@@ -1,34 +1,54 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/klopplaminaz.png";
+import "./App.css";
+import { AppRoutes } from "./Routes";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+        <a
+          href="https://www.metropoles.com/esportes/futebol/klopp-supera-guardiola-e-e-eleito-o-tecnico-do-ano-na-premier-league"
+          target="_blank"
+        >
+          <img
+            src={reactLogo}
+            className="logo"
+            alt="klopplaminaz"
+            title="Klopp Laminaz vem aí e o bixo vai pegar"
+          />
         </a>
       </div>
-      <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+          {count} GOLS
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {count > 6 ? (
+        <div className="flex">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/pt/9/90/ECBahia.png"
+            alt="bahia"
+            title="bahia"
+            height="300px"
+            className="pad"
+          />
+          <span>MAIS UM GOL DO SPORT?</span>
+          <img
+            src="https://images.emojiterra.com/google/android-11/512px/1f62d.png"
+            alt="choro"
+            title="chore nao bebe"
+            height="60px"
+          />
+        </div>
+      ) : (
+        <></>
+      )}
+      <AppRoutes />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
