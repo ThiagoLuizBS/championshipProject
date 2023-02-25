@@ -28,7 +28,6 @@ export function TableApp() {
     fetch("https://championship-project-9hyg.vercel.app/camp")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.camp);
         setCampeonato(data.camp);
       });
   }, []);

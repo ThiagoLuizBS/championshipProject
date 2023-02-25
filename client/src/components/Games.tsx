@@ -28,7 +28,6 @@ export function Games() {
     fetch("https://championship-project-9hyg.vercel.app/rodadas")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.rodadas);
         setRodadas(data.rodadas);
       });
   }, []);

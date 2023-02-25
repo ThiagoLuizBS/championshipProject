@@ -37,7 +37,7 @@ export function HeaderApp() {
                 TABELA
               </span>
             </Nav.Link>
-            <Nav.Link href="/regulamento">
+            <Nav.Link disabled href="/">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1358/1358208.png"
                 height="22"
