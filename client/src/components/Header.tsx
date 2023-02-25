@@ -33,7 +33,7 @@ export function HeaderApp() {
                 alt="Search"
                 className="nav-img"
               />
-              <span className="nav-font" title="Resultados">
+              <span className="nav-font" title="Tabela">
                 TABELA
               </span>
             </Nav.Link>
@@ -45,7 +45,7 @@ export function HeaderApp() {
                 alt="Search"
                 className="nav-img"
               />
-              <span className="nav-font" title="Notícias">
+              <span className="nav-font" title="Regulamento">
                 REGULAMENTO
               </span>
             </Nav.Link>
