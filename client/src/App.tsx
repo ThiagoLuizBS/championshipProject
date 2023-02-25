@@ -1,5 +1,5 @@
 import { HeaderApp } from "./components/Header";
-import { Troll } from "./pages/Troll";
+import { Regulamento } from "./pages/Regulamento";
 import { AppRoutes } from "./Routes";
 import "bootstrap/dist/css/bootstrap.min.css";
 

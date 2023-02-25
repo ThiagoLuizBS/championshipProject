@@ -4,16 +4,16 @@
   font-weight: bold;
 }
 
-.logo-table {
-  padding-right: 5px;
-}
-
 #form-table {
   text-align: center;
 }
 
 .form-pad-table {
   padding-right: 2px;
+}
+
+td {
+  vertical-align: middle;
 }
 
 .table-responsive > table > thead > tr > th,

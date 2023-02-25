@@ -1,368 +1,368 @@
 Rodada 1
-A - I
-K - N
-B - D
-O - C
-J - G
-R - H
-L - M
-E - P
-Q - F
+Chelsea - Tottenham
+Inter - Borussia Dortmund
+Real Madrid - Juventus
+Olympique Marseille - Manchester City
+Manchester United - Bayern Munchen
+Time do Talisca - Liverpool
+Arsenal - RB Leipzig
+Paris Saint Germain - Atlético de Madrid
+Milan - Barcelona
 
 Rodada 2
-A - N
-I - D
-K - C
-B - G
-O - H
-J - M
-R - P
-L - F
-E - Q
+Chelsea - Borussia Dortmund
+Tottenham - Juventus
+Inter - Manchester City
+Real Madrid - Bayern Munchen
+Olympique Marseille - Liverpool
+Manchester United - RB Leipzig
+Time do Talisca - Atlético de Madrid
+Arsenal - Barcelona
+Paris Saint Germain - Milan
 
 Rodada 3
-A - D
-N - C
-I - G
-K - H
-B - M
-O - P
-J - F
-R - Q
-L - E
+Chelsea - Juventus
+Borussia Dortmund - Manchester City
+Tottenham - Bayern Munchen
+Inter - Liverpool
+Real Madrid - RB Leipzig
+Olympique Marseille - Atlético de Madrid
+Manchester United - Barcelona
+Time do Talisca - Milan
+Arsenal - Paris Saint Germain
 
 Rodada 4
-A - C
-D - G
-N - H
-I - M
-K - P
-B - F
-O - Q
-J - E
-R - L
+Chelsea - Manchester City
+Juventus - Bayern Munchen
+Borussia Dortmund - Liverpool
+Tottenham - RB Leipzig
+Inter - Atlético de Madrid
+Real Madrid - Barcelona
+Olympique Marseille - Milan
+Manchester United - Paris Saint Germain
+Time do Talisca - Arsenal
 Rodada 5
-A - G
-C - H
-D - M
-N - P
-I - F
-K - Q
-B - E
-O - L
-J - R
+Chelsea - Bayern Munchen
+Manchester City- Liverpool
+Juventus - RB Leipzig
+Borussia Dortmund - Atlético de Madrid
+Tottenham - Barcelona
+Inter - Milan
+Real Madrid - Paris Saint Germain
+Olympique Marseille - Arsenal
+Manchester United - Time do Talisca
 
 Rodada 6
-A - H
-G - M
-C - P
-D - F
-N - Q
-I - E
-K - L
-B - R
-O - J
+Chelsea - Liverpool
+Bayern Munchen - RB Leipzig
+Manchester City- Atlético de Madrid
+Juventus - Barcelona
+Borussia Dortmund - Milan
+Tottenham - Paris Saint Germain
+Inter - Arsenal
+Real Madrid - Time do Talisca
+Olympique Marseille - Manchester United
 
 Rodada 7
-A - M
-H - P
-G - F
-C - Q
-D - E
-N - L
-I - R
-K - J
-B - O
+Chelsea - RB Leipzig
+Liverpool - Atlético de Madrid
+Bayern Munchen - Barcelona
+Manchester City- Milan
+Juventus - Paris Saint Germain
+Borussia Dortmund - Arsenal
+Tottenham - Time do Talisca
+Inter - Manchester United
+Real Madrid - Olympique Marseille
 
 Rodada 8
-A - P
-M - F
-H - Q
-G - E
-C - L
-D - R
-N - J
-I - O
-K - B
+Chelsea - Atlético de Madrid
+RB Leipzig - Barcelona
+Liverpool - Milan
+Bayern Munchen - Paris Saint Germain
+Manchester City- Arsenal
+Juventus - Time do Talisca
+Borussia Dortmund - Manchester United
+Tottenham - Olympique Marseille
+Inter - Real Madrid
 
 Rodada 9
-A - F
-P - Q
-M - E
-H - L
-G - R
-C - J
-D - O
-N - B
-I - K
+Chelsea - Barcelona
+Atlético de Madrid - Milan
+RB Leipzig - Paris Saint Germain
+Liverpool - Arsenal
+Bayern Munchen - Time do Talisca
+Manchester City- Manchester United
+Juventus - Olympique Marseille
+Borussia Dortmund - Real Madrid
+Tottenham - Inter
 
 Rodada 10
-A - Q
-F - E
-P - L
-M - R
-H - J
-G - O
-C - B
-D - K
-N - I
+Chelsea - Milan
+Barcelona - Paris Saint Germain
+Atlético de Madrid - Arsenal
+RB Leipzig - Time do Talisca
+Liverpool - Manchester United
+Bayern Munchen - Olympique Marseille
+Manchester City- Real Madrid
+Juventus - Inter
+Borussia Dortmund - Tottenham
 
 Rodada 11
-A - E
-Q - L
-F - R
-P - J
-M - O
-H - B
-G - K
-C - I
-D - N
+Chelsea - Paris Saint Germain
+Milan - Arsenal
+Barcelona - Time do Talisca
+Atlético de Madrid - Manchester United
+RB Leipzig - Olympique Marseille
+Liverpool - Real Madrid
+Bayern Munchen - Inter
+Manchester City- Tottenham
+Juventus - Borussia Dortmund
 
 Rodada 12
-A - L
-E - R
-Q - J
-F - O
-P - B
-M - K
-H - I
-G - N
-C - D
+Chelsea - Arsenal
+Paris Saint Germain - Time do Talisca
+Milan - Manchester United
+Barcelona - Olympique Marseille
+Atlético de Madrid - Real Madrid
+RB Leipzig - Inter
+Liverpool - Tottenham
+Bayern Munchen - Borussia Dortmund
+Manchester City- Juventus
 
 Rodada 13
-A - R
-L - J
-E - O
-Q - B
-F - K
-P - I
-M - N
-H - D
-G - C
+Chelsea - Time do Talisca
+Arsenal - Manchester United
+Paris Saint Germain - Olympique Marseille
+Milan - Real Madrid
+Barcelona - Inter
+Atlético de Madrid - Tottenham
+RB Leipzig - Borussia Dortmund
+Liverpool - Juventus
+Bayern Munchen - Manchester City
 
 Rodada 14
-A - J
-R - O
-L - B
-E - K
-Q - I
-F - N
-P - D
-M - C
-H - G
+Chelsea - Manchester United
+Time do Talisca - Olympique Marseille
+Arsenal - Real Madrid
+Paris Saint Germain - Inter
+Milan - Tottenham
+Barcelona - Borussia Dortmund
+Atlético de Madrid - Juventus
+RB Leipzig - Manchester City
+Liverpool - Bayern Munchen
 
 Rodada 15
-A - O
-J - B
-R - K
-L - I
-E - N
-Q - D
-F - C
-P - G
-M - H
+Chelsea - Olympique Marseille
+Manchester United - Real Madrid
+Time do Talisca - Inter
+Arsenal - Tottenham
+Paris Saint Germain - Borussia Dortmund
+Milan - Juventus
+Barcelona - Manchester City
+Atlético de Madrid - Bayern Munchen
+RB Leipzig - Liverpool
 
 Rodada 16
-A - B
-O - K
-J - I
-R - N
-L - D
-E - C
-Q - G
-F - H
-P - M
+Chelsea - Real Madrid
+Olympique Marseille - Inter
+Manchester United - Tottenham
+Time do Talisca - Borussia Dortmund
+Arsenal - Juventus
+Paris Saint Germain - Manchester City
+Milan - Bayern Munchen
+Barcelona - Liverpool
+Atlético de Madrid - RB Leipzig
 
 Rodada 17
-A - K
-B - I
-O - N
-J - D
-R - C
-L - G
-E - H
-Q - M
-F - P
+Chelsea - Inter
+Real Madrid - Tottenham
+Olympique Marseille - Borussia Dortmund
+Manchester United - Juventus
+Time do Talisca - Manchester City
+Arsenal - Bayern Munchen
+Paris Saint Germain - Liverpool
+Milan - RB Leipzig
+Barcelona - Atlético de Madrid
 
 Rodada 18
-I - A
-N - K
-D - B
-C - O
-G - J
-H - R
-M - L
-P - E
-F - Q
+Tottenham - Chelsea
+Borussia Dortmund - Inter
+Juventus - Real Madrid
+Manchester City- Olympique Marseille
+Bayern Munchen - Manchester United
+Liverpool - Time do Talisca
+RB Leipzig - Arsenal
+Atlético de Madrid - Paris Saint Germain
+Barcelona - Milan
 
 Rodada 19
-N - A
-D - I
-C - K
-G - B
-H - O
-M - J
-P - R
-F - L
-Q - E
+Borussia Dortmund - Chelsea
+Juventus - Tottenham
+Manchester City- Inter
+Bayern Munchen - Real Madrid
+Liverpool - Olympique Marseille
+RB Leipzig - Manchester United
+Atlético de Madrid - Time do Talisca
+Barcelona - Arsenal
+Milan - Paris Saint Germain
 
 Rodada 20
-D - A
-C - N
-G - I
-H - K
-M - B
-P - O
-F - J
-Q - R
-E - L
+Juventus - Chelsea
+Manchester City- Borussia Dortmund
+Bayern Munchen - Tottenham
+Liverpool - Inter
+RB Leipzig - Real Madrid
+Atlético de Madrid - Olympique Marseille
+Barcelona - Manchester United
+Milan - Time do Talisca
+Paris Saint Germain - Arsenal
 
 Rodada 21
-C - A
-G - D
-H - N
-M - I
-P - K
-F - B
-Q - O
-E - J
-L - R
+Manchester City- Chelsea
+Bayern Munchen - Juventus
+Liverpool - Borussia Dortmund
+RB Leipzig - Tottenham
+Atlético de Madrid - Inter
+Barcelona - Real Madrid
+Milan - Olympique Marseille
+Paris Saint Germain - Manchester United
+Arsenal - Time do Talisca
 
 Rodada 22
-G - A
-H - C
-M - D
-P - N
-F - I
-Q - K
-E - B
-L - O
-R - J
+Bayern Munchen - Chelsea
+Liverpool - Manchester City
+RB Leipzig - Juventus
+Atlético de Madrid - Borussia Dortmund
+Barcelona - Tottenham
+Milan - Inter
+Paris Saint Germain - Real Madrid
+Arsenal - Olympique Marseille
+Time do Talisca - Manchester United
 
 Rodada 23
-H - A
-M - G
-P - C
-F - D
-Q - N
-E - I
-L - K
-R - B
-J - O
+Liverpool - Chelsea
+RB Leipzig - Bayern Munchen
+Atlético de Madrid - Manchester City
+Barcelona - Juventus
+Milan - Borussia Dortmund
+Paris Saint Germain - Tottenham
+Arsenal - Inter
+Time do Talisca - Real Madrid
+Manchester United - Olympique Marseille
 
 Rodada 24
-M - A
-P - H
-F - G
-Q - C
-E - D
-L - N
-R - I
-J - K
-O - B
+RB Leipzig - Chelsea
+Atlético de Madrid - Liverpool
+Barcelona - Bayern Munchen
+Milan - Manchester City
+Paris Saint Germain - Juventus
+Arsenal - Borussia Dortmund
+Time do Talisca - Tottenham
+Manchester United - Inter
+Olympique Marseille - Real Madrid
 
 Rodada 25
-P - A
-F - M
-Q - H
-E - G
-L - C
-R - D
-J - N
-O - I
-B - K
+Atlético de Madrid - Chelsea
+Barcelona - RB Leipzig
+Milan - Liverpool
+Paris Saint Germain - Bayern Munchen
+Arsenal - Manchester City
+Time do Talisca - Juventus
+Manchester United - Borussia Dortmund
+Olympique Marseille - Tottenham
+Real Madrid - Inter
 
 Rodada 26
-F - A
-Q - P
-E - M
-L - H
-R - G
-J - C
-O - D
-B - N
-K - I
+Barcelona - Chelsea
+Milan - Atlético de Madrid
+Paris Saint Germain - RB Leipzig
+Arsenal - Liverpool
+Time do Talisca - Bayern Munchen
+Manchester United - Manchester City
+Olympique Marseille - Juventus
+Real Madrid - Borussia Dortmund
+Inter - Tottenham
 
 Rodada 27
-Q - A
-E - F
-L - P
-R - M
-J - H
-O - G
-B - C
-K - D
-I - N
+Milan - Chelsea
+Paris Saint Germain - Barcelona
+Arsenal - Atlético de Madrid
+Time do Talisca - RB Leipzig
+Manchester United - Liverpool
+Olympique Marseille - Bayern Munchen
+Real Madrid - Manchester City
+Inter - Juventus
+Tottenham - Borussia Dortmund
 
 Rodada 28
-E - A
-L - Q
-R - F
-J - P
-O - M
-B - H
-K - G
-I - C
-N - D
+Paris Saint Germain - Chelsea
+Arsenal - Milan
+Time do Talisca - Barcelona
+Manchester United - Atlético de Madrid
+Olympique Marseille - RB Leipzig
+Real Madrid - Liverpool
+Inter - Bayern Munchen
+Tottenham - Manchester City
+Borussia Dortmund - Juventus
 
 Rodada 29
-L - A
-R - E
-J - Q
-O - F
-B - P
-K - M
-I - H
-N - G
-D - C
+Arsenal - Chelsea
+Time do Talisca - Paris Saint Germain
+Manchester United - Milan
+Olympique Marseille - Barcelona
+Real Madrid - Atlético de Madrid
+Inter - RB Leipzig
+Tottenham - Liverpool
+Borussia Dortmund - Bayern Munchen
+Juventus - Manchester City
 Rodada 30
-R - A
-J - L
-O - E
-B - Q
-K - F
-I - P
-N - M
-D - H
-C - G
+Time do Talisca - Chelsea
+Manchester United - Arsenal
+Olympique Marseille - Paris Saint Germain
+Real Madrid - Milan
+Inter - Barcelona
+Tottenham - Atlético de Madrid
+Borussia Dortmund - RB Leipzig
+Juventus - Liverpool
+Manchester City- Bayern Munchen
 
 Rodada 31
-J - A
-O - R
-B - L
-K - E
-I - Q
-N - F
-D - P
-C - M
-G - H
+Manchester United - Chelsea
+Olympique Marseille - Time do Talisca
+Real Madrid - Arsenal
+Inter - Paris Saint Germain
+Tottenham - Milan
+Borussia Dortmund - Barcelona
+Juventus - Atlético de Madrid
+Manchester City- RB Leipzig
+Bayern Munchen - Liverpool
 Rodada 32
-O - A
-B - J
-K - R
-I - L
-N - E
-D - Q
-C - F
-G - P
-H - M
+Olympique Marseille - Chelsea
+Real Madrid - Manchester United
+Inter - Time do Talisca
+Tottenham - Arsenal
+Borussia Dortmund - Paris Saint Germain
+Juventus - Milan
+Manchester City- Barcelona
+Bayern Munchen - Atlético de Madrid
+Liverpool - RB Leipzig
 Rodada 33
-B - A
-K - O
-I - J
-N - R
-D - L
-C - E
-G - Q
-H - F
-M - P
+Real Madrid - Chelsea
+Inter - Olympique Marseille
+Tottenham - Manchester United
+Borussia Dortmund - Time do Talisca
+Juventus - Arsenal
+Manchester City- Paris Saint Germain
+Bayern Munchen - Milan
+Liverpool - Barcelona
+RB Leipzig - Atlético de Madrid
 Rodada 34
-K - A
-I - B
-N - O
-D - J
-C - R
-G - L
-H - E
-M - Q
-P - F
+Inter - Chelsea
+Tottenham - Real Madrid
+Borussia Dortmund - Olympique Marseille
+Juventus - Manchester United
+Manchester City- Time do Talisca
+Bayern Munchen - Arsenal
+Liverpool - Paris Saint Germain
+RB Leipzig - Milan
+Atlético de Madrid - Barcelona

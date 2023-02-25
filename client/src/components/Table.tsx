@@ -4,15 +4,12 @@ import { Table } from "react-bootstrap";
 type campeonatoProps = {
   id: string;
   name: string;
-  season: string;
-  img: string;
   table: rowProps[];
 };
 
 type rowProps = {
   posicao: number;
-  nome: string;
-  logo: string;
+  equipe: { id: string; logo: string; nome: string; treinador: string };
   pontos: number;
   vitorias: number;
   empates: number;
@@ -43,7 +40,12 @@ export function TableApp() {
           <tr id="form-table">
             <th>P</th>
             <th></th>
-            <th style={{ textAlign: "start", paddingRight: "100px" }}>
+            <th
+              style={{
+                textAlign: "start",
+                paddingRight: "100px",
+              }}
+            >
               EQUIPE
             </th>
             <th>PTS</th>
@@ -59,17 +61,12 @@ export function TableApp() {
         </thead>
         <tbody>
           {campeonato[0]?.table.map((row: rowProps) => (
-            <tr key={row.nome} id="form-table">
+            <tr key={row.equipe.id} id="form-table">
               <td>{row.posicao}</td>
               <td>
-                <img
-                  src={row.logo}
-                  alt={row.nome}
-                  width="30px"
-                  className="logo-table"
-                />
+                <img src={row.equipe.logo} alt={row.equipe.nome} width="30px" />
               </td>
-              <td style={{ textAlign: "start" }}>{row.nome}</td>
+              <td style={{ textAlign: "start" }}>{row.equipe.nome}</td>
               <td>{row.pontos}</td>
               <td>{row.vitorias}</td>
               <td>{row.empates}</td>
