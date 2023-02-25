@@ -1,0 +1,50 @@
+#games-title-responsive {
+  padding-top: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: nowrap;
+  color: white;
+}
+
+#games-responsive {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: nowrap;
+  color: white;
+}
+
+.rodada-games {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#col-left-games {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#col-right-games {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#button-games {
+  color: white;
+  background: rgba(76, 175, 80, 0);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

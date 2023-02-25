@@ -1,0 +1,368 @@
+Rodada 1
+A - I
+K - N
+B - D
+O - C
+J - G
+R - H
+L - M
+E - P
+Q - F
+
+Rodada 2
+A - N
+I - D
+K - C
+B - G
+O - H
+J - M
+R - P
+L - F
+E - Q
+
+Rodada 3
+A - D
+N - C
+I - G
+K - H
+B - M
+O - P
+J - F
+R - Q
+L - E
+
+Rodada 4
+A - C
+D - G
+N - H
+I - M
+K - P
+B - F
+O - Q
+J - E
+R - L
+Rodada 5
+A - G
+C - H
+D - M
+N - P
+I - F
+K - Q
+B - E
+O - L
+J - R
+
+Rodada 6
+A - H
+G - M
+C - P
+D - F
+N - Q
+I - E
+K - L
+B - R
+O - J
+
+Rodada 7
+A - M
+H - P
+G - F
+C - Q
+D - E
+N - L
+I - R
+K - J
+B - O
+
+Rodada 8
+A - P
+M - F
+H - Q
+G - E
+C - L
+D - R
+N - J
+I - O
+K - B
+
+Rodada 9
+A - F
+P - Q
+M - E
+H - L
+G - R
+C - J
+D - O
+N - B
+I - K
+
+Rodada 10
+A - Q
+F - E
+P - L
+M - R
+H - J
+G - O
+C - B
+D - K
+N - I
+
+Rodada 11
+A - E
+Q - L
+F - R
+P - J
+M - O
+H - B
+G - K
+C - I
+D - N
+
+Rodada 12
+A - L
+E - R
+Q - J
+F - O
+P - B
+M - K
+H - I
+G - N
+C - D
+
+Rodada 13
+A - R
+L - J
+E - O
+Q - B
+F - K
+P - I
+M - N
+H - D
+G - C
+
+Rodada 14
+A - J
+R - O
+L - B
+E - K
+Q - I
+F - N
+P - D
+M - C
+H - G
+
+Rodada 15
+A - O
+J - B
+R - K
+L - I
+E - N
+Q - D
+F - C
+P - G
+M - H
+
+Rodada 16
+A - B
+O - K
+J - I
+R - N
+L - D
+E - C
+Q - G
+F - H
+P - M
+
+Rodada 17
+A - K
+B - I
+O - N
+J - D
+R - C
+L - G
+E - H
+Q - M
+F - P
+
+Rodada 18
+I - A
+N - K
+D - B
+C - O
+G - J
+H - R
+M - L
+P - E
+F - Q
+
+Rodada 19
+N - A
+D - I
+C - K
+G - B
+H - O
+M - J
+P - R
+F - L
+Q - E
+
+Rodada 20
+D - A
+C - N
+G - I
+H - K
+M - B
+P - O
+F - J
+Q - R
+E - L
+
+Rodada 21
+C - A
+G - D
+H - N
+M - I
+P - K
+F - B
+Q - O
+E - J
+L - R
+
+Rodada 22
+G - A
+H - C
+M - D
+P - N
+F - I
+Q - K
+E - B
+L - O
+R - J
+
+Rodada 23
+H - A
+M - G
+P - C
+F - D
+Q - N
+E - I
+L - K
+R - B
+J - O
+
+Rodada 24
+M - A
+P - H
+F - G
+Q - C
+E - D
+L - N
+R - I
+J - K
+O - B
+
+Rodada 25
+P - A
+F - M
+Q - H
+E - G
+L - C
+R - D
+J - N
+O - I
+B - K
+
+Rodada 26
+F - A
+Q - P
+E - M
+L - H
+R - G
+J - C
+O - D
+B - N
+K - I
+
+Rodada 27
+Q - A
+E - F
+L - P
+R - M
+J - H
+O - G
+B - C
+K - D
+I - N
+
+Rodada 28
+E - A
+L - Q
+R - F
+J - P
+O - M
+B - H
+K - G
+I - C
+N - D
+
+Rodada 29
+L - A
+R - E
+J - Q
+O - F
+B - P
+K - M
+I - H
+N - G
+D - C
+Rodada 30
+R - A
+J - L
+O - E
+B - Q
+K - F
+I - P
+N - M
+D - H
+C - G
+
+Rodada 31
+J - A
+O - R
+B - L
+K - E
+I - Q
+N - F
+D - P
+C - M
+G - H
+Rodada 32
+O - A
+B - J
+K - R
+I - L
+N - E
+D - Q
+C - F
+G - P
+H - M
+Rodada 33
+B - A
+K - O
+I - J
+N - R
+D - L
+C - E
+G - Q
+H - F
+M - P
+Rodada 34
+K - A
+I - B
+N - O
+D - J
+C - R
+G - L
+H - E
+M - Q
+P - F
