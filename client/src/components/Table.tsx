@@ -28,7 +28,7 @@ export function TableApp() {
   const [campeonato, setCampeonato] = useState<campeonatoProps[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/camp")
+    fetch("https://championship-project-9hyg.vercel.app/camp")
       .then((response) => response.json())
       .then((data) => {
         console.log(data.camp);

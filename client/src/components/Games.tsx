@@ -17,7 +17,7 @@ export function Games() {
   const [rodadas, setRodadas] = useState<partidaProps[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/rodadas")
+    fetch("https://championship-project-9hyg.vercel.app/rodadas")
       .then((response) => response.json())
       .then((data) => {
         console.log(data.rodada);
