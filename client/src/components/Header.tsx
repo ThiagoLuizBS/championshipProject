@@ -17,7 +17,7 @@ export function HeaderApp() {
   //   }, [searchField]);
 
   return (
-    <Navbar className="bg-teal" fixed="top" sticky="top" expand="lg">
+    <Navbar className="bg-teal-header" expand="lg">
       <Container>
         <Navbar.Brand href="/">
           <img src={cdrLogo} height="50" width="50" alt="Search" />
@@ -25,29 +25,32 @@ export function HeaderApp() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
-            <Nav.Link href="/">
+            <Nav.Link href="/" title="Tabela">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/6862/6862199.png"
-                height="22"
                 width="22"
-                alt="Search"
-                className="nav-img"
+                alt="Tabela"
+                className="img-header"
               />
-              <span className="nav-font" title="Tabela">
-                TABELA
-              </span>
+              <span>TABELA</span>
             </Nav.Link>
-            <Nav.Link href="/regulamento">
+            <Nav.Link href="/equipes" title="Equipes">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/2636/2636184.png"
+                width="22"
+                alt="Equipes"
+                className="img-header"
+              />
+              <span>EQUIPES</span>
+            </Nav.Link>
+            <Nav.Link href="/regulamento" title="Regulamento">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1358/1358208.png"
-                height="22"
                 width="22"
-                alt="Search"
-                className="nav-img"
+                alt="Regulamento"
+                className="img-header"
               />
-              <span className="nav-font" title="Regulamento">
-                REGULAMENTO
-              </span>
+              <span>REGULAMENTO</span>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

@@ -37,7 +37,6 @@ button {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
 }
@@ -74,17 +73,4 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.pad {
-  padding-right: 15px;
-  padding-bottom: 20px;
-}
-
-.card {
-  background-color: #242424;
-  padding-left: 200px;
-  padding-right: 200px;
-  border: 0;
-  padding-bottom: 20px;
 }

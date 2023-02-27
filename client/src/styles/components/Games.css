@@ -33,13 +33,13 @@
 #col-left-games {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 #col-right-games {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 #button-games {
@@ -50,4 +50,44 @@
   justify-content: center;
   align-items: center;
   padding: 0;
+}
+
+.img-games {
+  width: 30px;
+}
+
+@media only screen and (max-width: 992px) {
+  #button-games {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .rodada-games {
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  #button-games {
+    font-size: 10px;
+  }
+
+  .rodada-games {
+    justify-content: center;
+  }
+
+  .img-games {
+    width: 25px;
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  .img-games {
+    width: 20px;
+  }
+
+  #button-games {
+    font-size: 10px;
+  }
 }

@@ -1,0 +1,103 @@
+.container-equipes {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.row-equipes {
+  justify-content: center;
+  align-items: center;
+}
+
+.col-equipes {
+  border: 1px solid rgb(250, 235, 215, 0.1);
+}
+
+.img-equipes {
+  width: 60px;
+  margin: 10px;
+}
+
+.nome-equipes {
+  font-weight: bolder;
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.treinador-equipes {
+  color: antiquewhite;
+  font-weight: bolder;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.treinador-nome-equipes {
+  font-weight: bolder;
+  font-size: 22px;
+}
+
+@media only screen and (max-width: 576px) {
+  .img-equipes {
+    width: 55px;
+  }
+
+  .nome-equipes {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .treinador-equipes {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .treinador-nome-equipes {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .img-equipes {
+    width: 50px;
+  }
+
+  .nome-equipes {
+    font-size: 12px;
+  }
+
+  .treinador-equipes,
+  .treinador-nome-equipes {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .img-equipes {
+    width: 40px;
+  }
+
+  .nome-equipes {
+    font-size: 11px;
+  }
+
+  .treinador-equipes,
+  .treinador-nome-equipes {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 260px) {
+  .img-equipes {
+    width: 30px;
+  }
+
+  .nome-equipes {
+    font-size: 8px;
+  }
+
+  .treinador-equipes,
+  .treinador-nome-equipes {
+    font-size: 10px;
+  }
+}

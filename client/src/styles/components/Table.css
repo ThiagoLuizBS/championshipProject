@@ -1,5 +1,6 @@
 .table-responsive {
   padding-top: 20px;
+  padding-bottom: 20px;
   overflow-x: auto;
   font-weight: bold;
 }
@@ -16,6 +17,25 @@ td {
   vertical-align: middle;
 }
 
+.table {
+  color: aliceblue;
+  align-items: center;
+}
+
+th.col-num-table {
+  width: 50px;
+}
+
+td.col-num-table {
+  width: 50px;
+}
+
+th.col-name-table,
+td.col-name-table {
+  text-align: start;
+  width: 250px;
+}
+
 .table-responsive > table > thead > tr > th,
 .table-responsive > table > tbody > tr > th,
 .table-responsive > table > tfoot > tr > th,
@@ -25,9 +45,28 @@ td {
   white-space: nowrap;
 }
 
-.table {
-  color: aliceblue;
-  align-items: center;
+@media only screen and (max-width: 1400px) {
+  th.col-num-table,
+  td.col-num-table {
+    max-width: 40px;
+  }
+
+  th.col-name-table,
+  td.col-name-table {
+    max-width: 200px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  th.col-num-table,
+  td.col-num-table {
+    max-width: 30px;
+  }
+
+  th.col-name-table,
+  td.col-name-table {
+    max-width: 150px;
+  }
 }
 
 @media only screen and (max-width: 768px) {

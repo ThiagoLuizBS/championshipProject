@@ -55,7 +55,7 @@ export function Games() {
     <>
       <div id="games-title-responsive">
         <Row className="rodada-games">
-          <Col md={2} id="col-left-games">
+          <Col id="col-left-games">
             <Button
               id="button-games"
               onClick={() => alterarRodada("left")}
@@ -64,10 +64,10 @@ export function Games() {
               <AiOutlineArrowLeft className="botao-left-games" />
             </Button>
           </Col>
-          <Col md={8} id="button-games">
+          <Col md={7} xs={6} id="button-games">
             <span>Rodada {rodadaNum}</span>
           </Col>
-          <Col md={2} id="col-right-games">
+          <Col id="col-right-games">
             <Button
               id="button-games"
               onClick={() => alterarRodada("right")}
@@ -80,10 +80,10 @@ export function Games() {
 
         {rodadas[rodadaNum - 1]?.rodada.map((partida: partidaProps) => (
           <Row className="rodada-games" key={partida.idPartida}>
-            <Col md={3}>
-              <img src={partida.casa.logo} width="30px" />
+            <Col lg={3} md={2} xs={3}>
+              <img className="img-games" src={partida.casa.logo} />
             </Col>
-            <Col md={6} id="button-games">
+            <Col lg={6} md={6} xs={6} id="button-games">
               {partida.status === "MARCADO" ? (
                 <span>A realizar</span>
               ) : (
@@ -92,8 +92,8 @@ export function Games() {
                 </span>
               )}
             </Col>
-            <Col md={3}>
-              <img src={partida.fora.logo} width="30px" />
+            <Col lg={3} md={2} xs={3}>
+              <img className="img-games" src={partida.fora.logo} />
             </Col>
           </Row>
         ))}

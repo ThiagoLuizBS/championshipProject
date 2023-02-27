@@ -7,10 +7,10 @@ export function Home() {
   return (
     <Container>
       <Row md={12}>
-        <Col md={9} id="content-side-bar-home">
+        <Col lg={9} id="content-side-bar-home">
           <TableApp />
         </Col>
-        <Col md={3} id="content-matchs-home">
+        <Col lg={3} id="content-matchs-home">
           <Games />
         </Col>
       </Row>

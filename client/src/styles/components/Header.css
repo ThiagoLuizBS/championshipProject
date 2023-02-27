@@ -1,11 +1,11 @@
-.bg-teal {
+.bg-teal-header {
   background-color: #10fab3;
   font-weight: bold;
   font-size: large;
   border-radius: 8px;
 }
 
-.nav-img {
+.img-header {
   margin-bottom: 5px;
   margin-right: 1px;
 }

@@ -552,12 +552,37 @@ const rodadas = [
   { num: "2", rodada: rodada2 },
 ];
 
+const equipes = [
+  chelsea,
+  realMadrid,
+  manchesterCity,
+  juventus,
+  psg,
+  barcelona,
+  bayern,
+  liverpool,
+  tottenham,
+  manchesterUnited,
+  inter,
+  arsenal,
+  leipzig,
+  dortmund,
+  marseille,
+  atletico,
+  milan,
+  nassr,
+];
+
 app.get("/camp", (req, res) => {
   res.json({ camp });
 });
 
 app.get("/rodadas", (req, res) => {
   res.json({ rodadas });
+});
+
+app.get("/equipes", (req, res) => {
+  res.json({ equipes });
 });
 
 export default app;

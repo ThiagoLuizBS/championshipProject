@@ -37,24 +37,17 @@ export function TableApp() {
       <Table className="table table-hover table-dark">
         <thead>
           <tr id="form-table">
-            <th>P</th>
+            <th className="col-num-table">P</th>
             <th></th>
-            <th
-              style={{
-                textAlign: "start",
-                paddingRight: "100px",
-              }}
-            >
-              EQUIPE
-            </th>
-            <th>PTS</th>
-            <th>V</th>
-            <th>E</th>
-            <th>D</th>
-            <th>GM</th>
-            <th>GS</th>
-            <th>SG</th>
-            <th>%</th>
+            <th className="col-name-table">EQUIPE</th>
+            <th className="col-num-table">PTS</th>
+            <th className="col-num-table">V</th>
+            <th className="col-num-table">E</th>
+            <th className="col-num-table">D</th>
+            <th className="col-num-table">GM</th>
+            <th className="col-num-table">GS</th>
+            <th className="col-num-table">SG</th>
+            <th className="col-num-table">%</th>
             <th>Últimos jogos</th>
           </tr>
         </thead>
@@ -65,15 +58,15 @@ export function TableApp() {
               <td>
                 <img src={row.equipe.logo} alt={row.equipe.nome} width="30px" />
               </td>
-              <td style={{ textAlign: "start" }}>{row.equipe.nome}</td>
-              <td>{row.pontos}</td>
-              <td>{row.vitorias}</td>
-              <td>{row.empates}</td>
-              <td>{row.derrotas}</td>
-              <td>{row.gols_marcados}</td>
-              <td>{row.gols_sofridos}</td>
-              <td>{row.saldo_de_gols}</td>
-              <td>{row.aproveitamento}</td>
+              <td className="col-name-table">{row.equipe.nome}</td>
+              <td className="col-num-table">{row.pontos}</td>
+              <td className="col-num-table">{row.vitorias}</td>
+              <td className="col-num-table">{row.empates}</td>
+              <td className="col-num-table">{row.derrotas}</td>
+              <td className="col-num-table">{row.gols_marcados}</td>
+              <td className="col-num-table">{row.gols_sofridos}</td>
+              <td className="col-num-table">{row.saldo_de_gols}</td>
+              <td className="col-num-table">{row.aproveitamento}</td>
               <td>
                 {row.forma.map((partida: string, i) => (
                   <>
