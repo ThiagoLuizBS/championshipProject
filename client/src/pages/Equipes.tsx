@@ -15,7 +15,6 @@ export function Equipes() {
     fetch("https://championship-project-9hyg.vercel.app/equipes")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.equipes);
         setEquipes(data.equipes);
       });
   }, []);

@@ -10,6 +10,7 @@ import "./styles/pages/Regulamento.css";
 import "./styles/components/Header.css";
 import "./styles/components/Games.css";
 import "./styles/components/Table.css";
+import "./styles/components/Download.css";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>

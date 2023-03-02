@@ -1,368 +1,369 @@
 Rodada 1
-Chelsea - Tottenham
-Inter - Borussia Dortmund
-Real Madrid - Juventus
-Olympique Marseille - Manchester City
-Manchester United - Bayern Munchen
-Time do Talisca - Liverpool
-Arsenal - RB Leipzig
-Paris Saint Germain - Atlético de Madrid
-Milan - Barcelona
+chelsea - tottenham
+inter - dortmund
+realMadrid - juventus
+bye - manchesterCity
+manchesterUnited - bayern
+nassr - liverpool
+arsenal - leipzig
+psg - atletico
+milan - barcelona
 
 Rodada 2
-Chelsea - Borussia Dortmund
-Tottenham - Juventus
-Inter - Manchester City
-Real Madrid - Bayern Munchen
-Olympique Marseille - Liverpool
-Manchester United - RB Leipzig
-Time do Talisca - Atlético de Madrid
-Arsenal - Barcelona
-Paris Saint Germain - Milan
+chelsea - dortmund
+tottenham - juventus
+inter - manchesterCity
+realMadrid - bayern
+bye - liverpool
+manchesterUnited - leipzig
+nassr - atletico
+arsenal - barcelona
+psg - milan
 
 Rodada 3
-Chelsea - Juventus
-Borussia Dortmund - Manchester City
-Tottenham - Bayern Munchen
-Inter - Liverpool
-Real Madrid - RB Leipzig
-Olympique Marseille - Atlético de Madrid
-Manchester United - Barcelona
-Time do Talisca - Milan
-Arsenal - Paris Saint Germain
+chelsea - juventus
+dortmund - manchesterCity
+tottenham - bayern
+inter - liverpool
+realMadrid - leipzig
+bye - atletico
+manchesterUnited - barcelona
+nassr - milan
+arsenal - psg
 
 Rodada 4
-Chelsea - Manchester City
-Juventus - Bayern Munchen
-Borussia Dortmund - Liverpool
-Tottenham - RB Leipzig
-Inter - Atlético de Madrid
-Real Madrid - Barcelona
-Olympique Marseille - Milan
-Manchester United - Paris Saint Germain
-Time do Talisca - Arsenal
+chelsea - manchesterCity
+juventus - bayern
+dortmund - liverpool
+tottenham - leipzig
+inter - atletico
+realMadrid - barcelona
+bye - milan
+manchesterUnited - psg
+nassr - arsenal
+
 Rodada 5
-Chelsea - Bayern Munchen
-Manchester City- Liverpool
-Juventus - RB Leipzig
-Borussia Dortmund - Atlético de Madrid
-Tottenham - Barcelona
-Inter - Milan
-Real Madrid - Paris Saint Germain
-Olympique Marseille - Arsenal
-Manchester United - Time do Talisca
+chelsea - bayern
+manchesterCity- liverpool
+juventus - leipzig
+dortmund - atletico
+tottenham - barcelona
+inter - milan
+realMadrid - psg
+bye - arsenal
+manchesterUnited - nassr
 
 Rodada 6
-Chelsea - Liverpool
-Bayern Munchen - RB Leipzig
-Manchester City- Atlético de Madrid
-Juventus - Barcelona
-Borussia Dortmund - Milan
-Tottenham - Paris Saint Germain
-Inter - Arsenal
-Real Madrid - Time do Talisca
-Olympique Marseille - Manchester United
+chelsea - liverpool
+bayern - leipzig
+manchesterCity- atletico
+juventus - barcelona
+dortmund - milan
+tottenham - psg
+inter - arsenal
+realMadrid - nassr
+bye - manchesterUnited
 
 Rodada 7
-Chelsea - RB Leipzig
-Liverpool - Atlético de Madrid
-Bayern Munchen - Barcelona
-Manchester City- Milan
-Juventus - Paris Saint Germain
-Borussia Dortmund - Arsenal
-Tottenham - Time do Talisca
-Inter - Manchester United
-Real Madrid - Olympique Marseille
+chelsea - leipzig
+liverpool - atletico
+bayern - barcelona
+manchesterCity- milan
+juventus - psg
+dortmund - arsenal
+tottenham - nassr
+inter - manchesterUnited
+realMadrid - bye
 
 Rodada 8
-Chelsea - Atlético de Madrid
-RB Leipzig - Barcelona
-Liverpool - Milan
-Bayern Munchen - Paris Saint Germain
-Manchester City- Arsenal
-Juventus - Time do Talisca
-Borussia Dortmund - Manchester United
-Tottenham - Olympique Marseille
-Inter - Real Madrid
+chelsea - atletico
+leipzig - barcelona
+liverpool - milan
+bayern - psg
+manchesterCity- arsenal
+juventus - nassr
+dortmund - manchesterUnited
+tottenham - bye
+inter - realMadrid
 
 Rodada 9
-Chelsea - Barcelona
-Atlético de Madrid - Milan
-RB Leipzig - Paris Saint Germain
-Liverpool - Arsenal
-Bayern Munchen - Time do Talisca
-Manchester City- Manchester United
-Juventus - Olympique Marseille
-Borussia Dortmund - Real Madrid
-Tottenham - Inter
+chelsea - barcelona
+atletico - milan
+leipzig - psg
+liverpool - arsenal
+bayern - nassr
+manchesterCity- manchesterUnited
+juventus - bye
+dortmund - realMadrid
+tottenham - inter
 
 Rodada 10
-Chelsea - Milan
-Barcelona - Paris Saint Germain
-Atlético de Madrid - Arsenal
-RB Leipzig - Time do Talisca
-Liverpool - Manchester United
-Bayern Munchen - Olympique Marseille
-Manchester City- Real Madrid
-Juventus - Inter
-Borussia Dortmund - Tottenham
+chelsea - milan
+barcelona - psg
+atletico - arsenal
+leipzig - nassr
+liverpool - manchesterUnited
+bayern - bye
+manchesterCity- realMadrid
+juventus - inter
+dortmund - tottenham
 
 Rodada 11
-Chelsea - Paris Saint Germain
-Milan - Arsenal
-Barcelona - Time do Talisca
-Atlético de Madrid - Manchester United
-RB Leipzig - Olympique Marseille
-Liverpool - Real Madrid
-Bayern Munchen - Inter
-Manchester City- Tottenham
-Juventus - Borussia Dortmund
+chelsea - psg
+milan - arsenal
+barcelona - nassr
+atletico - manchesterUnited
+leipzig - bye
+liverpool - realMadrid
+bayern - inter
+manchesterCity- tottenham
+juventus - dortmund
 
 Rodada 12
-Chelsea - Arsenal
-Paris Saint Germain - Time do Talisca
-Milan - Manchester United
-Barcelona - Olympique Marseille
-Atlético de Madrid - Real Madrid
-RB Leipzig - Inter
-Liverpool - Tottenham
-Bayern Munchen - Borussia Dortmund
-Manchester City- Juventus
+chelsea - arsenal
+psg - nassr
+milan - manchesterUnited
+barcelona - bye
+atletico - realMadrid
+leipzig - inter
+liverpool - tottenham
+bayern - dortmund
+manchesterCity- juventus
 
 Rodada 13
-Chelsea - Time do Talisca
-Arsenal - Manchester United
-Paris Saint Germain - Olympique Marseille
-Milan - Real Madrid
-Barcelona - Inter
-Atlético de Madrid - Tottenham
-RB Leipzig - Borussia Dortmund
-Liverpool - Juventus
-Bayern Munchen - Manchester City
+chelsea - nassr
+arsenal - manchesterUnited
+psg - bye
+milan - realMadrid
+barcelona - inter
+atletico - tottenham
+leipzig - dortmund
+liverpool - juventus
+bayern - manchesterCity
 
 Rodada 14
-Chelsea - Manchester United
-Time do Talisca - Olympique Marseille
-Arsenal - Real Madrid
-Paris Saint Germain - Inter
-Milan - Tottenham
-Barcelona - Borussia Dortmund
-Atlético de Madrid - Juventus
-RB Leipzig - Manchester City
-Liverpool - Bayern Munchen
+chelsea - manchesterUnited
+nassr - bye
+arsenal - realMadrid
+psg - inter
+milan - tottenham
+barcelona - dortmund
+atletico - juventus
+leipzig - manchesterCity
+liverpool - bayern
 
 Rodada 15
-Chelsea - Olympique Marseille
-Manchester United - Real Madrid
-Time do Talisca - Inter
-Arsenal - Tottenham
-Paris Saint Germain - Borussia Dortmund
-Milan - Juventus
-Barcelona - Manchester City
-Atlético de Madrid - Bayern Munchen
-RB Leipzig - Liverpool
+chelsea - bye
+manchesterUnited - realMadrid
+nassr - inter
+arsenal - tottenham
+psg - dortmund
+milan - juventus
+barcelona - manchesterCity
+atletico - bayern
+leipzig - liverpool
 
 Rodada 16
-Chelsea - Real Madrid
-Olympique Marseille - Inter
-Manchester United - Tottenham
-Time do Talisca - Borussia Dortmund
-Arsenal - Juventus
-Paris Saint Germain - Manchester City
-Milan - Bayern Munchen
-Barcelona - Liverpool
-Atlético de Madrid - RB Leipzig
+chelsea - realMadrid
+bye - inter
+manchesterUnited - tottenham
+nassr - dortmund
+arsenal - juventus
+psg - manchesterCity
+milan - bayern
+barcelona - liverpool
+atletico - leipzig
 
 Rodada 17
-Chelsea - Inter
-Real Madrid - Tottenham
-Olympique Marseille - Borussia Dortmund
-Manchester United - Juventus
-Time do Talisca - Manchester City
-Arsenal - Bayern Munchen
-Paris Saint Germain - Liverpool
-Milan - RB Leipzig
-Barcelona - Atlético de Madrid
+chelsea - inter
+realMadrid - tottenham
+bye - dortmund
+manchesterUnited - juventus
+nassr - manchesterCity
+arsenal - bayern
+psg - liverpool
+milan - leipzig
+barcelona - atletico
 
 Rodada 18
-Tottenham - Chelsea
-Borussia Dortmund - Inter
-Juventus - Real Madrid
-Manchester City- Olympique Marseille
-Bayern Munchen - Manchester United
-Liverpool - Time do Talisca
-RB Leipzig - Arsenal
-Atlético de Madrid - Paris Saint Germain
-Barcelona - Milan
+tottenham - chelsea
+dortmund - inter
+juventus - realMadrid
+manchesterCity- bye
+bayern - manchesterUnited
+liverpool - nassr
+leipzig - arsenal
+atletico - psg
+barcelona - milan
 
 Rodada 19
-Borussia Dortmund - Chelsea
-Juventus - Tottenham
-Manchester City- Inter
-Bayern Munchen - Real Madrid
-Liverpool - Olympique Marseille
-RB Leipzig - Manchester United
-Atlético de Madrid - Time do Talisca
-Barcelona - Arsenal
-Milan - Paris Saint Germain
+dortmund - chelsea
+juventus - tottenham
+manchesterCity- inter
+bayern - realMadrid
+liverpool - bye
+leipzig - manchesterUnited
+atletico - nassr
+barcelona - arsenal
+milan - psg
 
 Rodada 20
-Juventus - Chelsea
-Manchester City- Borussia Dortmund
-Bayern Munchen - Tottenham
-Liverpool - Inter
-RB Leipzig - Real Madrid
-Atlético de Madrid - Olympique Marseille
-Barcelona - Manchester United
-Milan - Time do Talisca
-Paris Saint Germain - Arsenal
+juventus - chelsea
+manchesterCity- dortmund
+bayern - tottenham
+liverpool - inter
+leipzig - realMadrid
+atletico - bye
+barcelona - manchesterUnited
+milan - nassr
+psg - arsenal
 
 Rodada 21
-Manchester City- Chelsea
-Bayern Munchen - Juventus
-Liverpool - Borussia Dortmund
-RB Leipzig - Tottenham
-Atlético de Madrid - Inter
-Barcelona - Real Madrid
-Milan - Olympique Marseille
-Paris Saint Germain - Manchester United
-Arsenal - Time do Talisca
+manchesterCity- chelsea
+bayern - juventus
+liverpool - dortmund
+leipzig - tottenham
+atletico - inter
+barcelona - realMadrid
+milan - bye
+psg - manchesterUnited
+arsenal - nassr
 
 Rodada 22
-Bayern Munchen - Chelsea
-Liverpool - Manchester City
-RB Leipzig - Juventus
-Atlético de Madrid - Borussia Dortmund
-Barcelona - Tottenham
-Milan - Inter
-Paris Saint Germain - Real Madrid
-Arsenal - Olympique Marseille
-Time do Talisca - Manchester United
+bayern - chelsea
+liverpool - manchesterCity
+leipzig - juventus
+atletico - dortmund
+barcelona - tottenham
+milan - inter
+psg - realMadrid
+arsenal - bye
+nassr - manchesterUnited
 
 Rodada 23
-Liverpool - Chelsea
-RB Leipzig - Bayern Munchen
-Atlético de Madrid - Manchester City
-Barcelona - Juventus
-Milan - Borussia Dortmund
-Paris Saint Germain - Tottenham
-Arsenal - Inter
-Time do Talisca - Real Madrid
-Manchester United - Olympique Marseille
+liverpool - chelsea
+leipzig - bayern
+atletico - manchesterCity
+barcelona - juventus
+milan - dortmund
+psg - tottenham
+arsenal - inter
+nassr - realMadrid
+manchesterUnited - bye
 
 Rodada 24
-RB Leipzig - Chelsea
-Atlético de Madrid - Liverpool
-Barcelona - Bayern Munchen
-Milan - Manchester City
-Paris Saint Germain - Juventus
-Arsenal - Borussia Dortmund
-Time do Talisca - Tottenham
-Manchester United - Inter
-Olympique Marseille - Real Madrid
+leipzig - chelsea
+atletico - liverpool
+barcelona - bayern
+milan - manchesterCity
+psg - juventus
+arsenal - dortmund
+nassr - tottenham
+manchesterUnited - inter
+bye - realMadrid
 
 Rodada 25
-Atlético de Madrid - Chelsea
-Barcelona - RB Leipzig
-Milan - Liverpool
-Paris Saint Germain - Bayern Munchen
-Arsenal - Manchester City
-Time do Talisca - Juventus
-Manchester United - Borussia Dortmund
-Olympique Marseille - Tottenham
-Real Madrid - Inter
+atletico - chelsea
+barcelona - leipzig
+milan - liverpool
+psg - bayern
+arsenal - manchesterCity
+nassr - juventus
+manchesterUnited - dortmund
+bye - tottenham
+realMadrid - inter
 
 Rodada 26
-Barcelona - Chelsea
-Milan - Atlético de Madrid
-Paris Saint Germain - RB Leipzig
-Arsenal - Liverpool
-Time do Talisca - Bayern Munchen
-Manchester United - Manchester City
-Olympique Marseille - Juventus
-Real Madrid - Borussia Dortmund
-Inter - Tottenham
+barcelona - chelsea
+milan - atletico
+psg - leipzig
+arsenal - liverpool
+nassr - bayern
+manchesterUnited - manchesterCity
+bye - juventus
+realMadrid - dortmund
+inter - tottenham
 
 Rodada 27
-Milan - Chelsea
-Paris Saint Germain - Barcelona
-Arsenal - Atlético de Madrid
-Time do Talisca - RB Leipzig
-Manchester United - Liverpool
-Olympique Marseille - Bayern Munchen
-Real Madrid - Manchester City
-Inter - Juventus
-Tottenham - Borussia Dortmund
+milan - chelsea
+psg - barcelona
+arsenal - atletico
+nassr - leipzig
+manchesterUnited - liverpool
+bye - bayern
+realMadrid - manchesterCity
+inter - juventus
+tottenham - dortmund
 
 Rodada 28
-Paris Saint Germain - Chelsea
-Arsenal - Milan
-Time do Talisca - Barcelona
-Manchester United - Atlético de Madrid
-Olympique Marseille - RB Leipzig
-Real Madrid - Liverpool
-Inter - Bayern Munchen
-Tottenham - Manchester City
-Borussia Dortmund - Juventus
+psg - chelsea
+arsenal - milan
+nassr - barcelona
+manchesterUnited - atletico
+bye - leipzig
+realMadrid - liverpool
+inter - bayern
+tottenham - manchesterCity
+dortmund - juventus
 
 Rodada 29
-Arsenal - Chelsea
-Time do Talisca - Paris Saint Germain
-Manchester United - Milan
-Olympique Marseille - Barcelona
-Real Madrid - Atlético de Madrid
-Inter - RB Leipzig
-Tottenham - Liverpool
-Borussia Dortmund - Bayern Munchen
-Juventus - Manchester City
+arsenal - chelsea
+nassr - psg
+manchesterUnited - milan
+bye - barcelona
+realMadrid - atletico
+inter - leipzig
+tottenham - liverpool
+dortmund - bayern
+juventus - manchesterCity
 Rodada 30
-Time do Talisca - Chelsea
-Manchester United - Arsenal
-Olympique Marseille - Paris Saint Germain
-Real Madrid - Milan
-Inter - Barcelona
-Tottenham - Atlético de Madrid
-Borussia Dortmund - RB Leipzig
-Juventus - Liverpool
-Manchester City- Bayern Munchen
+nassr - chelsea
+manchesterUnited - arsenal
+bye - psg
+realMadrid - milan
+inter - barcelona
+tottenham - atletico
+dortmund - leipzig
+juventus - liverpool
+manchesterCity- bayern
 
 Rodada 31
-Manchester United - Chelsea
-Olympique Marseille - Time do Talisca
-Real Madrid - Arsenal
-Inter - Paris Saint Germain
-Tottenham - Milan
-Borussia Dortmund - Barcelona
-Juventus - Atlético de Madrid
-Manchester City- RB Leipzig
-Bayern Munchen - Liverpool
+manchesterUnited - chelsea
+bye - nassr
+realMadrid - arsenal
+inter - psg
+tottenham - milan
+dortmund - barcelona
+juventus - atletico
+manchesterCity- leipzig
+bayern - liverpool
 Rodada 32
-Olympique Marseille - Chelsea
-Real Madrid - Manchester United
-Inter - Time do Talisca
-Tottenham - Arsenal
-Borussia Dortmund - Paris Saint Germain
-Juventus - Milan
-Manchester City- Barcelona
-Bayern Munchen - Atlético de Madrid
-Liverpool - RB Leipzig
+bye - chelsea
+realMadrid - manchesterUnited
+inter - nassr
+tottenham - arsenal
+dortmund - psg
+juventus - milan
+manchesterCity- barcelona
+bayern - atletico
+liverpool - leipzig
 Rodada 33
-Real Madrid - Chelsea
-Inter - Olympique Marseille
-Tottenham - Manchester United
-Borussia Dortmund - Time do Talisca
-Juventus - Arsenal
-Manchester City- Paris Saint Germain
-Bayern Munchen - Milan
-Liverpool - Barcelona
-RB Leipzig - Atlético de Madrid
+realMadrid - chelsea
+inter - bye
+tottenham - manchesterUnited
+dortmund - nassr
+juventus - arsenal
+manchesterCity- psg
+bayern - milan
+liverpool - barcelona
+leipzig - atletico
 Rodada 34
-Inter - Chelsea
-Tottenham - Real Madrid
-Borussia Dortmund - Olympique Marseille
-Juventus - Manchester United
-Manchester City- Time do Talisca
-Bayern Munchen - Arsenal
-Liverpool - Paris Saint Germain
-RB Leipzig - Milan
-Atlético de Madrid - Barcelona
+inter - chelsea
+tottenham - realMadrid
+dortmund - bye
+juventus - manchesterUnited
+manchesterCity- nassr
+bayern - arsenal
+liverpool - psg
+leipzig - milan
+atletico - barcelona

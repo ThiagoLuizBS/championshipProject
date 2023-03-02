@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import App from "./App";
 import { Equipes } from "./pages/Equipes";
 import { Home } from "./pages/Home";
 import { Regulamento } from "./pages/Regulamento";

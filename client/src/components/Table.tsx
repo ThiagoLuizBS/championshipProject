@@ -1,5 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { Table } from "react-bootstrap";
+import {
+  BsCheckCircleFill,
+  BsDashCircleFill,
+  BsFillXCircleFill,
+} from "react-icons/bs";
 
 type campeonatoProps = {
   id: string;
@@ -11,13 +16,14 @@ type rowProps = {
   posicao: number;
   equipe: { id: string; logo: string; nome: string; treinador: string };
   pontos: number;
+  partidas: number;
   vitorias: number;
   empates: number;
   derrotas: number;
   gols_marcados: number;
   gols_sofridos: number;
   saldo_de_gols: number;
-  aproveitamento: string;
+  aproveitamento: number;
   forma: string[];
 };
 
@@ -33,14 +39,15 @@ export function TableApp() {
   }, []);
 
   return (
-    <div className="table-responsive">
+    <div id="responsive-table">
       <Table className="table table-hover table-dark">
         <thead>
-          <tr id="form-table">
+          <tr className="form-th-table">
             <th className="col-num-table">P</th>
             <th></th>
-            <th className="col-name-table">EQUIPE</th>
-            <th className="col-num-table">PTS</th>
+            <th className="col-num-table">EQUIPE</th>
+            <th className="col-num-table">PT</th>
+            <th className="col-num-table">J</th>
             <th className="col-num-table">V</th>
             <th className="col-num-table">E</th>
             <th className="col-num-table">D</th>
@@ -53,56 +60,55 @@ export function TableApp() {
         </thead>
         <tbody>
           {campeonato[0]?.table.map((row: rowProps) => (
-            <tr key={row.equipe.id} id="form-table">
+            <tr key={row.equipe.nome} className="form-td-table">
               <td>{row.posicao}</td>
               <td>
-                <img src={row.equipe.logo} alt={row.equipe.nome} width="30px" />
+                <img
+                  className="img-table"
+                  src={row.equipe.logo}
+                  alt={row.equipe.nome}
+                />
               </td>
               <td className="col-name-table">{row.equipe.nome}</td>
               <td className="col-num-table">{row.pontos}</td>
+              <td className="col-num-table">{row.partidas}</td>
               <td className="col-num-table">{row.vitorias}</td>
               <td className="col-num-table">{row.empates}</td>
               <td className="col-num-table">{row.derrotas}</td>
               <td className="col-num-table">{row.gols_marcados}</td>
               <td className="col-num-table">{row.gols_sofridos}</td>
               <td className="col-num-table">{row.saldo_de_gols}</td>
-              <td className="col-num-table">{row.aproveitamento}</td>
+              <td className="col-num-table">{row.aproveitamento}%</td>
               <td>
-                {row.forma.map((partida: string, i) => (
-                  <>
-                    {partida === "V" ? (
-                      <img
-                        key={i}
-                        className="form-pad-table"
-                        src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png"
-                        width="20px"
-                        alt="vitoria"
+                {row.forma.map((resultado: string, i) => (
+                  <Fragment key={i}>
+                    {resultado === "V" ? (
+                      <BsCheckCircleFill
+                        className="form-pad-table green-table"
                         title="vitoria"
                       />
                     ) : (
                       <>
-                        {partida === "E" ? (
-                          <img
-                            key={i}
-                            className="form-pad-table"
-                            src="https://cdn-icons-png.flaticon.com/512/7193/7193157.png"
-                            width="20px"
-                            alt="empate"
+                        {resultado === "E" ? (
+                          <BsDashCircleFill
+                            className="form-pad-table gray-table"
                             title="empate"
                           />
                         ) : (
-                          <img
-                            key={i}
-                            className="form-pad-table"
-                            src="https://cdn-icons-png.flaticon.com/512/3389/3389152.png"
-                            width="20px"
-                            alt="derrota"
-                            title="derrota"
-                          />
+                          <>
+                            {resultado === "D" ? (
+                              <BsFillXCircleFill
+                                className="form-pad-table red-table"
+                                title="derrota"
+                              />
+                            ) : (
+                              <></>
+                            )}
+                          </>
                         )}
                       </>
                     )}
-                  </>
+                  </Fragment>
                 ))}
               </td>
             </tr>

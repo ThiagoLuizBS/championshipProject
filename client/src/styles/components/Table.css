@@ -1,20 +1,47 @@
-.table-responsive {
+#responsive-table {
   padding-top: 20px;
   padding-bottom: 20px;
   overflow-x: auto;
   font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #21282e;
 }
 
-#form-table {
+.form-th-table,
+.form-td-table {
   text-align: center;
+  vertical-align: middle;
+}
+
+.form-th-table {
+  color: antiquewhite;
 }
 
 .form-pad-table {
-  padding-right: 2px;
+  margin-right: 2px;
+}
+
+.green-table {
+  width: 16px;
+  height: 16px;
+  color: rgb(32, 121, 32);
+}
+
+.gray-table {
+  color: gray;
+}
+
+.red-table {
+  color: #8b1717;
 }
 
 td {
   vertical-align: middle;
+}
+
+.img-table {
+  width: 30px;
+  height: 30px;
 }
 
 .table {
@@ -30,18 +57,17 @@ td.col-num-table {
   width: 50px;
 }
 
-th.col-name-table,
 td.col-name-table {
   text-align: start;
   width: 250px;
 }
 
-.table-responsive > table > thead > tr > th,
-.table-responsive > table > tbody > tr > th,
-.table-responsive > table > tfoot > tr > th,
-.table-responsive > table > thead > tr > td,
-.table-responsive > table > tbody > tr > td,
-.table-responsive > table > tfoot > tr > td {
+#responsive-table > table > thead > tr > th,
+#responsive-table > table > tbody > tr > th,
+#responsive-table > table > tfoot > tr > th,
+#responsive-table > table > thead > tr > td,
+#responsive-table > table > tbody > tr > td,
+#responsive-table > table > tfoot > tr > td {
   white-space: nowrap;
 }
 
@@ -70,7 +96,7 @@ td.col-name-table {
 }
 
 @media only screen and (max-width: 768px) {
-  .table-responsive {
+  #responsive-table {
     width: 100%;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -79,25 +105,25 @@ td.col-name-table {
     box-shadow: none;
     border-radius: 0;
   }
-  .table-responsive > table {
+  #responsive-table > table {
     margin-bottom: 0;
     background-color: #fff;
   }
-  .table-responsive > table > thead > tr > th,
-  .table-responsive > table > tbody > tr > th,
-  .table-responsive > table > tfoot > tr > th,
-  .table-responsive > table > thead > tr > td,
-  .table-responsive > table > tbody > tr > td,
-  .table-responsive > table > tfoot > tr > td {
+  #responsive-table > table > thead > tr > th,
+  #responsive-table > table > tbody > tr > th,
+  #responsive-table > table > tfoot > tr > th,
+  #responsive-table > table > thead > tr > td,
+  #responsive-table > table > tbody > tr > td,
+  #responsive-table > table > tfoot > tr > td {
     white-space: nowrap;
   }
-  .table-responsive > table > tbody > tr {
+  #responsive-table > table > tbody > tr {
     border: none;
   }
-  .table-responsive > table > tbody > tr:nth-of-type(odd) {
+  #responsive-table > table > tbody > tr:nth-of-type(odd) {
     background-color: rgba(0, 0, 0, 0.05);
   }
-  .table-responsive > table > tbody > tr > td:before {
+  #responsive-table > table > tbody > tr > td:before {
     content: attr(data-label);
     float: left;
     font-weight: bold;

@@ -1,5 +1,6 @@
-#games-title-responsive {
+#responsive-games {
   padding-top: 20px;
+  padding-bottom: 20px;
   font-weight: bold;
   display: flex;
   flex-direction: column;
@@ -7,16 +8,7 @@
   text-align: center;
   flex-wrap: nowrap;
   color: white;
-}
-
-#games-responsive {
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  flex-wrap: nowrap;
-  color: white;
+  background-color: #21282e;
 }
 
 .rodada-games {
@@ -30,19 +22,17 @@
   margin: 0;
 }
 
-#col-left-games {
+.col-games {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#col-right-games {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#button-games {
+#button-1-games,
+#button-2-games,
+#button-3-games,
+#button-4-games,
+#button-5-games {
   color: white;
   background: rgba(76, 175, 80, 0);
   border: none;
@@ -52,13 +42,28 @@
   padding: 0;
 }
 
+#button-1-games,
+#button-2-games,
+#button-3-games {
+  color: antiquewhite;
+}
+
+.bye-games {
+  color: antiquewhite;
+}
+
 .img-games {
   width: 30px;
+  height: 30px;
 }
 
 @media only screen and (max-width: 992px) {
-  #button-games {
-    font-size: 12px;
+  #button-1-games,
+  #button-2-games,
+  #button-3-games,
+  #button-4-games,
+  #button-5-games {
+    font-size: 16px;
   }
 }
 
@@ -69,7 +74,11 @@
 }
 
 @media only screen and (max-width: 300px) {
-  #button-games {
+  #button-1-games,
+  #button-2-games,
+  #button-3-games,
+  #button-4-games,
+  #button-5-games {
     font-size: 10px;
   }
 
@@ -79,15 +88,21 @@
 
   .img-games {
     width: 25px;
+    height: 25px;
   }
 }
 
 @media only screen and (max-width: 200px) {
-  .img-games {
-    width: 20px;
+  #button-1-games,
+  #button-2-games,
+  #button-3-games,
+  #button-4-games,
+  #button-5-games {
+    font-size: 10px;
   }
 
-  #button-games {
-    font-size: 10px;
+  .img-games {
+    width: 20px;
+    height: 20px;
   }
 }
