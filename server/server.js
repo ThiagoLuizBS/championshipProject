@@ -3624,7 +3624,7 @@ equipes.forEach((equipe) => {
         gols_sofridos =
           gols_sofridos + parseInt(rodadas[x].rodada[y].placarFora);
         saldo_de_gols = gols_marcados - gols_sofridos;
-        aproveitamento = parseFloat(pontos / (partidas * 3)).toFixed(2);
+        aproveitamento = parseFloat(pontos / (partidas * 3)).toFixed(1);
       } else if (
         rodadas[x].rodada[y].fora.nome === equipe.nome &&
         rodadas[x].rodada[y].status !== "MARCADO"
@@ -3651,7 +3651,7 @@ equipes.forEach((equipe) => {
         gols_sofridos =
           gols_sofridos + parseInt(rodadas[x].rodada[y].placarCasa);
         saldo_de_gols = gols_marcados - gols_sofridos;
-        aproveitamento = parseFloat(pontos / (partidas * 3)).toFixed(2);
+        aproveitamento = parseFloat(pontos / (partidas * 3)).toFixed(1);
       }
     }
   }
