@@ -761,8 +761,8 @@ const rodada5 = [
   {
     idCampeonato: "1",
     idPartida: "1042",
-    casa: juventus,
-    fora: leipzig,
+    casa: leipzig,
+    fora: juventus,
     status: "REALIZADO",
     data: "2023-03-06T00:10:27.575Z",
     placarCasa: "6",
