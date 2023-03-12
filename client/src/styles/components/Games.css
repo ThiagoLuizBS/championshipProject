@@ -57,6 +57,12 @@
   height: 30px;
 }
 
+.match-games {
+  font-size: 1.1rem;
+  font-weight: bold;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 992px) {
   #button-1-games,
   #button-2-games,
@@ -89,6 +95,10 @@
   .img-games {
     width: 25px;
     height: 25px;
+  }
+
+  .match-games {
+    font-size: 0.8rem;
   }
 }
 

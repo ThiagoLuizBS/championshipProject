@@ -1363,12 +1363,12 @@ const rodada11 = [
   {
     idCampeonato: "1",
     idPartida: "1105",
-    casa: liverpool,
-    fora: realMadrid,
-    status: "MARCADO",
-    data: "",
-    placarCasa: "0",
-    placarFora: "0",
+    casa: realMadrid,
+    fora: liverpool,
+    status: "REALIZADO",
+    data: "2023-03-12T02:19:37.860Z",
+    placarCasa: "2",
+    placarFora: "4",
   },
   {
     idCampeonato: "1",

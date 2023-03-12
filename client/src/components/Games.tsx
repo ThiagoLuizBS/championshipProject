@@ -112,9 +112,21 @@ export function Games() {
                   {partida.status === "MARCADO" ? (
                     <span>A realizar</span>
                   ) : (
-                    <span>
-                      {partida.placarCasa} - {partida.placarFora}
-                    </span>
+                    <>
+                      <Col className="col-games">
+                        <span className="match-games">
+                          {partida.placarCasa}
+                        </span>
+                      </Col>
+                      <Col className="col-games">
+                        <span className="match-games">-</span>
+                      </Col>
+                      <Col className="col-games">
+                        <span className="match-games">
+                          {partida.placarFora}
+                        </span>
+                      </Col>
+                    </>
                   )}
                 </Col>
                 <Col className="col-games" lg={3} md={2} xs={3}>
