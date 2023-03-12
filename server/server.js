@@ -361,6 +361,20 @@ const camp = [
         aproveitamento: 0,
         forma: [],
       },
+      {
+        posicao: 18,
+        equipe: napoli,
+        pontos: 0,
+        partidas: 0,
+        vitorias: 0,
+        empates: 0,
+        derrotas: 0,
+        gols_marcados: 0,
+        gols_sofridos: 0,
+        saldo_de_gols: 0,
+        aproveitamento: 0,
+        forma: [],
+      },
     ],
   },
 ];
@@ -3582,6 +3596,7 @@ const equipes = [
   atletico,
   milan,
   nassr,
+  napoli,
 ];
 
 /* funcao para atualizar tabela */
