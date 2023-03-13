@@ -8,9 +8,11 @@
 a.option-header,
 a.option-selected-header {
   font-weight: bold;
-  padding: 0.5rem 0.5rem;
+  padding: 0.25rem 0.5rem;
   color: rgb(0, 0, 0, 0.5);
   text-decoration: none;
+  border-top: 1px solid #10fab3;
+  border-bottom: 1px solid #10fab3;
 }
 
 a.option-selected-header {

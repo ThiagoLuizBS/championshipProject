@@ -11,6 +11,7 @@
 .row-detalhes {
   border: 1px solid rgb(250, 235, 215, 0.1);
   border-radius: 20px;
+  font-size: 1rem;
 }
 
 .row-down-detalhes {
@@ -18,8 +19,23 @@
   flex-direction: column;
   align-content: center;
   border: 1px solid rgb(250, 235, 215, 0.1);
+  padding: 10px;
   border-radius: 20px;
-  max-height: 784px;
+  gap: 0 50px;
+  max-height: 812px;
+  font-size: 1rem;
+}
+
+.row-top-detalhes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.row-inside-detalhes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .img-detalhes {
@@ -27,18 +43,278 @@
   max-height: 100%;
 }
 
+.img-down-detalhes {
+  width: 30px;
+  height: 30px;
+}
+
+.col-inside-detalhes {
+  margin: 0.5em 0;
+}
+
 .col-detalhes {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  gap: 20px;
-  margin: 0.5rem 0.25rem;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem 0rem;
+}
+
+.col-down-detalhes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.match-detalhes {
+  font-size: 1.1rem;
+  font-weight: bold;
+  justify-content: center;
 }
 
 .partida-detalhes {
   display: flex;
   text-align: center;
   justify-content: center;
-  padding: 0.5rem;
+  padding: 0.5em;
   margin: 0;
+}
+
+.col-1-detalhes,
+.col-2-detalhes {
+  color: white;
+  background: rgba(76, 175, 80, 0);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.title-detalhes {
+  color: antiquewhite;
+  font-weight: bolder;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.name-detalhes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 1.4rem;
+  height: 28.8px;
+}
+
+.form-pad-detalhes {
+  margin-right: 2px;
+}
+
+.green-detalhes {
+  max-width: 1em;
+  max-height: 1em;
+  color: rgb(32, 121, 32);
+}
+
+.gray-detalhes {
+  color: gray;
+}
+
+.red-detalhes {
+  color: #8b1717;
+}
+
+@media only screen and (max-width: 992px) {
+  .title-detalhes,
+  .name-detalhes {
+    font-size: 1.2rem;
+  }
+
+  .name-detalhes {
+    max-height: 24px;
+  }
+
+  .img-detalhes {
+    height: 130px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .title-detalhes,
+  .name-detalhes {
+    font-size: 0.9rem;
+  }
+
+  .name-detalhes {
+    max-height: 15.61px;
+  }
+
+  .img-detalhes {
+    height: 100px;
+  }
+  .row-down-detalhes {
+    gap: 0;
+  }
+
+  .col-1-detalhes,
+  .col-2-detalhes {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .title-detalhes,
+  .name-detalhes {
+    font-size: 1rem;
+  }
+
+  .name-detalhes {
+    max-height: 20px;
+  }
+
+  .img-detalhes {
+    height: 120px;
+  }
+
+  .col-1-detalhes,
+  .col-2-detalhes {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 472px) {
+  .title-detalhes,
+  .name-detalhes {
+    font-size: 1rem;
+  }
+
+  .name-detalhes {
+    max-height: 20px;
+  }
+
+  .img-detalhes {
+    height: 110px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .title-detalhes,
+  .name-detalhes {
+    font-size: 0.9rem;
+  }
+
+  .name-detalhes {
+    max-height: 16px;
+  }
+
+  .img-detalhes {
+    height: 90px;
+  }
+
+  .col-1-detalhes,
+  .col-2-detalhes {
+    font-size: 0.6rem;
+  }
+
+  .match-detalhes {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .img-detalhes {
+    height: 80px;
+  }
+
+  .col-1-detalhes,
+  .col-2-detalhes {
+    font-size: 0.55rem;
+  }
+
+  .img-down-detalhes {
+    width: 25px;
+    height: 25px;
+  }
+
+  .row-down-detalhes {
+    max-height: 727px;
+  }
+
+  .match-detalhes {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .title-detalhes,
+  .name-detalhes {
+    font-size: 0.7rem;
+  }
+
+  .name-detalhes {
+    max-height: 12px;
+  }
+
+  .img-detalhes {
+    height: 65px;
+  }
+
+  .col-1-detalhes,
+  .col-2-detalhes {
+    font-size: 0.45rem;
+  }
+
+  .match-detalhes {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 250px) {
+  .title-detalhes,
+  .name-detalhes {
+    font-size: 0.6rem;
+  }
+
+  .name-detalhes {
+    max-height: 10px;
+  }
+
+  .img-detalhes {
+    height: 55px;
+  }
+
+  .col-1-detalhes,
+  .col-2-detalhes {
+    font-size: 0.4rem;
+  }
+
+  .match-detalhes {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 225px) {
+  .title-detalhes,
+  .name-detalhes {
+    font-size: 0.5rem;
+  }
+
+  .name-detalhes {
+    max-height: 9px;
+  }
+
+  .img-detalhes {
+    height: 50px;
+  }
+
+  .col-1-detalhes,
+  .col-2-detalhes {
+    font-size: 0.3rem;
+  }
+
+  .match-detalhes {
+    font-size: 0.6rem;
+  }
 }

@@ -65,7 +65,7 @@ export function Games() {
               <AiOutlineArrowLeft />
             </Button>
           </Col>
-          <Col id="button-2-games" lg={6} md={5} xs={6}>
+          <Col className="button-2-games" lg={6} md={5} xs={6}>
             <span>Rodada {rodadaNum}</span>
           </Col>
           <Col className="col-games" xs={3}>
@@ -90,7 +90,7 @@ export function Games() {
                     <img className="img-games" src={partida.casa.logo} />
                   )}
                 </Col>
-                <Col lg={6} md={6} xs={6} id="button-4-games">
+                <Col lg={6} md={6} xs={6} className="button-4-games">
                   {partida.status === "MARCADO" ? (
                     <span>Sem partida</span>
                   ) : (
@@ -108,7 +108,7 @@ export function Games() {
                 <Col className="col-games" lg={3} md={2} xs={3}>
                   <img className="img-games" src={partida.casa.logo} />
                 </Col>
-                <Col lg={6} md={6} xs={6} id="button-5-games">
+                <Col lg={6} md={6} xs={6} className="button-5-games">
                   {partida.status === "MARCADO" ? (
                     <span>A realizar</span>
                   ) : (

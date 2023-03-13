@@ -75,187 +75,183 @@ export function Detalhes() {
   return (
     <Container className="container-detalhes">
       <Row lg={12} xs={12} className="row-detalhes">
-        <Col lg={2} sm={2} xs={2} className="col-detalhes">
+        <Col lg={4} xs={4} className="col-detalhes">
           <img className="img-detalhes" src={equipe?.equipe.logo} />
-          <span className="treinador-nome-equipes">
-            {equipe?.equipe.treinador}
-          </span>
         </Col>
         <Col className="col-detalhes">
-          <Row className="row-equipes">
-            <Col>
-              <Col className="treinador-equipes">Posição</Col>
+          <Row className="row-top-detalhes">
+            <Col className="col-detalhes">
+              <Col className="title-detalhes">Treinador</Col>
               <Col>
-                <span className="treinador-nome-equipes">
-                  {equipe?.posicao}°
+                <span className="name-detalhes">
+                  {equipe?.equipe?.treinador}
                 </span>
               </Col>
             </Col>
-            <Col>
-              <Col className="treinador-equipes">Vitorias</Col>
+            <Col className="col-detalhes">
+              <Col className="title-detalhes">Jogos</Col>
               <Col>
-                <span className="treinador-nome-equipes">
-                  {equipe?.vitorias}
-                </span>
-              </Col>
-            </Col>
-            <Col>
-              <Col className="treinador-equipes">Empates</Col>
-              <Col>
-                <span className="treinador-nome-equipes">
-                  {equipe?.empates}
-                </span>
-              </Col>
-            </Col>
-            <Col>
-              <Col className="treinador-equipes">Derrotas</Col>
-              <Col>
-                <span className="treinador-nome-equipes">
-                  {equipe?.derrotas}
-                </span>
-              </Col>
-            </Col>
-            <Col>
-              <Col className="treinador-equipes">Aproveitamento</Col>
-              <Col>
-                <span className="treinador-nome-equipes">
-                  {equipe?.aproveitamento}%
-                </span>
+                <span className="name-detalhes">{equipe?.partidas}</span>
               </Col>
             </Col>
           </Row>
-          <Row className="row-equipes">
-            <Col>
-              <Col className="treinador-equipes">Pontos</Col>
+        </Col>
+        <Col className="col-detalhes">
+          <Row className="row-top-detalhes">
+            <Col className="col-detalhes">
+              <Col className="title-detalhes">Posição</Col>
               <Col>
-                <span className="treinador-nome-equipes">{equipe?.pontos}</span>
+                <span className="name-detalhes">{equipe?.posicao}°</span>
               </Col>
             </Col>
-            <Col>
-              <Col className="treinador-equipes">Gols marcados</Col>
+            <Col className="col-detalhes">
+              <Col className="title-detalhes">Pontos</Col>
               <Col>
-                <span className="treinador-nome-equipes">
-                  {equipe?.gols_marcados}
-                </span>
-              </Col>
-            </Col>
-            <Col>
-              <Col className="treinador-equipes">Gols sofridos</Col>
-              <Col>
-                <span className="treinador-nome-equipes">
-                  {equipe?.gols_sofridos}
-                </span>
-              </Col>
-            </Col>
-            <Col>
-              <Col className="treinador-equipes">Saldo de gols</Col>
-              <Col>
-                <span className="treinador-nome-equipes">
-                  {equipe?.saldo_de_gols}
-                </span>
-              </Col>
-            </Col>
-
-            <Col>
-              <Col className="treinador-equipes">Últimos 5 jogos</Col>
-              <Col>
-                {equipe?.forma.map((resultado: string, i) => (
-                  <Fragment key={i}>
-                    {resultado === "V" ? (
-                      <BsCheckCircleFill
-                        className="form-pad-table green-table"
-                        title="vitoria"
-                      />
-                    ) : (
-                      <>
-                        {resultado === "E" ? (
-                          <BsDashCircleFill
-                            className="form-pad-table gray-table"
-                            title="empate"
-                          />
-                        ) : (
-                          <>
-                            {resultado === "D" ? (
-                              <BsFillXCircleFill
-                                className="form-pad-table red-table"
-                                title="derrota"
-                              />
-                            ) : (
-                              <></>
-                            )}
-                          </>
-                        )}
-                      </>
-                    )}
-                  </Fragment>
-                ))}
-              </Col>
-            </Col>
-          </Row>
-          <Row className="row-equipes">
-            <Col>
-              <Col className="treinador-equipes">Jogos</Col>
-              <Col>
-                <span className="treinador-nome-equipes">
-                  {equipe?.partidas}
-                </span>
-              </Col>
-            </Col>
-            <Col>
-              <Col className="treinador-equipes">GM por jogo</Col>
-              <Col>
-                <span className="treinador-nome-equipes">
-                  {equipe?.media_feitos_jogo}
-                </span>
-              </Col>
-            </Col>
-            <Col>
-              <Col className="treinador-equipes">GS por jogo</Col>
-              <Col>
-                <span className="treinador-nome-equipes">
-                  {equipe?.media_sofridos_jogo}
-                </span>
-              </Col>
-            </Col>
-            <Col>
-              <Col className="treinador-equipes">Clean Sheets</Col>
-              <Col>
-                <span className="treinador-nome-equipes">
-                  {equipe?.clean_sheets}
-                </span>
-              </Col>
-            </Col>
-            <Col>
-              <Col>
-                <Col className="treinador-equipes">Sem marcar</Col>
-                <Col>
-                  <span className="treinador-nome-equipes">
-                    {equipe?.sem_marcar}
-                  </span>
-                </Col>
+                <span className="name-detalhes">{equipe?.pontos}</span>
               </Col>
             </Col>
           </Row>
         </Col>
       </Row>
-      <Row lg={12} xs={12} className="row-down-detalhes">
+      <Row lg={12} xs={12} className="row-detalhes">
+        <Row className="row-inside-detalhes">
+          <Col sm={3} xs={6} className="col-inside-detalhes">
+            <Col className="title-detalhes">Vitorias</Col>
+            <Col>
+              <span className="name-detalhes">{equipe?.vitorias}</span>
+            </Col>
+          </Col>
+          <Col sm={3} xs={6} className="col-inside-detalhes">
+            <Col className="title-detalhes">Empates</Col>
+            <Col>
+              <span className="name-detalhes">{equipe?.empates}</span>
+            </Col>
+          </Col>
+          <Col sm={3} xs={6} className="col-inside-detalhes">
+            <Col className="title-detalhes">Derrotas</Col>
+            <Col>
+              <span className="name-detalhes">{equipe?.derrotas}</span>
+            </Col>
+          </Col>
+          <Col sm={3} xs={6} className="col-inside-detalhes">
+            <Col className="title-detalhes">Aproveitamento</Col>
+            <Col>
+              <span className="name-detalhes">{equipe?.aproveitamento}%</span>
+            </Col>
+          </Col>
+        </Row>
+        <Row className="row-inside-detalhes">
+          <Col sm={3} xs={6} className="col-inside-detalhes">
+            <Col className="title-detalhes">Gols marcados</Col>
+            <Col>
+              <span className="name-detalhes">{equipe?.gols_marcados}</span>
+            </Col>
+          </Col>
+          <Col sm={3} xs={6} className="col-inside-detalhes">
+            <Col className="title-detalhes">Gols sofridos</Col>
+            <Col>
+              <span className="name-detalhes">{equipe?.gols_sofridos}</span>
+            </Col>
+          </Col>
+          <Col sm={3} xs={6} className="col-inside-detalhes">
+            <Col className="title-detalhes">Saldo de gols</Col>
+            <Col>
+              <span className="name-detalhes">{equipe?.saldo_de_gols}</span>
+            </Col>
+          </Col>
+          <Col sm={3} xs={6} className="col-inside-detalhes">
+            <Col className="title-detalhes">Últimos 5 jogos</Col>
+            <Col className="name-detalhes">
+              {equipe?.forma.map((resultado: string, i) => (
+                <Fragment key={i}>
+                  {resultado === "V" ? (
+                    <BsCheckCircleFill
+                      className="form-pad-detalhes green-detalhes"
+                      title="vitoria"
+                    />
+                  ) : (
+                    <>
+                      {resultado === "E" ? (
+                        <BsDashCircleFill
+                          className="form-pad-detalhes gray-detalhes"
+                          title="empate"
+                        />
+                      ) : (
+                        <>
+                          {resultado === "D" ? (
+                            <BsFillXCircleFill
+                              className="form-pad-detalhes red-detalhes"
+                              title="derrota"
+                            />
+                          ) : (
+                            <></>
+                          )}
+                        </>
+                      )}
+                    </>
+                  )}
+                </Fragment>
+              ))}
+            </Col>
+          </Col>
+        </Row>
+        <Row className="row-inside-detalhes">
+          <Col sm={3} xs={6} className="col-inside-detalhes">
+            <Col className="title-detalhes">GM por jogo</Col>
+            <Col>
+              <span className="name-detalhes">{equipe?.media_feitos_jogo}</span>
+            </Col>
+          </Col>
+          <Col sm={3} xs={6} className="col-inside-detalhes">
+            <Col className="title-detalhes">GS por jogo</Col>
+            <Col>
+              <span className="name-detalhes">
+                {equipe?.media_sofridos_jogo}
+              </span>
+            </Col>
+          </Col>
+          <Col sm={3} xs={6} className="col-inside-detalhes">
+            <Col className="title-detalhes">Clean Sheets</Col>
+            <Col>
+              <span className="name-detalhes">{equipe?.clean_sheets}</span>
+            </Col>
+          </Col>
+          <Col sm={3} xs={6} className="col-inside-detalhes">
+            <Col>
+              <Col className="title-detalhes">Sem marcar</Col>
+              <Col>
+                <span className="name-detalhes">{equipe?.sem_marcar}</span>
+              </Col>
+            </Col>
+          </Col>
+        </Row>
+      </Row>
+      <Row md={12} sm={12} xs={12} className="row-down-detalhes">
         {partidas?.map((partida: partidaProps) => (
           <Col
             lg={3}
-            xs={3}
+            md={4}
+            sm={5}
+            xs={6}
             className="partida-detalhes"
             key={partida.idPartida}
           >
             {partida.casa.nome === "BYE" || partida.fora.nome === "BYE" ? (
               <>
-                <Col className="col-games">
+                <Col className="col-down-detalhes">
                   {partida.casa.logo === "" ? (
-                    <img className="img-games" src={partida.fora.logo} />
+                    <img
+                      className="img-down-detalhes"
+                      src={partida.fora.logo}
+                    />
                   ) : (
-                    <img className="img-games" src={partida.casa.logo} />
+                    <img
+                      className="img-down-detalhes"
+                      src={partida.casa.logo}
+                    />
                   )}
                 </Col>
-                <Col id="button-4-games">
+                <Col className="col-1-detalhes">
                   {partida.status === "MARCADO" ? (
                     <span>Sem partida</span>
                   ) : (
@@ -264,38 +260,38 @@ export function Detalhes() {
                     </span>
                   )}
                 </Col>
-                <Col className="col-games">
+                <Col className="col-down-detalhes">
                   <span className="bye-games">BYE</span>
                 </Col>
               </>
             ) : (
               <>
-                <Col className="col-games">
-                  <img className="img-games" src={partida.casa.logo} />
+                <Col className="col-down-detalhes">
+                  <img className="img-down-detalhes" src={partida.casa.logo} />
                 </Col>
-                <Col id="button-5-games">
+                <Col className="col-2-detalhes">
                   {partida.status === "MARCADO" ? (
                     <span>A realizar</span>
                   ) : (
                     <>
-                      <Col className="col-games">
-                        <span className="match-games">
+                      <Col className="col-down-detalhes">
+                        <span className="match-detalhes">
                           {partida.placarCasa}
                         </span>
                       </Col>
-                      <Col className="col-games">
-                        <span className="match-games">-</span>
+                      <Col className="col-down-detalhes">
+                        <span className="match-detalhes">-</span>
                       </Col>
-                      <Col className="col-games">
-                        <span className="match-games">
+                      <Col className="col-down-detalhes">
+                        <span className="match-detalhes">
                           {partida.placarFora}
                         </span>
                       </Col>
                     </>
                   )}
                 </Col>
-                <Col className="col-games">
-                  <img className="img-games" src={partida.fora.logo} />
+                <Col className="col-down-detalhes">
+                  <img className="img-down-detalhes" src={partida.fora.logo} />
                 </Col>
               </>
             )}

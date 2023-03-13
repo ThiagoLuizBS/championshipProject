@@ -29,10 +29,10 @@
 }
 
 #button-1-games,
-#button-2-games,
+.button-2-games,
 #button-3-games,
-#button-4-games,
-#button-5-games {
+.button-4-games,
+.button-5-games {
   color: white;
   background: rgba(76, 175, 80, 0);
   border: none;
@@ -42,9 +42,9 @@
   padding: 0;
 }
 
-#button-1-games,
-#button-2-games,
-#button-3-games {
+.button-1-games,
+.button-2-games,
+.button-3-games {
   color: antiquewhite;
 }
 
@@ -65,10 +65,10 @@
 
 @media only screen and (max-width: 992px) {
   #button-1-games,
-  #button-2-games,
+  .button-2-games,
   #button-3-games,
-  #button-4-games,
-  #button-5-games {
+  .button-4-games,
+  .button-5-games {
     font-size: 16px;
   }
 }
@@ -81,10 +81,10 @@
 
 @media only screen and (max-width: 300px) {
   #button-1-games,
-  #button-2-games,
+  .button-2-games,
   #button-3-games,
-  #button-4-games,
-  #button-5-games {
+  .button-4-games,
+  .button-5-games {
     font-size: 10px;
   }
 
@@ -104,10 +104,10 @@
 
 @media only screen and (max-width: 200px) {
   #button-1-games,
-  #button-2-games,
+  .button-2-games,
   #button-3-games,
-  #button-4-games,
-  #button-5-games {
+  .button-4-games,
+  .button-5-games {
     font-size: 10px;
   }
 
