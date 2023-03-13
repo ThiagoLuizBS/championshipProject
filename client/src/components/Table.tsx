@@ -5,6 +5,7 @@ import {
   BsDashCircleFill,
   BsFillXCircleFill,
 } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 type campeonatoProps = {
   id: string;
@@ -29,6 +30,17 @@ type rowProps = {
 
 export function TableApp() {
   const [campeonato, setCampeonato] = useState<campeonatoProps[]>([]);
+  const [width, setWidth] = useState(innerWidth);
+
+  useEffect(() => {
+    const updateWindowDimensions = () => {
+      const newWidth = window.innerWidth;
+      setWidth(newWidth);
+    };
+
+    window.addEventListener("resize", updateWindowDimensions);
+    return () => window.removeEventListener("resize", updateWindowDimensions);
+  }, []);
 
   useEffect(() => {
     fetch("https://championship-project-9hyg.vercel.app/camp")
@@ -45,7 +57,7 @@ export function TableApp() {
           <tr className="form-th-table">
             <th className="col-num-table">P</th>
             <th></th>
-            <th className="col-num-table">EQUIPE</th>
+            {width <= 768 ? <></> : <th className="col-num-table">EQUIPE</th>}
             <th className="col-num-table">PT</th>
             <th className="col-num-table">J</th>
             <th className="col-num-table">V</th>
@@ -63,13 +75,23 @@ export function TableApp() {
             <tr key={row.equipe.nome} className="form-td-table">
               <td>{row.posicao}</td>
               <td>
-                <img
-                  className="img-table"
-                  src={row.equipe.logo}
-                  alt={row.equipe.nome}
-                />
+                <Link to={`/equipes/${row.equipe.id}`} className="link-table">
+                  <img
+                    className="img-table"
+                    src={row.equipe.logo}
+                    alt={row.equipe.nome}
+                  />
+                </Link>
               </td>
-              <td className="col-name-table">{row.equipe.nome}</td>
+              {width <= 768 ? (
+                <></>
+              ) : (
+                <td className="col-name-table">
+                  <Link to={`/equipes/${row.equipe.id}`} className="link-table">
+                    {row.equipe.nome}
+                  </Link>
+                </td>
+              )}
               <td className="col-num-table">{row.pontos}</td>
               <td className="col-num-table">{row.partidas}</td>
               <td className="col-num-table">{row.vitorias}</td>

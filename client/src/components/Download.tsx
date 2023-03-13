@@ -36,12 +36,14 @@ export function Download() {
     <Row className="button-download">
       <Col lg={6} md={6} xs={6}>
         <button type="button" onClick={handleDownloadTable}>
-          <FiDownload className="img-download" /> Tabela
+          <FiDownload className="img-download" />{" "}
+          <span className="text-download">Tabela</span>
         </button>
       </Col>
       <Col lg={6} md={6} xs={6}>
         <button type="button" onClick={handleDownloadGames}>
-          <FiDownload className="img-download" /> Rodadas
+          <FiDownload className="img-download" />{" "}
+          <span className="text-download">Rodadas</span>
         </button>
       </Col>
     </Row>

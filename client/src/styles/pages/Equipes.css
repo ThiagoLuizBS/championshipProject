@@ -1,7 +1,6 @@
 .container-equipes {
   padding-top: 20px;
   padding-bottom: 20px;
-  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
@@ -24,6 +23,11 @@
   font-weight: bolder;
   font-size: 19px;
   margin-bottom: 10px;
+}
+
+a.link-equipes {
+  color: white;
+  text-decoration: none;
 }
 
 .treinador-equipes {

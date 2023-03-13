@@ -18,6 +18,7 @@ body {
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #21282e;
+  overflow-y: scroll;
 }
 
 a {
@@ -28,6 +29,10 @@ a {
 
 a:hover {
   color: #535bf2;
+}
+
+a:focus-visible {
+  outline: 2px solid antiquewhite;
 }
 
 button {
@@ -47,7 +52,7 @@ button:hover {
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 2px auto antiquewhite;
 }
 
 p {

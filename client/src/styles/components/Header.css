@@ -5,12 +5,34 @@
   border-radius: 8px;
 }
 
+a.option-header,
+a.option-selected-header {
+  font-weight: bold;
+  padding: 0.5rem 0.5rem;
+  color: rgb(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+a.option-selected-header {
+  color: rgb(0, 0, 0, 0.9);
+  border-bottom: 1px solid antiquewhite;
+}
+
+a.option-header:hover {
+  color: rgb(0, 0, 0, 0.9);
+}
+
 .img-header {
   margin-bottom: 2px;
-  margin-right: 5px;
+  margin-right: 0.35rem;
 }
 
 .img-brand-header {
-  width: 50px;
-  height: 50px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.brand-header {
+  height: 4rem;
+  width: 4rem;
 }

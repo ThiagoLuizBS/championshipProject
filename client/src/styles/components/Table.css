@@ -3,7 +3,7 @@
   padding-bottom: 20px;
   overflow-x: auto;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
   background-color: #21282e;
 }
 
@@ -22,8 +22,8 @@
 }
 
 .green-table {
-  width: 16px;
-  height: 16px;
+  width: 1em;
+  height: 1em;
   color: rgb(32, 121, 32);
 }
 
@@ -49,6 +49,11 @@ td {
   align-items: center;
 }
 
+a.link-table {
+  color: aliceblue;
+  text-decoration: none;
+}
+
 th.col-num-table {
   width: 50px;
 }
@@ -57,6 +62,7 @@ td.col-num-table {
   width: 50px;
 }
 
+th.col-name-table,
 td.col-name-table {
   text-align: start;
   width: 250px;
@@ -95,38 +101,33 @@ td.col-name-table {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   #responsive-table {
-    width: 100%;
-    overflow-y: hidden;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    border-collapse: collapse;
-    margin-bottom: 15px;
-    box-shadow: none;
-    border-radius: 0;
+    font-size: 0.9rem;
   }
-  #responsive-table > table {
-    margin-bottom: 0;
-    background-color: #fff;
+
+  th.col-name-table,
+  td.col-name-table {
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-  #responsive-table > table > thead > tr > th,
-  #responsive-table > table > tbody > tr > th,
-  #responsive-table > table > tfoot > tr > th,
-  #responsive-table > table > thead > tr > td,
-  #responsive-table > table > tbody > tr > td,
-  #responsive-table > table > tfoot > tr > td {
-    white-space: nowrap;
+}
+
+@media only screen and (max-width: 768px) {
+  th.col-num-table,
+  td.col-num-table {
+    max-width: 35px;
   }
-  #responsive-table > table > tbody > tr {
-    border: none;
+}
+
+@media only screen and (max-width: 576px) {
+  #responsive-table {
+    font-size: 0.8rem;
   }
-  #responsive-table > table > tbody > tr:nth-of-type(odd) {
-    background-color: rgba(0, 0, 0, 0.05);
-  }
-  #responsive-table > table > tbody > tr > td:before {
-    content: attr(data-label);
-    float: left;
-    font-weight: bold;
-    text-transform: uppercase;
+
+  th.col-num-table,
+  td.col-num-table {
+    max-width: 30px;
   }
 }

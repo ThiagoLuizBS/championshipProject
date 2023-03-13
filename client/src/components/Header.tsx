@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -6,40 +5,58 @@ import cdrLogo from "../assets/LOGOCDR2.png";
 import { ImTrophy } from "react-icons/im";
 import { RiTeamFill } from "react-icons/ri";
 import { HiNewspaper } from "react-icons/hi";
-// import TeamDataService from "../services/team";
+import { Link, useLocation } from "react-router-dom";
 
 export function HeaderApp() {
-  //   useEffect(() => {
-  //     if (searchField === "") {
-  //       setListTeams([]);
-  //     } else {
-  //       TeamDataService.getTeams(searchField).then((response) => {
-  //         setListTeams(response.data.team);
-  //       });
-  //     }
-  //   }, [searchField]);
+  const location = useLocation();
 
   return (
     <Navbar className="bg-teal-header" expand="lg">
       <Container>
-        <Navbar.Brand href="/">
-          <img className="img-brand-header" src={cdrLogo} alt="Search" />
+        <Navbar.Brand className="brand-header">
+          <Link to="/">
+            <img className="img-brand-header" src={cdrLogo} alt="Search" />
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
-            <Nav.Link href="/" title="Tabela">
+            <Link
+              to="/"
+              className={
+                location.pathname === "/"
+                  ? "option-selected-header"
+                  : "option-header"
+              }
+              title="Tabela"
+            >
               <ImTrophy className="img-header" />
               <span>TABELA</span>
-            </Nav.Link>
-            <Nav.Link href="/equipes" title="Equipes">
+            </Link>
+            <Link
+              to="/equipes"
+              className={
+                location.pathname === "/equipes"
+                  ? "option-selected-header"
+                  : "option-header"
+              }
+              title="Equipes"
+            >
               <RiTeamFill className="img-header" />
               <span>EQUIPES</span>
-            </Nav.Link>
-            <Nav.Link href="/regulamento" title="Regulamento">
+            </Link>
+            <Link
+              to="/regulamento"
+              className={
+                location.pathname === "/regulamento"
+                  ? "option-selected-header"
+                  : "option-header"
+              }
+              title="Regulamento"
+            >
               <HiNewspaper className="img-header" />
               <span>REGULAMENTO</span>
-            </Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -136,6 +136,10 @@ const camp = [
         saldo_de_gols: 0,
         aproveitamento: 0,
         forma: [],
+        clean_sheets: 0,
+        sem_marcar: 0,
+        media_feitos_jogo: 0,
+        media_sofridos_jogo: 0,
       },
       {
         posicao: 2,
@@ -150,6 +154,10 @@ const camp = [
         saldo_de_gols: 0,
         aproveitamento: 0,
         forma: [],
+        clean_sheets: 0,
+        sem_marcar: 0,
+        media_feitos_jogo: 0,
+        media_sofridos_jogo: 0,
       },
       {
         posicao: 3,
@@ -164,6 +172,10 @@ const camp = [
         saldo_de_gols: 0,
         aproveitamento: 0,
         forma: [],
+        clean_sheets: 0,
+        sem_marcar: 0,
+        media_feitos_jogo: 0,
+        media_sofridos_jogo: 0,
       },
       {
         posicao: 4,
@@ -178,6 +190,10 @@ const camp = [
         saldo_de_gols: 0,
         aproveitamento: 0,
         forma: [],
+        clean_sheets: 0,
+        sem_marcar: 0,
+        media_feitos_jogo: 0,
+        media_sofridos_jogo: 0,
       },
       {
         posicao: 5,
@@ -192,6 +208,10 @@ const camp = [
         saldo_de_gols: 0,
         aproveitamento: 0,
         forma: [],
+        clean_sheets: 0,
+        sem_marcar: 0,
+        media_feitos_jogo: 0,
+        media_sofridos_jogo: 0,
       },
       {
         posicao: 6,
@@ -206,6 +226,10 @@ const camp = [
         saldo_de_gols: 0,
         aproveitamento: 0,
         forma: [],
+        clean_sheets: 0,
+        sem_marcar: 0,
+        media_feitos_jogo: 0,
+        media_sofridos_jogo: 0,
       },
       {
         posicao: 7,
@@ -220,6 +244,10 @@ const camp = [
         saldo_de_gols: 0,
         aproveitamento: 0,
         forma: [],
+        clean_sheets: 0,
+        sem_marcar: 0,
+        media_feitos_jogo: 0,
+        media_sofridos_jogo: 0,
       },
       {
         posicao: 8,
@@ -234,6 +262,10 @@ const camp = [
         saldo_de_gols: 0,
         aproveitamento: 0,
         forma: [],
+        clean_sheets: 0,
+        sem_marcar: 0,
+        media_feitos_jogo: 0,
+        media_sofridos_jogo: 0,
       },
       {
         posicao: 9,
@@ -248,6 +280,10 @@ const camp = [
         saldo_de_gols: 0,
         aproveitamento: 0,
         forma: [],
+        clean_sheets: 0,
+        sem_marcar: 0,
+        media_feitos_jogo: 0,
+        media_sofridos_jogo: 0,
       },
       {
         posicao: 10,
@@ -262,6 +298,10 @@ const camp = [
         saldo_de_gols: 0,
         aproveitamento: 0,
         forma: [],
+        clean_sheets: 0,
+        sem_marcar: 0,
+        media_feitos_jogo: 0,
+        media_sofridos_jogo: 0,
       },
       {
         posicao: 11,
@@ -276,6 +316,10 @@ const camp = [
         saldo_de_gols: 0,
         aproveitamento: 0,
         forma: [],
+        clean_sheets: 0,
+        sem_marcar: 0,
+        media_feitos_jogo: 0,
+        media_sofridos_jogo: 0,
       },
       {
         posicao: 12,
@@ -290,6 +334,10 @@ const camp = [
         saldo_de_gols: 0,
         aproveitamento: 0,
         forma: [],
+        clean_sheets: 0,
+        sem_marcar: 0,
+        media_feitos_jogo: 0,
+        media_sofridos_jogo: 0,
       },
       {
         posicao: 13,
@@ -304,6 +352,10 @@ const camp = [
         saldo_de_gols: 0,
         aproveitamento: 0,
         forma: [],
+        clean_sheets: 0,
+        sem_marcar: 0,
+        media_feitos_jogo: 0,
+        media_sofridos_jogo: 0,
       },
       {
         posicao: 14,
@@ -318,6 +370,10 @@ const camp = [
         saldo_de_gols: 0,
         aproveitamento: 0,
         forma: [],
+        clean_sheets: 0,
+        sem_marcar: 0,
+        media_feitos_jogo: 0,
+        media_sofridos_jogo: 0,
       },
       {
         posicao: 15,
@@ -332,6 +388,10 @@ const camp = [
         saldo_de_gols: 0,
         aproveitamento: 0,
         forma: [],
+        clean_sheets: 0,
+        sem_marcar: 0,
+        media_feitos_jogo: 0,
+        media_sofridos_jogo: 0,
       },
       {
         posicao: 16,
@@ -346,6 +406,10 @@ const camp = [
         saldo_de_gols: 0,
         aproveitamento: 0,
         forma: [],
+        clean_sheets: 0,
+        sem_marcar: 0,
+        media_feitos_jogo: 0,
+        media_sofridos_jogo: 0,
       },
       {
         posicao: 17,
@@ -360,6 +424,10 @@ const camp = [
         saldo_de_gols: 0,
         aproveitamento: 0,
         forma: [],
+        clean_sheets: 0,
+        sem_marcar: 0,
+        media_feitos_jogo: 0,
+        media_sofridos_jogo: 0,
       },
       {
         posicao: 18,
@@ -374,6 +442,10 @@ const camp = [
         saldo_de_gols: 0,
         aproveitamento: 0,
         forma: [],
+        clean_sheets: 0,
+        sem_marcar: 0,
+        media_feitos_jogo: 0,
+        media_sofridos_jogo: 0,
       },
     ],
   },
@@ -413,12 +485,12 @@ const rodada1 = [
   {
     idCampeonato: "1",
     idPartida: "1003",
-    casa: napoli,
-    fora: manchesterCity,
-    status: "MARCADO",
-    data: "",
-    placarCasa: "0",
-    placarFora: "0",
+    casa: manchesterCity,
+    fora: napoli,
+    status: "REALIZADO",
+    data: "2023-03-12T21:23:37.043Z",
+    placarCasa: "3",
+    placarFora: "3",
   },
   {
     idCampeonato: "1",
@@ -518,10 +590,10 @@ const rodada2 = [
     idPartida: "1014",
     casa: napoli,
     fora: liverpool,
-    status: "MARCADO",
-    data: "",
-    placarCasa: "0",
-    placarFora: "0",
+    status: "REALIZADO",
+    data: "2023-03-12T21:23:26.378Z",
+    placarCasa: "2",
+    placarFora: "3",
   },
   {
     idCampeonato: "1",
@@ -1021,12 +1093,12 @@ const rodada7 = [
   {
     idCampeonato: "1",
     idPartida: "1068",
-    casa: realMadrid,
-    fora: napoli,
-    status: "MARCADO",
-    data: "",
-    placarCasa: "0",
-    placarFora: "0",
+    casa: napoli,
+    fora: realMadrid,
+    status: "REALIZADO",
+    data: "2023-03-12T21:20:46.915Z",
+    placarCasa: "1",
+    placarFora: "3",
   },
 ];
 
@@ -1355,9 +1427,9 @@ const rodada11 = [
     idPartida: "1104",
     casa: leipzig,
     fora: napoli,
-    status: "MARCADO",
-    data: "",
-    placarCasa: "0",
+    status: "REALIZADO",
+    data: "2023-03-12T21:24:05.464Z",
+    placarCasa: "8",
     placarFora: "0",
   },
   {
@@ -1436,12 +1508,12 @@ const rodada12 = [
   {
     idCampeonato: "1",
     idPartida: "1113",
-    casa: barcelona,
-    fora: napoli,
-    status: "MARCADO",
-    data: "",
-    placarCasa: "0",
-    placarFora: "0",
+    casa: napoli,
+    fora: barcelona,
+    status: "REALIZADO",
+    data: "2023-03-12T21:21:07.608Z",
+    placarCasa: "2",
+    placarFora: "2",
   },
   {
     idCampeonato: "1",
@@ -1687,10 +1759,10 @@ const rodada15 = [
     idPartida: "1140",
     casa: chelsea,
     fora: napoli,
-    status: "MARCADO",
-    data: "",
-    placarCasa: "0",
-    placarFora: "0",
+    status: "REALIZADO",
+    data: "2023-03-12T21:22:45.626Z",
+    placarCasa: "3",
+    placarFora: "7",
   },
   {
     idCampeonato: "1",
@@ -2097,8 +2169,8 @@ const rodada19 = [
   {
     idCampeonato: "1",
     idPartida: "1184",
-    casa: napoli,
-    fora: liverpool,
+    casa: liverpool,
+    fora: napoli,
     status: "MARCADO",
     data: "",
     placarCasa: "0",
@@ -2934,8 +3006,8 @@ const rodada28 = [
   {
     idCampeonato: "1",
     idPartida: "1274",
-    casa: leipzig,
-    fora: napoli,
+    casa: napoli,
+    fora: leipzig,
     status: "MARCADO",
     data: "",
     placarCasa: "0",
@@ -3266,8 +3338,8 @@ const rodada32 = [
   {
     idCampeonato: "1",
     idPartida: "1310",
-    casa: chelsea,
-    fora: napoli,
+    casa: napoli,
+    fora: chelsea,
     status: "MARCADO",
     data: "",
     placarCasa: "0",
@@ -3611,6 +3683,10 @@ equipes.forEach((equipe) => {
   let gols_sofridos = 0;
   let saldo_de_gols = 0;
   let aproveitamento = 0;
+  let clean_sheets = 0;
+  let sem_marcar = 0;
+  let media_feitos_jogo = 0;
+  let media_sofridos_jogo = 0;
 
   for (let x = 0; x < rodadas.length; x++) {
     for (let y = 0; y < rodadas[x].rodada.length; y++) {
@@ -3633,6 +3709,12 @@ equipes.forEach((equipe) => {
         } else {
           derrotas = derrotas + 1;
         }
+        if (parseInt(rodadas[x].rodada[y].placarFora) === 0) {
+          clean_sheets = clean_sheets + 1;
+        }
+        if (parseInt(rodadas[x].rodada[y].placarCasa) === 0) {
+          sem_marcar = sem_marcar + 1;
+        }
         partidas = vitorias + empates + derrotas;
         gols_marcados =
           gols_marcados + parseInt(rodadas[x].rodada[y].placarCasa);
@@ -3640,6 +3722,8 @@ equipes.forEach((equipe) => {
           gols_sofridos + parseInt(rodadas[x].rodada[y].placarFora);
         saldo_de_gols = gols_marcados - gols_sofridos;
         aproveitamento = parseFloat(pontos / (partidas * 3)).toFixed(2);
+        media_feitos_jogo = parseFloat(gols_marcados / partidas).toFixed(2);
+        media_sofridos_jogo = parseFloat(gols_sofridos / partidas).toFixed(2);
       } else if (
         rodadas[x].rodada[y].fora.nome === equipe.nome &&
         rodadas[x].rodada[y].status !== "MARCADO"
@@ -3659,7 +3743,12 @@ equipes.forEach((equipe) => {
         } else {
           derrotas = derrotas + 1;
         }
-
+        if (parseInt(rodadas[x].rodada[y].placarCasa) === 0) {
+          clean_sheets = clean_sheets + 1;
+        }
+        if (parseInt(rodadas[x].rodada[y].placarFora) === 0) {
+          sem_marcar = sem_marcar + 1;
+        }
         partidas = vitorias + empates + derrotas;
         gols_marcados =
           gols_marcados + parseInt(rodadas[x].rodada[y].placarFora);
@@ -3667,11 +3756,13 @@ equipes.forEach((equipe) => {
           gols_sofridos + parseInt(rodadas[x].rodada[y].placarCasa);
         saldo_de_gols = gols_marcados - gols_sofridos;
         aproveitamento = parseFloat(pontos / (partidas * 3)).toFixed(2);
+        media_feitos_jogo = parseFloat(gols_marcados / partidas).toFixed(2);
+        media_sofridos_jogo = parseFloat(gols_sofridos / partidas).toFixed(2);
       }
     }
   }
 
-  //arrumar for da forma
+  //forma
   let forma = ["", "", "", "", ""];
   let count = rodadas.length;
   let partida = "";
@@ -3753,8 +3844,7 @@ equipes.forEach((equipe) => {
     }
   }
 
-  //posicao comparar equipe com o foreach abaixo
-
+  //adicionar ao banco
   for (let z = 0; z < camp[0].table.length; z++) {
     if (camp[0].table[z].equipe.nome === equipe.nome) {
       camp[0].table[z].pontos = pontos;
@@ -3767,6 +3857,10 @@ equipes.forEach((equipe) => {
       camp[0].table[z].saldo_de_gols = saldo_de_gols;
       camp[0].table[z].aproveitamento = Math.trunc(aproveitamento * 100);
       camp[0].table[z].forma = forma;
+      camp[0].table[z].clean_sheets = clean_sheets;
+      camp[0].table[z].sem_marcar = sem_marcar;
+      camp[0].table[z].media_feitos_jogo = media_feitos_jogo;
+      camp[0].table[z].media_sofridos_jogo = media_sofridos_jogo;
       break;
     }
   }
