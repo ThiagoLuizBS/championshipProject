@@ -99,6 +99,8 @@ td.col-name-table {
   th.col-name-table,
   td.col-name-table {
     max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -110,8 +112,6 @@ td.col-name-table {
   th.col-name-table,
   td.col-name-table {
     max-width: 120px;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 }
 
