@@ -26,6 +26,19 @@
   font-size: 1rem;
 }
 
+.row-col-detalhes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid rgb(250, 235, 215, 0.1);
+  padding: 10px;
+  border-radius: 20px;
+  gap: 0 50px;
+  max-height: 812px;
+  font-size: 1rem;
+}
+
 .row-top-detalhes {
   display: flex;
   flex-direction: column;
@@ -154,7 +167,8 @@
   .img-detalhes {
     height: 100px;
   }
-  .row-down-detalhes {
+  .row-down-detalhes,
+  .row-col-detalhes {
     gap: 0;
   }
 
@@ -238,7 +252,8 @@
     height: 25px;
   }
 
-  .row-down-detalhes {
+  .row-down-detalhes,
+  .row-col-detalhes {
     max-height: 727px;
   }
 

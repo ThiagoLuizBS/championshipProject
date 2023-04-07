@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button, Spinner } from "react-bootstrap";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { Download } from "./Download";
 
@@ -24,12 +24,14 @@ export function Games() {
   const [rodadas, setRodadas] = useState<rodadasProps[]>([]);
   const [botaoLeft, setBotaoLeft] = useState<boolean>(true);
   const [botaoRight, setBotaoRight] = useState<boolean>(false);
+  const [loading, setLoading] = useState<Boolean>(true);
 
   useEffect(() => {
     fetch("https://championship-project-9hyg.vercel.app/rodadas")
       .then((response) => response.json())
       .then((data) => {
         setRodadas(data.rodadas);
+        setLoading(false);
       });
   }, []);
 
@@ -54,89 +56,95 @@ export function Games() {
 
   return (
     <div id="responsive-games">
-      <div id="content-games">
-        <Row className="rodada-games">
-          <Col className="col-games" xs={3}>
-            <Button
-              id="button-1-games"
-              onClick={() => alterarRodada("left")}
-              disabled={botaoLeft}
-            >
-              <AiOutlineArrowLeft />
-            </Button>
-          </Col>
-          <Col className="button-2-games" lg={6} md={5} xs={6}>
-            <span>Rodada {rodadaNum}</span>
-          </Col>
-          <Col className="col-games" xs={3}>
-            <Button
-              id="button-3-games"
-              onClick={() => alterarRodada("right")}
-              disabled={botaoRight}
-            >
-              <AiOutlineArrowRight />
-            </Button>
-          </Col>
-        </Row>
-
-        {rodadas[rodadaNum - 1]?.rodada.map((partida: partidaProps) => (
-          <Row className="rodada-games" key={partida.idPartida}>
-            {partida.casa.nome === "BYE" || partida.fora.nome === "BYE" ? (
-              <>
-                <Col className="col-games" lg={3} md={2} xs={3}>
-                  {partida.casa.logo === "" ? (
-                    <img className="img-games" src={partida.fora.logo} />
-                  ) : (
-                    <img className="img-games" src={partida.casa.logo} />
-                  )}
-                </Col>
-                <Col lg={6} md={6} xs={6} className="button-4-games">
-                  {partida.status === "MARCADO" ? (
-                    <span>Sem partida</span>
-                  ) : (
-                    <span>
-                      {partida.placarCasa} - {partida.placarFora}
-                    </span>
-                  )}
-                </Col>
-                <Col className="col-games" lg={3} md={2} xs={3}>
-                  <span className="bye-games">BYE</span>
-                </Col>
-              </>
-            ) : (
-              <>
-                <Col className="col-games" lg={3} md={2} xs={3}>
-                  <img className="img-games" src={partida.casa.logo} />
-                </Col>
-                <Col lg={6} md={6} xs={6} className="button-5-games">
-                  {partida.status === "MARCADO" ? (
-                    <span>A realizar</span>
-                  ) : (
-                    <>
-                      <Col className="col-games">
-                        <span className="match-games">
-                          {partida.placarCasa}
-                        </span>
-                      </Col>
-                      <Col className="col-games">
-                        <span className="match-games">-</span>
-                      </Col>
-                      <Col className="col-games">
-                        <span className="match-games">
-                          {partida.placarFora}
-                        </span>
-                      </Col>
-                    </>
-                  )}
-                </Col>
-                <Col className="col-games" lg={3} md={2} xs={3}>
-                  <img className="img-games" src={partida.fora.logo} />
-                </Col>
-              </>
-            )}
+      {loading ? (
+        <div className="spinner">
+          <Spinner animation="border" />
+        </div>
+      ) : (
+        <div id="content-games">
+          <Row className="rodada-games">
+            <Col className="col-games" xs={3}>
+              <Button
+                id="button-1-games"
+                onClick={() => alterarRodada("left")}
+                disabled={botaoLeft}
+              >
+                <AiOutlineArrowLeft />
+              </Button>
+            </Col>
+            <Col className="button-2-games" lg={6} md={5} xs={6}>
+              <span>Rodada {rodadaNum}</span>
+            </Col>
+            <Col className="col-games" xs={3}>
+              <Button
+                id="button-3-games"
+                onClick={() => alterarRodada("right")}
+                disabled={botaoRight}
+              >
+                <AiOutlineArrowRight />
+              </Button>
+            </Col>
           </Row>
-        ))}
-      </div>
+
+          {rodadas[rodadaNum - 1]?.rodada.map((partida: partidaProps) => (
+            <Row className="rodada-games" key={partida.idPartida}>
+              {partida.casa.nome === "BYE" || partida.fora.nome === "BYE" ? (
+                <>
+                  <Col className="col-games" lg={3} md={2} xs={3}>
+                    {partida.casa.logo === "" ? (
+                      <img className="img-games" src={partida.fora.logo} />
+                    ) : (
+                      <img className="img-games" src={partida.casa.logo} />
+                    )}
+                  </Col>
+                  <Col lg={6} md={6} xs={6} className="button-4-games">
+                    {partida.status === "MARCADO" ? (
+                      <span>Sem partida</span>
+                    ) : (
+                      <span>
+                        {partida.placarCasa} - {partida.placarFora}
+                      </span>
+                    )}
+                  </Col>
+                  <Col className="col-games" lg={3} md={2} xs={3}>
+                    <span className="bye-games">BYE</span>
+                  </Col>
+                </>
+              ) : (
+                <>
+                  <Col className="col-games" lg={3} md={2} xs={3}>
+                    <img className="img-games" src={partida.casa.logo} />
+                  </Col>
+                  <Col lg={6} md={6} xs={6} className="button-5-games">
+                    {partida.status === "MARCADO" ? (
+                      <span>MARCADO</span>
+                    ) : (
+                      <>
+                        <Col className="col-games">
+                          <span className="match-games">
+                            {partida.placarCasa}
+                          </span>
+                        </Col>
+                        <Col className="col-games">
+                          <span className="match-games">-</span>
+                        </Col>
+                        <Col className="col-games">
+                          <span className="match-games">
+                            {partida.placarFora}
+                          </span>
+                        </Col>
+                      </>
+                    )}
+                  </Col>
+                  <Col className="col-games" lg={3} md={2} xs={3}>
+                    <img className="img-games" src={partida.fora.logo} />
+                  </Col>
+                </>
+              )}
+            </Row>
+          ))}
+        </div>
+      )}
 
       <Download />
     </div>

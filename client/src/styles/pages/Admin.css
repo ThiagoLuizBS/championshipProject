@@ -1,0 +1,327 @@
+.container-admin {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-weight: bolder;
+  justify-content: center;
+  /* gap: 10px; */
+}
+
+.row-admin {
+  border: 1px solid rgb(250, 235, 215, 0.1);
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+.row-down-admin {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  border: 1px solid rgb(250, 235, 215, 0.1);
+  padding: 10px 0;
+  border-radius: 20px;
+  gap: 0 50px;
+  font-size: 1rem;
+}
+
+.row-top-admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.row-inside-admin {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.img-admin {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.img-down-admin {
+  width: 30px;
+  height: 30px;
+}
+
+.col-inside-admin {
+  margin: 0.5em 0;
+}
+
+.col-admin {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem 0rem;
+}
+
+.col-down-admin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.match-admin {
+  font-size: 1.1rem;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.partida-admin {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 0.5em 0;
+  margin: 0;
+}
+
+.col-1-admin,
+.col-2-admin {
+  color: white;
+  background: rgba(76, 175, 80, 0);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.title-admin {
+  color: antiquewhite;
+  font-weight: bolder;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.name-admin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 1.4rem;
+  height: 28.8px;
+}
+
+.form-pad-admin {
+  margin-right: 2px;
+}
+
+.green-admin {
+  max-width: 1em;
+  max-height: 1em;
+  color: rgb(32, 121, 32);
+}
+
+.gray-admin {
+  color: gray;
+}
+
+.red-admin {
+  color: #8b1717;
+}
+
+@media only screen and (max-width: 992px) {
+  .title-admin,
+  .name-admin {
+    font-size: 1rem;
+  }
+
+  .name-admin {
+    max-height: 24px;
+  }
+
+  .img-admin {
+    height: 130px;
+  }
+
+  .col-1-admin,
+  .col-2-admin {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .title-admin,
+  .name-admin {
+    font-size: 0.9rem;
+  }
+
+  .name-admin {
+    max-height: 15.61px;
+  }
+
+  .img-admin {
+    height: 100px;
+  }
+  .row-down-admin {
+    gap: 0;
+  }
+
+  .col-1-admin,
+  .col-2-admin {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .title-admin,
+  .name-admin {
+    font-size: 1rem;
+  }
+
+  .name-admin {
+    max-height: 20px;
+  }
+
+  .img-admin {
+    height: 120px;
+  }
+
+  .col-1-admin,
+  .col-2-admin {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 472px) {
+  .title-admin,
+  .name-admin {
+    font-size: 1rem;
+  }
+
+  .name-admin {
+    max-height: 20px;
+  }
+
+  .img-admin {
+    height: 110px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .title-admin,
+  .name-admin {
+    font-size: 0.9rem;
+  }
+
+  .name-admin {
+    max-height: 16px;
+  }
+
+  .img-admin {
+    height: 90px;
+  }
+
+  .col-1-admin,
+  .col-2-admin {
+    font-size: 0.8rem;
+  }
+
+  .match-admin {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .img-admin {
+    height: 80px;
+  }
+
+  .col-1-admin,
+  .col-2-admin {
+    font-size: 0.7rem;
+  }
+
+  .img-down-admin {
+    width: 25px;
+    height: 25px;
+  }
+
+  .row-down-admin {
+    max-height: 727px;
+  }
+
+  .match-admin {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .title-admin,
+  .name-admin {
+    font-size: 0.7rem;
+  }
+
+  .name-admin {
+    max-height: 12px;
+  }
+
+  .img-admin {
+    height: 65px;
+  }
+
+  .col-1-admin,
+  .col-2-admin {
+    font-size: 0.6rem;
+  }
+
+  .match-admin {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 250px) {
+  .title-admin,
+  .name-admin {
+    font-size: 0.6rem;
+  }
+
+  .name-admin {
+    max-height: 10px;
+  }
+
+  .img-admin {
+    height: 55px;
+  }
+
+  .col-1-admin,
+  .col-2-admin {
+    font-size: 0.4rem;
+  }
+
+  .match-admin {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 225px) {
+  .title-admin,
+  .name-admin {
+    font-size: 0.5rem;
+  }
+
+  .name-admin {
+    max-height: 9px;
+  }
+
+  .img-admin {
+    height: 50px;
+  }
+
+  .col-1-admin,
+  .col-2-admin {
+    font-size: 0.3rem;
+  }
+
+  .match-admin {
+    font-size: 0.6rem;
+  }
+}

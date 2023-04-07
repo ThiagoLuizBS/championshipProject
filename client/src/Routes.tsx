@@ -20,7 +20,7 @@ export function AppRoutes() {
         <Route path="/equipes" element={<Equipes />} />
         <Route path="/equipes/:id" element={<Detalhes />} />
         <Route path="/regulamento" element={<Regulamento />} />
-        <Route path="/admin/344589375" element={<Admin />} />
+        <Route path="/admin" element={<Admin />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>

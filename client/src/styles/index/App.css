@@ -59,3 +59,9 @@ p {
   font-size: larger;
   font-weight: bolder;
 }
+
+.spinner {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
