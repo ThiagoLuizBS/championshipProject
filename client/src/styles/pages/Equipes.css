@@ -15,7 +15,7 @@
 }
 
 .img-equipes {
-  width: 60px;
+  height: 60px;
   margin: 10px;
 }
 
@@ -44,7 +44,7 @@ a.link-equipes {
 
 @media only screen and (max-width: 576px) {
   .img-equipes {
-    width: 55px;
+    height: 55px;
   }
 
   .nome-equipes {
@@ -64,7 +64,7 @@ a.link-equipes {
 
 @media only screen and (max-width: 400px) {
   .img-equipes {
-    width: 50px;
+    height: 50px;
   }
 
   .nome-equipes {
@@ -79,7 +79,7 @@ a.link-equipes {
 
 @media only screen and (max-width: 300px) {
   .img-equipes {
-    width: 40px;
+    height: 40px;
   }
 
   .nome-equipes {
@@ -94,7 +94,7 @@ a.link-equipes {
 
 @media only screen and (max-width: 260px) {
   .img-equipes {
-    width: 30px;
+    height: 30px;
   }
 
   .nome-equipes {

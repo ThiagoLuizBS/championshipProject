@@ -6,6 +6,7 @@ import {
   BsDashCircleFill,
   BsFillXCircleFill,
 } from "react-icons/bs";
+import campeonatosService from "../services/campeonatos";
 
 type equipeProps = {
   posicao: number;
@@ -38,40 +39,46 @@ type partidaProps = {
 };
 
 export function Detalhes() {
-  let { id } = useParams();
+  const { id } = useParams();
   const [equipe, setEquipe] = useState<equipeProps>();
   const [partidas, setPartidas] = useState<partidaProps[]>([]);
   const [loading, setLoading] = useState<Boolean>(true);
 
   useEffect(() => {
-    fetch("https://championship-project-9hyg.vercel.app/camp")
+    fetch("http://localhost:5000/campCartola")
       .then((response) => response.json())
       .then((data) => {
         for (let index = 0; index < data?.camp[0]?.table.length; index++) {
-          if (data?.camp[0]?.table[index]?.equipe.id === id)
-            setEquipe(data.camp[0].table[index]);
+          if (data?.campCartola[0]?.table[index]?.equipe.id === id)
+            setEquipe(data.campCartola[0].table[index]);
         }
       });
   }, [id]);
 
   useEffect(() => {
-    fetch("https://championship-project-9hyg.vercel.app/rodadas")
-      .then((response) => response.json())
-      .then((data) => {
-        setPartidas([]);
-        for (let i = 0; i < data?.rodadas?.length; i++) {
-          for (let j = 0; j < data?.rodadas[i]?.rodada?.length; j++) {
-            if (
-              data?.rodadas[i]?.rodada[j]?.casa.id === id ||
-              data?.rodadas[i]?.rodada[j]?.fora.id === id
-            ) {
-              setPartidas((partida) => [...partida, data.rodadas[i].rodada[j]]);
-              break;
-            }
+    campeonatosService.getCampeonatoTabela("1").then((response) => {
+      console.log(response.data);
+      setPartidas([]);
+      for (let i = 0; i < response.data?.rodadasCartola?.length; i++) {
+        for (
+          let j = 0;
+          j < response.data?.rodadasCartola[i]?.rodada?.length;
+          j++
+        ) {
+          if (
+            response.data?.rodadasCartola[i]?.rodada[j]?.casa.id === id ||
+            response.data?.rodadasCartola[i]?.rodada[j]?.fora.id === id
+          ) {
+            setPartidas((partida) => [
+              ...partida,
+              response.data.rodadasCartola[i].rodada[j],
+            ]);
+            break;
           }
         }
-        setLoading(false);
-      });
+      }
+      setLoading(false);
+    });
   }, [id]);
 
   return (

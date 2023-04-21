@@ -1,0 +1,397 @@
+Rodada 1
+cbmk - springboks
+cincinnatti - markin
+frankfurto - felipelima
+medr - mancha
+lokomotiv - animes
+surprise - baleia
+vagudo - tamires
+biribiri - f1vs
+universidad - joaninha
+olympique - galatassarey
+
+Rodada 2
+galatassarey - cmbk
+markin - olympique
+felipelima - springboks
+mancha - cincinnatti
+animes - frankfurto
+baleia - medr 
+tamires - lokomotiv
+f1vs - surprise
+joaninha - vagudo
+universidad - biribiri
+
+Rodada 3
+cbmk - felipelima
+markin - mancha
+springboks - galatassarey
+olympique - animes
+cincinnatti - baleia
+frankfurto - tamires
+medr - f1vs
+lokomotiv - joaninha
+surprise - universidad
+vagudo - biribiri
+
+Rodada 4
+cbmk - mancha
+felipelima - animes
+markin - baleia
+springboks - tamires
+cincinnatti - f1vs
+frankfurto - joaninha
+medr - universidad
+lokomotiv - biribiri
+surprise - vagudo
+
+Rodada 5
+cbmk - animes
+mancha- baleia
+felipelima - tamires
+markin - f1vs
+springboks - joaninha
+cincinnatti - universidad
+frankfurto - biribiri
+medr - vagudo
+lokomotiv - surprise
+
+Rodada 6
+cbmk - baleia
+animes - tamires
+mancha- f1vs
+felipelima - joaninha
+markin - universidad
+springboks - biribiri
+cincinnatti - vagudo
+frankfurto - surprise
+medr - lokomotiv
+
+Rodada 7
+cbmk - tamires
+baleia - f1vs
+animes - joaninha
+mancha- universidad
+felipelima - biribiri
+markin - vagudo
+springboks - surprise
+cincinnatti - lokomotiv
+frankfurto - medr
+
+Rodada 8
+cbmk - f1vs
+tamires - joaninha
+baleia - universidad
+animes - biribiri
+mancha- vagudo
+felipelima - surprise
+markin - lokomotiv
+springboks - medr
+cincinnatti - frankfurto
+
+Rodada 9
+cbmk - joaninha
+f1vs - universidad
+tamires - biribiri
+baleia - vagudo
+animes - surprise
+mancha- lokomotiv
+felipelima - medr
+markin - frankfurto
+springboks - cincinnatti
+
+Rodada 10
+cbmk - universidad
+joaninha - biribiri
+f1vs - vagudo
+tamires - surprise
+baleia - lokomotiv
+animes - medr
+mancha- frankfurto
+felipelima - cincinnatti
+markin - springboks
+
+Rodada 11
+cbmk - biribiri
+universidad - vagudo
+joaninha - surprise
+f1vs - lokomotiv
+tamires - medr
+baleia - frankfurto
+animes - cincinnatti
+mancha- springboks
+felipelima - markin
+
+Rodada 12
+cbmk - vagudo
+biribiri - surprise
+universidad - lokomotiv
+joaninha - medr
+f1vs - frankfurto
+tamires - cincinnatti
+baleia - springboks
+animes - markin
+mancha- felipelima
+
+Rodada 13
+cbmk - surprise
+vagudo - lokomotiv
+biribiri - medr
+universidad - frankfurto
+joaninha - cincinnatti
+f1vs - springboks
+tamires - markin
+baleia - felipelima
+animes - mancha
+
+Rodada 14
+cbmk - lokomotiv
+surprise - medr
+vagudo - frankfurto
+biribiri - cincinnatti
+universidad - springboks
+joaninha - markin
+f1vs - felipelima
+tamires - mancha
+baleia - animes
+
+Rodada 15
+cbmk - medr
+lokomotiv - frankfurto
+surprise - cincinnatti
+vagudo - springboks
+biribiri - markin
+universidad - felipelima
+joaninha - mancha
+f1vs - animes
+tamires - baleia
+
+Rodada 16
+cbmk - frankfurto
+medr - cincinnatti
+lokomotiv - springboks
+surprise - markin
+vagudo - felipelima
+biribiri - mancha
+universidad - animes
+joaninha - baleia
+f1vs - tamires
+
+Rodada 17
+cbmk - cincinnatti
+frankfurto - springboks
+medr - markin
+lokomotiv - felipelima
+surprise - mancha
+vagudo - animes
+biribiri - baleia
+universidad - tamires
+joaninha - f1vs
+
+Rodada 18
+cbmk - markin
+springboks - animes
+cincinnatti - f1vs
+frankfurto - biribiri
+medr - lokomotiv
+mancha- universidad
+felipelima - surprise
+tamires - biribiri
+vagudo - olympique
+joaninha - galatassarey
+
+Rodada 19
+cbmk - universidad
+joaninha - surprise
+f1vs - frankfurto
+tamires - markin
+baleia - animes
+vagudo - springboks
+biribiri - mancha
+lokomotiv - felipelima
+olympique - medr
+galatassarey - cincinnatti
+
+/*/*/*/*/*/
+Rodada 18
+springboks - cbmk
+markin - cincinnatti
+felipelima - frankfurto
+mancha- medr
+animes - lokomotiv
+baleia - surprise
+tamires - vagudo
+f1vs - biribiri
+joaninha - universidad
+
+Rodada 19
+markin - cbmk
+felipelima - springboks
+mancha- cincinnatti
+animes - frankfurto
+baleia - medr
+tamires - lokomotiv
+f1vs - surprise
+joaninha - vagudo
+universidad - biribiri
+
+Rodada 20
+felipelima - cbmk
+mancha- markin
+animes - springboks
+baleia - cincinnatti
+tamires - frankfurto
+f1vs - medr
+joaninha - lokomotiv
+universidad - surprise
+biribiri - vagudo
+
+Rodada 21
+mancha- cbmk
+animes - felipelima
+baleia - markin
+tamires - springboks
+f1vs - cincinnatti
+joaninha - frankfurto
+universidad - medr
+biribiri - lokomotiv
+vagudo - surprise
+
+Rodada 22
+animes - cbmk
+baleia - mancha
+tamires - felipelima
+f1vs - markin
+joaninha - springboks
+universidad - cincinnatti
+biribiri - frankfurto
+vagudo - medr
+surprise - lokomotiv
+
+Rodada 23
+baleia - cbmk
+tamires - animes
+f1vs - mancha
+joaninha - felipelima
+universidad - markin
+biribiri - springboks
+vagudo - cincinnatti
+surprise - frankfurto
+lokomotiv - medr
+
+Rodada 24
+tamires - cbmk
+f1vs - baleia
+joaninha - animes
+universidad - mancha
+biribiri - felipelima
+vagudo - markin
+surprise - springboks
+lokomotiv - cincinnatti
+medr - frankfurto
+
+Rodada 25
+f1vs - cbmk
+joaninha - tamires
+universidad - baleia
+biribiri - animes
+vagudo - mancha
+surprise - felipelima
+lokomotiv - markin
+medr - springboks
+frankfurto - cincinnatti
+
+Rodada 26
+joaninha - cbmk
+universidad - f1vs
+biribiri - tamires
+vagudo - baleia
+surprise - animes
+lokomotiv - mancha
+medr - felipelima
+frankfurto - markin
+cincinnatti - springboks
+
+Rodada 27
+universidad - cbmk
+biribiri - joaninha
+vagudo - f1vs
+surprise - tamires
+lokomotiv - baleia
+medr - animes
+frankfurto - mancha
+cincinnatti - felipelima
+springboks - markin
+
+Rodada 28
+biribiri - cbmk
+vagudo - universidad
+surprise - joaninha
+lokomotiv - f1vs
+medr - tamires
+frankfurto - baleia
+cincinnatti - animes
+springboks - mancha
+markin - felipelima
+
+Rodada 29
+vagudo - cbmk
+surprise - biribiri
+lokomotiv - universidad
+medr - joaninha
+frankfurto - f1vs
+cincinnatti - tamires
+springboks - baleia
+markin - animes
+felipelima - mancha
+Rodada 30
+surprise - cbmk
+lokomotiv - vagudo
+medr - biribiri
+frankfurto - universidad
+cincinnatti - joaninha
+springboks - f1vs
+markin - tamires
+felipelima - baleia
+mancha- animes
+
+Rodada 31
+lokomotiv - cbmk
+medr - surprise
+frankfurto - vagudo
+cincinnatti - biribiri
+springboks - universidad
+markin - joaninha
+felipelima - f1vs
+mancha- tamires
+animes - baleia
+Rodada 32
+medr - cbmk
+frankfurto - lokomotiv
+cincinnatti - surprise
+springboks - vagudo
+markin - biribiri
+felipelima - universidad
+mancha- joaninha
+animes - f1vs
+baleia - tamires
+Rodada 33
+frankfurto - cbmk
+cincinnatti - medr
+springboks - lokomotiv
+markin - surprise
+felipelima - vagudo
+mancha- biribiri
+animes - universidad
+baleia - joaninha
+tamires - f1vs
+Rodada 34
+cincinnatti - cbmk
+springboks - frankfurto
+markin - medr
+felipelima - lokomotiv
+mancha- surprise
+animes - vagudo
+baleia - biribiri
+tamires - universidad
+f1vs - joaninha

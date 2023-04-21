@@ -11,8 +11,20 @@ type rodadaProps = {
 type partidaProps = {
   idCampeonato: string;
   idPartida: string;
-  casa: { id: string; logo: string; nome: string; treinador: string };
-  fora: { id: string; logo: string; nome: string; treinador: string };
+  casa: {
+    id: string;
+    logo: string;
+    nome: string;
+    treinador: string;
+    urlCartola: string;
+  };
+  fora: {
+    id: string;
+    logo: string;
+    nome: string;
+    treinador: string;
+    urlCartola: string;
+  };
   status: string;
   data: string;
   placarCasa: string;
@@ -20,28 +32,41 @@ type partidaProps = {
 };
 
 export function Admin() {
+  const { id } = useParams();
   const [rodadas, setRodadas] = useState<rodadaProps[]>([]);
   const [loading, setLoading] = useState<Boolean>(true);
   const [show, setShow] = useState(false);
   const [match, setMatch] = useState<partidaProps>({
     idCampeonato: "0",
     idPartida: "0",
-    casa: { id: "0", logo: "0", nome: "0", treinador: "0" },
-    fora: { id: "0", logo: "0", nome: "0", treinador: "0" },
+    casa: { id: "0", logo: "0", nome: "0", treinador: "0", urlCartola: "" },
+    fora: { id: "0", logo: "0", nome: "0", treinador: "0", urlCartola: "" },
     status: "0",
     data: "0",
     placarCasa: "0",
     placarFora: "0",
   });
 
-  useEffect(() => {
-    fetch("https://championship-project-9hyg.vercel.app/rodadas")
-      .then((response) => response.json())
-      .then((data) => {
-        setRodadas(data.rodadas);
-        setLoading(false);
-      });
-  }, []);
+  if (id === "1") {
+    useEffect(() => {
+      fetch("http://localhost:5000/rodadas")
+        .then((response) => response.json())
+        .then((data) => {
+          setRodadas(data.rodadas);
+          setLoading(false);
+        });
+    }, [id]);
+  } else {
+    useEffect(() => {
+      fetch("http://localhost:5000/rodadasCartola")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data.rodadasCartola);
+          setRodadas(data.rodadasCartola);
+          setLoading(false);
+        });
+    }, [id]);
+  }
 
   const handleShow = (match: partidaProps) => {
     setShow(true);
@@ -98,7 +123,16 @@ export function Admin() {
                 ) : (
                   <>
                     <Col lg={4} md={4} sm={4} xs={4} className="col-down-admin">
-                      <img className="img-down-admin" src={partida.casa.logo} />
+                      <img
+                        className="img-down-admin"
+                        src={
+                          partida?.casa.urlCartola
+                            ? `src/assets/${partida?.casa.logo}.png`
+                            : `${partida?.casa.logo}`
+                        }
+                        alt={partida.casa.nome}
+                        title={partida.casa.nome}
+                      />
                     </Col>
                     <button
                       className="button-admin"
@@ -127,7 +161,16 @@ export function Admin() {
                       </Col>
                     </button>
                     <Col lg={4} md={4} sm={4} xs={4} className="col-down-admin">
-                      <img className="img-down-admin" src={partida.fora.logo} />
+                      <img
+                        className="img-down-admin"
+                        src={
+                          partida?.fora.urlCartola
+                            ? `src/assets/${partida?.fora.logo}.png`
+                            : `${partida?.fora.logo}`
+                        }
+                        alt={partida.fora.nome}
+                        title={partida.fora.nome}
+                      />
                     </Col>
                   </>
                 )}

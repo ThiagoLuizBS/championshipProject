@@ -2,7 +2,8 @@
   background-color: #10fab3;
   font-weight: bold;
   font-size: large;
-  border-radius: 8px;
+  border-radius: 16px;
+  padding: 2px;
 }
 
 a.option-header,
@@ -24,6 +25,14 @@ a.option-header:hover {
   color: rgb(0, 0, 0, 0.9);
 }
 
+.name-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: antiquewhite;
+  padding: 0 8px;
+}
+
 .img-header {
   margin-bottom: 2px;
   margin-right: 0.35rem;
@@ -35,6 +44,8 @@ a.option-header:hover {
 }
 
 .brand-header {
-  height: 4rem;
-  width: 4rem;
+  margin: 0;
+  padding: 0;
+  height: 3rem;
+  width: 3rem;
 }

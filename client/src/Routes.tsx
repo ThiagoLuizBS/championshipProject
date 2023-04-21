@@ -16,11 +16,14 @@ export function AppRoutes() {
     <Router>
       <HeaderApp />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/equipes" element={<Equipes />} />
+        <Route path="/" element={<Home id={"1"} />} />
+        <Route path="/cartola" element={<Home id={"2"} />} />
+        <Route path="/equipes" element={<Equipes id={"1"} />} />
+        <Route path="/equipes-cartola" element={<Equipes id={"2"} />} />
+        <Route path="/regulamento" element={<Regulamento id={"1"} />} />
+        <Route path="/regulamento-cartola" element={<Regulamento id={"2"} />} />
         <Route path="/equipes/:id" element={<Detalhes />} />
-        <Route path="/regulamento" element={<Regulamento />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin/:id" element={<Admin />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>

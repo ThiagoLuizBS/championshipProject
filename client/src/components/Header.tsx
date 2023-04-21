@@ -21,6 +21,7 @@ export function HeaderApp() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
+            <span className="name-header">FIFA</span>
             <Link
               to="/"
               className={
@@ -49,6 +50,46 @@ export function HeaderApp() {
               to="/regulamento"
               className={
                 location.pathname === "/regulamento"
+                  ? "option-selected-header"
+                  : "option-header"
+              }
+              title="Regulamento"
+            >
+              <HiNewspaper className="img-header" />
+              <span>REGULAMENTO</span>
+            </Link>
+          </Nav>
+          <span className="name-header">|</span>
+          <Nav className="m-auto">
+            <span className="name-header">CARTOLA</span>
+            <Link
+              to="/cartola"
+              className={
+                location.pathname === "/cartola"
+                  ? "option-selected-header"
+                  : "option-header"
+              }
+              title="Tabela"
+            >
+              <ImTrophy className="img-header" />
+              <span>TABELA</span>
+            </Link>
+            <Link
+              to="/equipes-cartola"
+              className={
+                location.pathname === "/equipes-cartola"
+                  ? "option-selected-header"
+                  : "option-header"
+              }
+              title="Equipes"
+            >
+              <RiTeamFill className="img-header" />
+              <span>EQUIPES</span>
+            </Link>
+            <Link
+              to="/regulamento-cartola"
+              className={
+                location.pathname === "/regulamento-cartola"
                   ? "option-selected-header"
                   : "option-header"
               }

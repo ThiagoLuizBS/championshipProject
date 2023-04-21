@@ -3,15 +3,19 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Games } from "../components/Games";
 import { TableApp } from "../components/Table";
 
-export function Home() {
+type Props = {
+  id: string;
+};
+
+export function Home(props: Props) {
   return (
     <Container>
       <Row md={12}>
         <Col lg={9} id="table-home">
-          <TableApp />
+          <TableApp id={props.id} />
         </Col>
         <Col lg={3} id="games-home">
-          <Games />
+          <Games id={props.id} />
         </Col>
       </Row>
     </Container>

@@ -1,26 +1,32 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row, Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import equipesService from "../services/equipes";
 
 type equipesProps = {
   id: string;
   logo: string;
   nome: string;
   treinador: string;
+  urlCartola: string;
 };
 
-export function Equipes() {
+type Props = {
+  id: string;
+};
+
+export function Equipes(props: Props) {
   const [equipes, setEquipes] = useState<equipesProps[]>([]);
   const [loading, setLoading] = useState<Boolean>(true);
+  const { id } = props;
 
   useEffect(() => {
-    fetch("https://championship-project-9hyg.vercel.app/equipes")
-      .then((response) => response.json())
-      .then((data) => {
-        setEquipes(data.equipes);
-        setLoading(false);
-      });
-  }, []);
+    equipesService.getEquipesByCampeonato(id).then((response) => {
+      console.log(response.data[0].equipes);
+      setEquipes(response.data[0].equipes);
+      setLoading(false);
+    });
+  }, [id]);
 
   return (
     <Container className="container-equipes">
@@ -36,7 +42,14 @@ export function Equipes() {
                 <Row className="row-equipes">
                   <Col lg={5} sm={5} xs={6}>
                     <Col>
-                      <img className="img-equipes" src={equipe.logo} />
+                      <img
+                        className="img-equipes"
+                        src={
+                          equipe?.urlCartola
+                            ? `src/assets/${equipe?.logo}.png`
+                            : `${equipe?.logo}`
+                        }
+                      />
                     </Col>
                     <Col className="nome-equipes">
                       <span>{equipe.nome}</span>

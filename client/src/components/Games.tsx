@@ -19,21 +19,37 @@ type partidaProps = {
   placarFora: string;
 };
 
-export function Games() {
+type Props = {
+  id: string;
+};
+
+export function Games(props: Props) {
   const [rodadaNum, setRodadaNum] = useState<number>(1);
   const [rodadas, setRodadas] = useState<rodadasProps[]>([]);
   const [botaoLeft, setBotaoLeft] = useState<boolean>(true);
   const [botaoRight, setBotaoRight] = useState<boolean>(false);
   const [loading, setLoading] = useState<Boolean>(true);
+  const { id } = props;
 
-  useEffect(() => {
-    fetch("https://championship-project-9hyg.vercel.app/rodadas")
-      .then((response) => response.json())
-      .then((data) => {
-        setRodadas(data.rodadas);
-        setLoading(false);
-      });
-  }, []);
+  if (id === "1") {
+    useEffect(() => {
+      fetch("http://localhost:5000/rodadas")
+        .then((response) => response.json())
+        .then((data) => {
+          setRodadas(data.rodadas);
+          setLoading(false);
+        });
+    }, [id]);
+  } else {
+    useEffect(() => {
+      fetch("http://localhost:5000/rodadasCartola")
+        .then((response) => response.json())
+        .then((data) => {
+          setRodadas(data.rodadasCartola);
+          setLoading(false);
+        });
+    }, [id]);
+  }
 
   const alterarRodada = (lado: string) => {
     if (lado === "left") {
@@ -113,7 +129,16 @@ export function Games() {
               ) : (
                 <>
                   <Col className="col-games" lg={3} md={2} xs={3}>
-                    <img className="img-games" src={partida.casa.logo} />
+                    <img
+                      className="img-games"
+                      src={
+                        partida?.casa.logo.includes("http")
+                          ? `${partida?.casa.logo}`
+                          : `src/assets/${partida?.casa.logo}.png`
+                      }
+                      alt={partida.casa.nome}
+                      title={partida.casa.nome}
+                    />
                   </Col>
                   <Col lg={6} md={6} xs={6} className="button-5-games">
                     {partida.status === "MARCADO" ? (
@@ -137,7 +162,16 @@ export function Games() {
                     )}
                   </Col>
                   <Col className="col-games" lg={3} md={2} xs={3}>
-                    <img className="img-games" src={partida.fora.logo} />
+                    <img
+                      className="img-games"
+                      src={
+                        partida?.fora.logo.includes("http")
+                          ? `${partida?.fora.logo}`
+                          : `src/assets/${partida?.fora.logo}.png`
+                      }
+                      alt={partida.fora.nome}
+                      title={partida.fora.nome}
+                    />
                   </Col>
                 </>
               )}

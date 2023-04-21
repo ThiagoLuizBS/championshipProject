@@ -6,11 +6,19 @@ import {
   BsFillXCircleFill,
 } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import campeonatosService from "../services/campeonatos";
 
 type campeonatoProps = {
+  _id: equipeProps[];
+  dados: rowProps[];
+};
+
+type equipeProps = {
   id: string;
-  name: string;
-  table: rowProps[];
+  logo: string;
+  nome: string;
+  treinador: string;
+  urlCartola: string;
 };
 
 type rowProps = {
@@ -28,10 +36,15 @@ type rowProps = {
   forma: string[];
 };
 
-export function TableApp() {
-  const [campeonato, setCampeonato] = useState<campeonatoProps>();
+type Props = {
+  id: string;
+};
+
+export function TableApp(props: Props) {
+  const [campeonato, setCampeonato] = useState<campeonatoProps[]>([]);
   const [loading, setLoading] = useState<Boolean>(true);
   const [width, setWidth] = useState(innerWidth);
+  const { id } = props;
 
   useEffect(() => {
     const updateWindowDimensions = () => {
@@ -44,13 +57,12 @@ export function TableApp() {
   }, []);
 
   useEffect(() => {
-    fetch("https://championship-project-9hyg.vercel.app/camp")
-      .then((response) => response.json())
-      .then((data) => {
-        setCampeonato(data.camp[0]);
-        setLoading(false);
-      });
-  }, []);
+    campeonatosService.getCampeonatoTabela(id).then((response) => {
+      console.log(response.data);
+      setCampeonato(response.data);
+      setLoading(false);
+    });
+  }, [id]);
 
   return (
     <div id="responsive-table">
@@ -78,15 +90,22 @@ export function TableApp() {
             </tr>
           </thead>
           <tbody>
-            {campeonato?.table.map((row: rowProps) => (
-              <tr key={row.equipe.nome} className="form-td-table">
-                <td>{row.posicao}</td>
+            {campeonato?.map((row: campeonatoProps) => (
+              <tr key={row?._id[0]?.nome} className="form-td-table">
+                <td>{row?.dados[0]?.posicao}</td>
                 <td>
-                  <Link to={`/equipes/${row.equipe.id}`} className="link-table">
+                  <Link
+                    to={`/equipes/${row?._id[0]?.id}`}
+                    className="link-table"
+                  >
                     <img
                       className="img-table"
-                      src={row.equipe.logo}
-                      alt={row.equipe.nome}
+                      src={
+                        row?._id[0]?.urlCartola
+                          ? `src/assets/${row?._id[0]?.logo}.png`
+                          : `${row?._id[0]?.logo}`
+                      }
+                      alt={row?._id[0]?.nome}
                     />
                   </Link>
                 </td>
@@ -95,24 +114,32 @@ export function TableApp() {
                 ) : (
                   <td className="col-name-table">
                     <Link
-                      to={`/equipes/${row.equipe.id}`}
+                      to={`/equipes/${row?._id[0]?.id}`}
                       className="link-table"
                     >
-                      {row.equipe.nome}
+                      {row._id[0].nome}
                     </Link>
                   </td>
                 )}
-                <td className="col-num-table">{row.pontos}</td>
-                <td className="col-num-table">{row.partidas}</td>
-                <td className="col-num-table">{row.vitorias}</td>
-                <td className="col-num-table">{row.empates}</td>
-                <td className="col-num-table">{row.derrotas}</td>
-                <td className="col-num-table">{row.gols_marcados}</td>
-                <td className="col-num-table">{row.gols_sofridos}</td>
-                <td className="col-num-table">{row.saldo_de_gols}</td>
-                <td className="col-num-table">{row.aproveitamento}%</td>
+                <td className="col-num-table">{row?.dados[0]?.pontos}</td>
+                <td className="col-num-table">{row?.dados[0]?.partidas}</td>
+                <td className="col-num-table">{row?.dados[0]?.vitorias}</td>
+                <td className="col-num-table">{row?.dados[0]?.empates}</td>
+                <td className="col-num-table">{row?.dados[0]?.derrotas}</td>
+                <td className="col-num-table">
+                  {row?.dados[0]?.gols_marcados}
+                </td>
+                <td className="col-num-table">
+                  {row?.dados[0]?.gols_sofridos}
+                </td>
+                <td className="col-num-table">
+                  {row?.dados[0]?.saldo_de_gols}
+                </td>
+                <td className="col-num-table">
+                  {row?.dados[0]?.aproveitamento}%
+                </td>
                 <td>
-                  {row.forma.map((resultado: string, i) => (
+                  {row?.dados[0]?.forma.map((resultado: string, i) => (
                     <Fragment key={i}>
                       {resultado === "V" ? (
                         <BsCheckCircleFill
