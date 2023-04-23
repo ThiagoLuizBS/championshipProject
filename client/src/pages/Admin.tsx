@@ -98,12 +98,20 @@ export function Admin() {
                       {partida.casa.logo === "" ? (
                         <img
                           className="img-down-admin"
-                          src={partida.fora.logo}
+                          src={
+                            partida?.fora.urlCartola
+                              ? `src/assets/${partida?.fora.logo}.png`
+                              : `${partida?.fora.logo}`
+                          }
                         />
                       ) : (
                         <img
                           className="img-down-admin"
-                          src={partida.casa.logo}
+                          src={
+                            partida?.casa.urlCartola
+                              ? `src/assets/${partida?.casa.logo}.png`
+                              : `${partida?.casa.logo}`
+                          }
                         />
                       )}
                     </Col>
@@ -127,45 +135,47 @@ export function Admin() {
                         className="img-down-admin"
                         src={
                           partida?.casa.urlCartola
-                            ? `src/assets/${partida?.casa.logo}.png`
+                            ? `../src/assets/${partida?.casa.logo}.png`
                             : `${partida?.casa.logo}`
                         }
                         alt={partida.casa.nome}
                         title={partida.casa.nome}
                       />
                     </Col>
-                    <button
-                      className="button-admin"
-                      onClick={() => handleShow(partida)}
-                    >
-                      <Col className="col-2-admin">
-                        {partida.status === "MARCADO" ? (
-                          <span>MARCADO</span>
-                        ) : (
-                          <>
-                            <Col className="col-down-admin">
-                              <span className="match-admin">
-                                {partida.placarCasa}
-                              </span>
-                            </Col>
-                            <Col className="col-down-admin">
-                              <span className="match-admin">-</span>
-                            </Col>
-                            <Col className="col-down-admin">
-                              <span className="match-admin">
-                                {partida.placarFora}
-                              </span>
-                            </Col>
-                          </>
-                        )}
-                      </Col>
-                    </button>
+                    <Col lg={4} md={4} sm={4} xs={4}>
+                      <button
+                        className="button-admin"
+                        onClick={() => handleShow(partida)}
+                      >
+                        <Col className="col-2-admin">
+                          {partida.status === "MARCADO" ? (
+                            <span>MARCADO</span>
+                          ) : (
+                            <>
+                              <Col className="col-down-admin">
+                                <span className="match-admin">
+                                  {partida.placarCasa}
+                                </span>
+                              </Col>
+                              <Col className="col-down-admin">
+                                <span className="match-admin">-</span>
+                              </Col>
+                              <Col className="col-down-admin">
+                                <span className="match-admin">
+                                  {partida.placarFora}
+                                </span>
+                              </Col>
+                            </>
+                          )}
+                        </Col>
+                      </button>
+                    </Col>
                     <Col lg={4} md={4} sm={4} xs={4} className="col-down-admin">
                       <img
                         className="img-down-admin"
                         src={
                           partida?.fora.urlCartola
-                            ? `src/assets/${partida?.fora.logo}.png`
+                            ? `../src/assets/${partida?.fora.logo}.png`
                             : `${partida?.fora.logo}`
                         }
                         alt={partida.fora.nome}

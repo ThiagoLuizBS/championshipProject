@@ -10,8 +10,20 @@ type editProps = {
 type matchProps = {
   idCampeonato: string;
   idPartida: string;
-  casa: { id: string; logo: string; nome: string; treinador: string };
-  fora: { id: string; logo: string; nome: string; treinador: string };
+  casa: {
+    id: string;
+    logo: string;
+    nome: string;
+    treinador: string;
+    urlCartola: string;
+  };
+  fora: {
+    id: string;
+    logo: string;
+    nome: string;
+    treinador: string;
+    urlCartola: string;
+  };
   status: string;
   data: string;
   placarCasa: string;
@@ -50,7 +62,16 @@ export function EditGame(editProps: editProps) {
           key={match.idPartida}
         >
           <Col className="col-down-admin">
-            <img className="img-down-admin" src={match.casa.logo} />
+            <img
+              className="img-down-admin"
+              src={
+                match?.casa.urlCartola
+                  ? `src/assets/${match?.casa.logo}.png`
+                  : `${match?.casa.logo}`
+              }
+              alt={match.casa.nome}
+              title={match.casa.nome}
+            />
           </Col>
           <Col className="col-2-admin">
             <Col className="col-down-admin">
@@ -74,7 +95,16 @@ export function EditGame(editProps: editProps) {
             </Col>
           </Col>
           <Col className="col-down-admin">
-            <img className="img-down-admin" src={match.fora.logo} />
+            <img
+              className="img-down-admin"
+              src={
+                match?.fora.urlCartola
+                  ? `src/assets/${match?.fora.logo}.png`
+                  : `${match?.fora.logo}`
+              }
+              alt={match.fora.nome}
+              title={match.fora.nome}
+            />
           </Col>
         </Col>
       </Modal.Body>

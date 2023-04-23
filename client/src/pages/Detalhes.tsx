@@ -40,6 +40,7 @@ type partidaProps = {
 
 export function Detalhes() {
   const { id } = useParams();
+  const idString = id as string;
   const [equipe, setEquipe] = useState<equipeProps>();
   const [partidas, setPartidas] = useState<partidaProps[]>([]);
   const [loading, setLoading] = useState<Boolean>(true);
@@ -56,7 +57,7 @@ export function Detalhes() {
   }, [id]);
 
   useEffect(() => {
-    campeonatosService.getCampeonatoTabela("1").then((response) => {
+    campeonatosService.getCampeonatoTabela(idString).then((response) => {
       console.log(response.data);
       setPartidas([]);
       for (let i = 0; i < response.data?.rodadasCartola?.length; i++) {
