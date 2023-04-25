@@ -95,7 +95,7 @@ export function TableApp(props: Props) {
                 <td>{row?.dados[0]?.posicao}</td>
                 <td>
                   <Link
-                    to={`/equipes/${row?._id[0]?.id}`}
+                    to={`/${id}/equipe/${row?._id[0]?.id}`}
                     className="link-table"
                   >
                     <img
@@ -114,7 +114,7 @@ export function TableApp(props: Props) {
                 ) : (
                   <td className="col-name-table">
                     <Link
-                      to={`/equipes/${row?._id[0]?.id}`}
+                      to={`/${id}/equipe/${row?._id[0]?.id}`}
                       className="link-table"
                     >
                       {row._id[0].nome}

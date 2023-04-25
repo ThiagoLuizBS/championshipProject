@@ -2,9 +2,10 @@ import React, { Fragment, useEffect, useState } from "react";
 import { Container, Row, Col, Spinner } from "react-bootstrap";
 import { EditGame } from "../components/EditGame";
 import { useParams } from "react-router-dom";
+import partidasService from "../services/partidas";
 
 type rodadaProps = {
-  num: string;
+  _id: string;
   rodada: partidaProps[];
 };
 
@@ -25,7 +26,6 @@ type partidaProps = {
     treinador: string;
     urlCartola: string;
   };
-  status: string;
   data: string;
   placarCasa: string;
   placarFora: string;
@@ -33,6 +33,7 @@ type partidaProps = {
 
 export function Admin() {
   const { id } = useParams();
+  const idString = id as string;
   const [rodadas, setRodadas] = useState<rodadaProps[]>([]);
   const [loading, setLoading] = useState<Boolean>(true);
   const [show, setShow] = useState(false);
@@ -41,32 +42,18 @@ export function Admin() {
     idPartida: "0",
     casa: { id: "0", logo: "0", nome: "0", treinador: "0", urlCartola: "" },
     fora: { id: "0", logo: "0", nome: "0", treinador: "0", urlCartola: "" },
-    status: "0",
     data: "0",
     placarCasa: "0",
     placarFora: "0",
   });
 
-  if (id === "1") {
-    useEffect(() => {
-      fetch("http://localhost:5000/rodadas")
-        .then((response) => response.json())
-        .then((data) => {
-          setRodadas(data.rodadas);
-          setLoading(false);
-        });
-    }, [id]);
-  } else {
-    useEffect(() => {
-      fetch("http://localhost:5000/rodadasCartola")
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data.rodadasCartola);
-          setRodadas(data.rodadasCartola);
-          setLoading(false);
-        });
-    }, [id]);
-  }
+  useEffect(() => {
+    partidasService.getRodadasCampeonato(idString).then((response) => {
+      console.log(response.data);
+      setRodadas(response.data);
+      setLoading(false);
+    });
+  }, [id, show]);
 
   const handleShow = (match: partidaProps) => {
     setShow(true);
@@ -81,8 +68,8 @@ export function Admin() {
         </div>
       ) : (
         rodadas?.map((rodada: rodadaProps) => (
-          <Col md={3} sm={4} xs={6} key={rodada.num} className="row-down-admin">
-            <span className="title-admin">Rodada {rodada.num}</span>
+          <Col md={3} sm={4} xs={6} key={rodada._id} className="row-down-admin">
+            <span className="title-admin">Rodada {rodada._id}</span>
             {rodada?.rodada.map((partida: partidaProps) => (
               <Col
                 lg={12}
@@ -116,10 +103,10 @@ export function Admin() {
                       )}
                     </Col>
                     <Col className="col-1-admin">
-                      {partida.status === "MARCADO" ? (
-                        <span>Sem partida</span>
+                      {partida.placarCasa === "" ? (
+                        <span className="match-admin">x</span>
                       ) : (
-                        <span>
+                        <span className="match-admin">
                           {partida.placarCasa} - {partida.placarFora}
                         </span>
                       )}
@@ -148,8 +135,10 @@ export function Admin() {
                         onClick={() => handleShow(partida)}
                       >
                         <Col className="col-2-admin">
-                          {partida.status === "MARCADO" ? (
-                            <span>MARCADO</span>
+                          {partida.placarCasa === "" ? (
+                            <Col className="col-down-admin">
+                              <span className="match-admin">x</span>
+                            </Col>
                           ) : (
                             <>
                               <Col className="col-down-admin">

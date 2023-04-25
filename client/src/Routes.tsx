@@ -22,7 +22,7 @@ export function AppRoutes() {
         <Route path="/equipes-cartola" element={<Equipes id={"2"} />} />
         <Route path="/regulamento" element={<Regulamento id={"1"} />} />
         <Route path="/regulamento-cartola" element={<Regulamento id={"2"} />} />
-        <Route path="/equipes/:id" element={<Detalhes />} />
+        <Route path="/:campeonato/equipe/:id" element={<Detalhes />} />
         <Route path="/admin/:id" element={<Admin />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

@@ -28,12 +28,10 @@ export default class campeonatosDAO {
         { $unwind: "$tabela" },
         {
           $group: {
-            _id: {
-              equipe: "$tabela.equipe",
-            },
+            _id: "$tabela.equipe",
             dados: {
               $addToSet: {
-                // tipo: "$tipo",
+                equipe: "$tabela.equipe",
                 posicao: "$tabela.posicao",
                 pontos: "$tabela.pontos",
                 partidas: "$tabela.partidas",
@@ -58,7 +56,7 @@ export default class campeonatosDAO {
         {
           $lookup: {
             from: "equipes",
-            localField: "_id.equipe",
+            localField: "_id",
             foreignField: "id",
             as: "_id",
           },
@@ -132,7 +130,7 @@ export default class campeonatosDAO {
         { id: id },
         {
           $set: {
-            table: tabela,
+            tabela: tabela,
           },
         }
       );

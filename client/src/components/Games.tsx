@@ -2,21 +2,32 @@ import React, { useEffect, useState } from "react";
 import { Row, Col, Button, Spinner } from "react-bootstrap";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { Download } from "./Download";
+import partidasService from "../services/partidas";
 
 type rodadasProps = {
-  num: string;
+  _id: string;
   rodada: partidaProps[];
 };
 
 type partidaProps = {
   idPartida: string;
-  casa: { id: string; logo: string; nome: string; treinador: string };
-  fora: { id: string; logo: string; nome: string; treinador: string };
-  idCampeonato: string;
-  status: string;
   data: string;
   placarCasa: string;
   placarFora: string;
+  casa: {
+    id: string;
+    logo: string;
+    nome: string;
+    treinador: string;
+    urlCartola: string;
+  };
+  fora: {
+    id: string;
+    logo: string;
+    nome: string;
+    treinador: string;
+    urlCartola: string;
+  };
 };
 
 type Props = {
@@ -31,25 +42,13 @@ export function Games(props: Props) {
   const [loading, setLoading] = useState<Boolean>(true);
   const { id } = props;
 
-  if (id === "1") {
-    useEffect(() => {
-      fetch("http://localhost:5000/rodadas")
-        .then((response) => response.json())
-        .then((data) => {
-          setRodadas(data.rodadas);
-          setLoading(false);
-        });
-    }, [id]);
-  } else {
-    useEffect(() => {
-      fetch("http://localhost:5000/rodadasCartola")
-        .then((response) => response.json())
-        .then((data) => {
-          setRodadas(data.rodadasCartola);
-          setLoading(false);
-        });
-    }, [id]);
-  }
+  useEffect(() => {
+    partidasService.getRodadasCampeonato(id).then((response) => {
+      console.log(response.data);
+      setRodadas(response.data);
+      setLoading(false);
+    });
+  }, [id]);
 
   const alterarRodada = (lado: string) => {
     if (lado === "left") {
@@ -62,7 +61,8 @@ export function Games(props: Props) {
   };
 
   const verificar = (alt: number) => {
-    if (rodadaNum + alt === 34) setBotaoRight(true);
+    if (rodadaNum + alt === rodadas?.length && rodadaNum + alt > 0)
+      setBotaoRight(true);
     else if (rodadaNum + alt === 1) setBotaoLeft(true);
     else {
       setBotaoRight(false);
@@ -114,13 +114,7 @@ export function Games(props: Props) {
                     )}
                   </Col>
                   <Col lg={6} md={6} xs={6} className="button-4-games">
-                    {partida.status === "MARCADO" ? (
-                      <span>Sem partida</span>
-                    ) : (
-                      <span>
-                        {partida.placarCasa} - {partida.placarFora}
-                      </span>
-                    )}
+                    <span>Sem partida</span>
                   </Col>
                   <Col className="col-games" lg={3} md={2} xs={3}>
                     <span className="bye-games">BYE</span>
@@ -132,42 +126,32 @@ export function Games(props: Props) {
                     <img
                       className="img-games"
                       src={
-                        partida?.casa.logo.includes("http")
-                          ? `${partida?.casa.logo}`
-                          : `src/assets/${partida?.casa.logo}.png`
+                        partida?.casa?.urlCartola
+                          ? `src/assets/${partida?.casa.logo}.png`
+                          : `${partida?.casa.logo}`
                       }
                       alt={partida.casa.nome}
                       title={partida.casa.nome}
                     />
                   </Col>
                   <Col lg={6} md={6} xs={6} className="button-5-games">
-                    {partida.status === "MARCADO" ? (
-                      <span>MARCADO</span>
-                    ) : (
-                      <>
-                        <Col className="col-games">
-                          <span className="match-games">
-                            {partida.placarCasa}
-                          </span>
-                        </Col>
-                        <Col className="col-games">
-                          <span className="match-games">-</span>
-                        </Col>
-                        <Col className="col-games">
-                          <span className="match-games">
-                            {partida.placarFora}
-                          </span>
-                        </Col>
-                      </>
-                    )}
+                    <Col className="col-games">
+                      <span className="match-games">{partida.placarCasa}</span>
+                    </Col>
+                    <Col className="col-games">
+                      <span className="match-games">-</span>
+                    </Col>
+                    <Col className="col-games">
+                      <span className="match-games">{partida.placarFora}</span>
+                    </Col>
                   </Col>
                   <Col className="col-games" lg={3} md={2} xs={3}>
                     <img
                       className="img-games"
                       src={
-                        partida?.fora.logo.includes("http")
-                          ? `${partida?.fora.logo}`
-                          : `src/assets/${partida?.fora.logo}.png`
+                        partida?.fora?.urlCartola
+                          ? `src/assets/${partida?.fora.logo}.png`
+                          : `${partida?.fora.logo}`
                       }
                       alt={partida.fora.nome}
                       title={partida.fora.nome}

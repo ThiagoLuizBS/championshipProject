@@ -33,6 +33,13 @@ a.option-header:hover {
   padding: 0 8px;
 }
 
+.icon-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: antiquewhite;
+}
+
 .img-header {
   margin-bottom: 2px;
   margin-right: 0.35rem;

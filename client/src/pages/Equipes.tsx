@@ -16,9 +16,9 @@ type Props = {
 };
 
 export function Equipes(props: Props) {
+  const { id } = props;
   const [equipes, setEquipes] = useState<equipesProps[]>([]);
   const [loading, setLoading] = useState<Boolean>(true);
-  const { id } = props;
 
   useEffect(() => {
     equipesService.getEquipesByCampeonato(id).then((response) => {
@@ -38,7 +38,7 @@ export function Equipes(props: Props) {
         <Row lg={12} xs={12}>
           {equipes?.map((equipe: equipesProps) => (
             <Col key={equipe.id} lg={6} className="col-equipes">
-              <Link to={`/equipes/${equipe.id}`} className="link-equipes">
+              <Link to={`/${id}/equipe/${equipe.id}`} className="link-equipes">
                 <Row className="row-equipes">
                   <Col lg={5} sm={5} xs={6}>
                     <Col>

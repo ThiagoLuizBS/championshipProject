@@ -8,9 +8,19 @@
   gap: 10px;
 }
 
-.row-detalhes {
-  border: 1px solid rgb(250, 235, 215, 0.1);
-  border-radius: 20px;
+.row-detalhes-up {
+  border-top: 1px solid rgb(250, 235, 215, 0.1);
+  border-right: 1px solid rgb(250, 235, 215, 0.1);
+  border-left: 1px solid rgb(250, 235, 215, 0.1);
+  border-radius: 20px 20px 0 0;
+  font-size: 1rem;
+}
+
+.row-detalhes-down {
+  border-bottom: 1px solid rgb(250, 235, 215, 0.1);
+  border-right: 1px solid rgb(250, 235, 215, 0.1);
+  border-left: 1px solid rgb(250, 235, 215, 0.1);
+  border-radius: 0 0 20px 20px;
   font-size: 1rem;
 }
 
@@ -18,9 +28,11 @@
   display: flex;
   flex-direction: column;
   align-content: center;
-  border: 1px solid rgb(250, 235, 215, 0.1);
+  border-bottom: 1px solid rgb(250, 235, 215, 0.1);
+  border-right: 1px solid rgb(250, 235, 215, 0.1);
+  border-left: 1px solid rgb(250, 235, 215, 0.1);
+  border-radius: 0 0 20px 20px;
   padding: 10px;
-  border-radius: 20px;
   gap: 0 50px;
   max-height: 812px;
   font-size: 1rem;
@@ -31,9 +43,11 @@
   flex-direction: row;
   justify-content: center;
   align-content: center;
-  border: 1px solid rgb(250, 235, 215, 0.1);
+  border-top: 1px solid rgb(250, 235, 215, 0.1);
+  border-right: 1px solid rgb(250, 235, 215, 0.1);
+  border-left: 1px solid rgb(250, 235, 215, 0.1);
+  border-radius: 20px 20px 0 0;
   padding: 10px;
-  border-radius: 20px;
   gap: 0 50px;
   max-height: 812px;
   font-size: 1rem;
@@ -52,12 +66,10 @@
 }
 
 .img-detalhes {
-  max-width: 100%;
-  max-height: 100%;
+  max-height: 150px;
 }
 
 .img-down-detalhes {
-  width: 30px;
   height: 30px;
 }
 
@@ -248,7 +260,6 @@
   }
 
   .img-down-detalhes {
-    width: 25px;
     height: 25px;
   }
 

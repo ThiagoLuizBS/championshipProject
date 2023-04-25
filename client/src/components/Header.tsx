@@ -1,14 +1,25 @@
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import { useState, useEffect } from "react";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import cdrLogo from "../assets/LOGOCDR2.png";
 import { ImTrophy } from "react-icons/im";
 import { RiTeamFill } from "react-icons/ri";
+import { GiTopHat, GiSoccerBall } from "react-icons/gi";
 import { HiNewspaper } from "react-icons/hi";
 import { Link, useLocation } from "react-router-dom";
 
 export function HeaderApp() {
   const location = useLocation();
+  const [width, setWidth] = useState(innerWidth);
+
+  useEffect(() => {
+    const updateWindowDimensions = () => {
+      const newWidth = window.innerWidth;
+      setWidth(newWidth);
+    };
+
+    window.addEventListener("resize", updateWindowDimensions);
+    return () => window.removeEventListener("resize", updateWindowDimensions);
+  }, []);
 
   return (
     <Navbar className="bg-teal-header" expand="lg">
@@ -21,7 +32,10 @@ export function HeaderApp() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
-            <span className="name-header">FIFA</span>
+            <div className="icon-header">
+              <GiSoccerBall />
+              <span className="name-header">FIFA</span>
+            </div>
             <Link
               to="/"
               className={
@@ -59,9 +73,12 @@ export function HeaderApp() {
               <span>REGULAMENTO</span>
             </Link>
           </Nav>
-          <span className="name-header">|</span>
+          {width > 991 && <span className="name-header">|</span>}
           <Nav className="m-auto">
-            <span className="name-header">CARTOLA</span>
+            <div className="icon-header">
+              <GiTopHat />
+              <span className="name-header">CARTOLA</span>
+            </div>
             <Link
               to="/cartola"
               className={

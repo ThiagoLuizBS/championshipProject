@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Modal, Button, Col } from "react-bootstrap";
+import partidasService from "../services/partidas";
 
 type editProps = {
   match: matchProps;
@@ -24,7 +25,6 @@ type matchProps = {
     treinador: string;
     urlCartola: string;
   };
-  status: string;
   data: string;
   placarCasa: string;
   placarFora: string;
@@ -35,12 +35,47 @@ export function EditGame(editProps: editProps) {
   const [placarCasa, setPlacarCasa] = useState<string>("");
   const [placarFora, setPlacarFora] = useState<string>("");
 
-  const handleClose = () => setShow(false);
-
   useEffect(() => {
     setPlacarCasa(match.placarCasa);
     setPlacarFora(match.placarFora);
   }, [show]);
+
+  const handleClose = () => setShow(false);
+
+  const atualizarPartida = () => {
+    if (isNaN(parseFloat(placarCasa)) || isNaN(parseFloat(placarFora))) {
+      alert("Bota numero carai");
+    } else {
+      partidasService
+        .updatePartida(match.idPartida, placarCasa, placarFora)
+        .then((response) => {
+          console.log(response);
+          setShow(false);
+        });
+    }
+  };
+
+  const inverterPartida = () => {
+    if (
+      match.data !== "" ||
+      match.placarCasa !== "" ||
+      match.placarFora !== ""
+    ) {
+      alert("Este jogo ja foi editado!");
+    } else {
+      partidasService.inverterPartida(match.idPartida).then((response) => {
+        console.log(response);
+        setShow(false);
+      });
+    }
+  };
+
+  const resetarPartida = () => {
+    partidasService.resetarPartida(match.idPartida).then((response) => {
+      console.log(response);
+      setShow(false);
+    });
+  };
 
   return (
     <Modal
@@ -66,7 +101,7 @@ export function EditGame(editProps: editProps) {
               className="img-down-admin"
               src={
                 match?.casa.urlCartola
-                  ? `src/assets/${match?.casa.logo}.png`
+                  ? `../src/assets/${match?.casa.logo}.png`
                   : `${match?.casa.logo}`
               }
               alt={match.casa.nome}
@@ -99,7 +134,7 @@ export function EditGame(editProps: editProps) {
               className="img-down-admin"
               src={
                 match?.fora.urlCartola
-                  ? `src/assets/${match?.fora.logo}.png`
+                  ? `../src/assets/${match?.fora.logo}.png`
                   : `${match?.fora.logo}`
               }
               alt={match.fora.nome}
@@ -112,7 +147,33 @@ export function EditGame(editProps: editProps) {
         <Button variant="secondary" onClick={handleClose}>
           Cancelar
         </Button>
-        <Button variant="success">Salvar</Button>
+        <Button
+          variant="danger"
+          onClick={(e) => {
+            e.preventDefault;
+            resetarPartida();
+          }}
+        >
+          Resetar
+        </Button>
+        <Button
+          variant="warning"
+          onClick={(e) => {
+            e.preventDefault;
+            inverterPartida();
+          }}
+        >
+          Inverter
+        </Button>
+        <Button
+          variant="success"
+          onClick={(e) => {
+            e.preventDefault;
+            atualizarPartida();
+          }}
+        >
+          Salvar
+        </Button>
       </Modal.Footer>
     </Modal>
   );
