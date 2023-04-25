@@ -112,7 +112,7 @@ export function Detalhes() {
                 className="img-detalhes"
                 src={
                   equipe?._id[0].urlCartola
-                    ? `../../src/assets/${equipe?._id[0].logo}.png`
+                    ? `/logos/${equipe?._id[0].logo}.png`
                     : `${equipe?._id[0].logo}`
                 }
                 alt={equipe?._id[0].nome}
@@ -340,7 +340,7 @@ export function Detalhes() {
                           className="img-down-detalhes"
                           src={
                             partida?.fora.urlCartola
-                              ? `../../src/assets/${partida?.fora.logo}.png`
+                              ? `/logos/${partida?.fora.logo}.png`
                               : `${partida?.fora.logo}`
                           }
                           alt={partida.fora.nome}
@@ -351,7 +351,7 @@ export function Detalhes() {
                           className="img-down-detalhes"
                           src={
                             partida?.casa.urlCartola
-                              ? `../../src/assets/${partida?.casa.logo}.png`
+                              ? `/logos/${partida?.casa.logo}.png`
                               : `${partida?.casa.logo}`
                           }
                           alt={partida.casa.nome}
@@ -375,7 +375,7 @@ export function Detalhes() {
                         className="img-down-detalhes"
                         src={
                           partida?.casa.urlCartola
-                            ? `../../src/assets/${partida?.casa.logo}.png`
+                            ? `/logos/${partida?.casa.logo}.png`
                             : `${partida?.casa.logo}`
                         }
                         alt={partida.casa.nome}
@@ -402,7 +402,7 @@ export function Detalhes() {
                         className="img-down-detalhes"
                         src={
                           partida?.fora.urlCartola
-                            ? `../../src/assets/${partida?.fora.logo}.png`
+                            ? `/logos/${partida?.fora.logo}.png`
                             : `${partida?.fora.logo}`
                         }
                         alt={partida.fora.nome}

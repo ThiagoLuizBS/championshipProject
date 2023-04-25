@@ -45,6 +45,8 @@ export function EditGame(editProps: editProps) {
   const atualizarPartida = () => {
     if (isNaN(parseFloat(placarCasa)) || isNaN(parseFloat(placarFora))) {
       alert("Bota numero carai");
+    } else if (match.data !== "") {
+      alert("Este jogo ja foi editado!");
     } else {
       partidasService
         .updatePartida(match.idPartida, placarCasa, placarFora)
@@ -101,7 +103,7 @@ export function EditGame(editProps: editProps) {
               className="img-down-admin"
               src={
                 match?.casa.urlCartola
-                  ? `../src/assets/${match?.casa.logo}.png`
+                  ? `/logos/${match?.casa.logo}.png`
                   : `${match?.casa.logo}`
               }
               alt={match.casa.nome}
@@ -134,7 +136,7 @@ export function EditGame(editProps: editProps) {
               className="img-down-admin"
               src={
                 match?.fora.urlCartola
-                  ? `../src/assets/${match?.fora.logo}.png`
+                  ? `/logos/${match?.fora.logo}.png`
                   : `${match?.fora.logo}`
               }
               alt={match.fora.nome}

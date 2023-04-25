@@ -46,7 +46,7 @@ export function Equipes(props: Props) {
                         className="img-equipes"
                         src={
                           equipe?.urlCartola
-                            ? `src/assets/${equipe?.logo}.png`
+                            ? `/logos/${equipe?.logo}.png`
                             : `${equipe?.logo}`
                         }
                       />

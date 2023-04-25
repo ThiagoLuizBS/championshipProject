@@ -87,7 +87,7 @@ export function Admin() {
                           className="img-down-admin"
                           src={
                             partida?.fora.urlCartola
-                              ? `src/assets/${partida?.fora.logo}.png`
+                              ? `/logos/${partida?.fora.logo}.png`
                               : `${partida?.fora.logo}`
                           }
                         />
@@ -96,7 +96,7 @@ export function Admin() {
                           className="img-down-admin"
                           src={
                             partida?.casa.urlCartola
-                              ? `src/assets/${partida?.casa.logo}.png`
+                              ? `/logos/${partida?.casa.logo}.png`
                               : `${partida?.casa.logo}`
                           }
                         />
@@ -122,7 +122,7 @@ export function Admin() {
                         className="img-down-admin"
                         src={
                           partida?.casa.urlCartola
-                            ? `../src/assets/${partida?.casa.logo}.png`
+                            ? `/logos/${partida?.casa.logo}.png`
                             : `${partida?.casa.logo}`
                         }
                         alt={partida.casa.nome}
@@ -164,7 +164,7 @@ export function Admin() {
                         className="img-down-admin"
                         src={
                           partida?.fora.urlCartola
-                            ? `../src/assets/${partida?.fora.logo}.png`
+                            ? `/logos/${partida?.fora.logo}.png`
                             : `${partida?.fora.logo}`
                         }
                         alt={partida.fora.nome}

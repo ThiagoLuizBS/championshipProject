@@ -102,7 +102,7 @@ export function TableApp(props: Props) {
                       className="img-table"
                       src={
                         row?._id[0]?.urlCartola
-                          ? `src/assets/${row?._id[0]?.logo}.png`
+                          ? `/logos/${row?._id[0]?.logo}.png`
                           : `${row?._id[0]?.logo}`
                       }
                       alt={row?._id[0]?.nome}
