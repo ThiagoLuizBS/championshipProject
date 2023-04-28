@@ -530,7 +530,8 @@ export default class campeonatosController {
               tabela[z].dados.saldo_de_gols = saldo_de_gols;
               tabela[z].dados.aproveitamento = Math.round(aproveitamento * 100);
               tabela[z].dados.forma = forma;
-              tabela[z].dados.pontuacao_cartola = pontuacao_cartola;
+              tabela[z].dados.pontuacao_cartola =
+                parseFloat(pontuacao_cartola).toFixed(2);
               tabela[z].dados.media_pontuacao = media_pontuacao;
               tabelaAux.push(tabela[z].dados);
               break;

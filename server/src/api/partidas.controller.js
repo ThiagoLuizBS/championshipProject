@@ -44,6 +44,13 @@ export default class partidasController {
       let placarFora = req.params.placarFora;
       let date = new Date();
 
+      console.log(placarCasa + " " + placarFora);
+
+      placarCasa = placarCasa.replace(",", ".");
+      placarFora = placarFora.replace(",", ".");
+
+      console.log(placarCasa + " " + placarFora);
+
       const response = await partidasDAO.updatePartida(
         id,
         date,
