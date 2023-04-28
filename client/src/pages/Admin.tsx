@@ -49,7 +49,6 @@ export function Admin() {
 
   useEffect(() => {
     partidasService.getRodadasCampeonato(idString).then((response) => {
-      console.log(response.data);
       setRodadas(response.data);
       setLoading(false);
     });

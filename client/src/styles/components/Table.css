@@ -1,10 +1,9 @@
 #responsive-table {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
   overflow-x: auto;
   font-weight: bold;
   font-size: 1rem;
-  background-color: #21282e;
+  background-color: var(--body-bg);
 }
 
 .form-th-table,
@@ -14,7 +13,7 @@
 }
 
 .form-th-table {
-  color: antiquewhite;
+  color: var(--body-secondary-color);
 }
 
 .form-pad-table {
@@ -44,14 +43,23 @@ td {
 }
 
 .table {
-  color: aliceblue;
-  align-items: center;
+  color: var(--body-color);
+  background-color: var(--body-secondary-bg);
+  border-radius: 16px 16px 0 0;
 }
 
 a.link-table {
-  color: aliceblue;
+  color: var(--body-color);
   text-decoration: none;
   font-weight: bolder;
+}
+
+.radius-left-table {
+  border-radius: 16px 0 0 0;
+}
+
+.radius-right-table {
+  border-radius: 0 16px 0 0;
 }
 
 th.col-num-table {

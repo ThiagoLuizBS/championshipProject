@@ -1,9 +1,9 @@
 .modal-editgame {
-  color: antiquewhite;
+  color: var(--body-secondary-color);
 }
 
 div.modal-content {
-  background-color: #21282e;
+  background-color: var(--body-bg);
 }
 
 div.modal-body {

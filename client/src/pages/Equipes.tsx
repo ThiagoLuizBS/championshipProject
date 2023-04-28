@@ -22,7 +22,6 @@ export function Equipes(props: Props) {
 
   useEffect(() => {
     equipesService.getEquipesByCampeonato(id).then((response) => {
-      console.log(response.data[0].equipes);
       setEquipes(response.data[0].equipes);
       setLoading(false);
     });

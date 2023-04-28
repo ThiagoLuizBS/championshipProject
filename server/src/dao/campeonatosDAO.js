@@ -29,6 +29,12 @@ export default class campeonatosDAO {
         {
           $group: {
             _id: "$tabela.equipe",
+            campeonatoNome: {
+              $push: "$nome",
+            },
+            campeonatoTipo: {
+              $push: "$tipo",
+            },
             dados: {
               $addToSet: {
                 equipe: "$tabela.equipe",
@@ -66,10 +72,38 @@ export default class campeonatosDAO {
             "dados.posicao": 1,
           },
         },
+        {
+          $project: {
+            equipe: { $arrayElemAt: ["$_id", 0] },
+            dados: { $arrayElemAt: ["$dados", 0] },
+            _id: 0,
+          },
+        },
       ];
       return await campeonatos.aggregate(pipeline).toArray();
     } catch (e) {
       console.error(`Something went wrong in getCampeonatoTabelaById: ${e}`);
+      throw e;
+    }
+  }
+
+  static async getCampeonatoInfosById(id) {
+    try {
+      const pipeline = [
+        {
+          $match: { id: id },
+        },
+        {
+          $project: {
+            _id: 0,
+            nome: 1,
+            tipo: 1,
+          },
+        },
+      ];
+      return await campeonatos.aggregate(pipeline).toArray();
+    } catch (e) {
+      console.error(`Something went wrong in getCampeonatoInfosById: ${e}`);
       throw e;
     }
   }

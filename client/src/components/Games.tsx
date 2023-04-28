@@ -44,7 +44,6 @@ export function Games(props: Props) {
 
   useEffect(() => {
     partidasService.getRodadasCampeonato(id).then((response) => {
-      console.log(response.data);
       setRodadas(response.data);
       setLoading(false);
     });
@@ -78,7 +77,7 @@ export function Games(props: Props) {
         </div>
       ) : (
         <div id="content-games">
-          <Row className="rodada-games">
+          <Row className="rodada-games radius-top-games">
             <Col className="col-games" xs={3}>
               <Button
                 id="button-1-games"

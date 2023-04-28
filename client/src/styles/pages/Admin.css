@@ -11,7 +11,7 @@
 }
 
 .row-admin {
-  border: 1px solid rgb(250, 235, 215, 0.1);
+  border: 1px solid var(--border-color);
   border-radius: 20px;
   font-size: 1rem;
 }
@@ -21,7 +21,7 @@
   flex-direction: column;
   align-content: center;
   align-items: center;
-  border: 1px solid rgb(250, 235, 215, 0.1);
+  border: 1px solid var(--border-color);
   padding: 10px 0;
   border-radius: 20px;
   gap: 0 50px;
@@ -91,7 +91,7 @@
 
 .col-1-admin,
 .col-2-admin {
-  color: white;
+  color: var(--body-color);
   background: rgba(76, 175, 80, 0);
   border: none;
   display: flex;
@@ -102,7 +102,7 @@
 }
 
 .title-admin {
-  color: antiquewhite;
+  color: var(--body-secondary-color);
   font-weight: bolder;
   font-size: 1rem;
   margin-bottom: 5px;

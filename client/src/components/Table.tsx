@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 import campeonatosService from "../services/campeonatos";
 
 type campeonatoProps = {
-  _id: equipeProps[];
-  dados: rowProps[];
+  equipe: equipeProps;
+  dados: rowProps;
 };
 
 type equipeProps = {
@@ -41,10 +41,34 @@ type Props = {
 };
 
 export function TableApp(props: Props) {
+  const { id } = props;
   const [campeonato, setCampeonato] = useState<campeonatoProps[]>([]);
   const [loading, setLoading] = useState<Boolean>(true);
   const [width, setWidth] = useState(innerWidth);
-  const { id } = props;
+  const [theme, setTheme] = useState(
+    document.querySelector("body")?.getAttribute("data-theme")
+  );
+
+  useEffect(() => {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (
+          mutation.type === "attributes" &&
+          mutation.attributeName === "data-theme"
+        ) {
+          const newTheme = document
+            .querySelector("body")
+            ?.getAttribute("data-theme");
+          if (newTheme !== undefined && newTheme !== null) setTheme(newTheme);
+        }
+      });
+    });
+
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+  }, [theme]);
 
   useEffect(() => {
     const updateWindowDimensions = () => {
@@ -58,7 +82,6 @@ export function TableApp(props: Props) {
 
   useEffect(() => {
     campeonatosService.getCampeonatoTabela(id).then((response) => {
-      console.log(response.data);
       setCampeonato(response.data);
       setLoading(false);
     });
@@ -71,10 +94,16 @@ export function TableApp(props: Props) {
           <Spinner animation="border" />
         </div>
       ) : (
-        <Table className="table table-hover table-dark">
+        <Table
+          className={
+            theme === "dark"
+              ? "table table-hover table-dark"
+              : "table table-hover"
+          }
+        >
           <thead>
             <tr className="form-th-table">
-              <th className="col-num-table">P</th>
+              <th className="col-num-table radius-left-table">P</th>
               <th></th>
               {width <= 768 ? <></> : <th className="col-num-table">EQUIPE</th>}
               <th className="col-num-table">PT</th>
@@ -86,26 +115,26 @@ export function TableApp(props: Props) {
               <th className="col-num-table">GS</th>
               <th className="col-num-table">SG</th>
               <th className="col-num-table">%</th>
-              <th>Últimos jogos</th>
+              <th className="radius-right-table">Últimos jogos</th>
             </tr>
           </thead>
           <tbody>
             {campeonato?.map((row: campeonatoProps) => (
-              <tr key={row?._id[0]?.nome} className="form-td-table">
-                <td>{row?.dados[0]?.posicao}</td>
+              <tr key={row?.equipe?.id} className="form-td-table">
+                <td>{row?.dados?.posicao}</td>
                 <td>
                   <Link
-                    to={`/${id}/equipe/${row?._id[0]?.id}`}
+                    to={`/${id}/equipe/${row?.equipe?.id}`}
                     className="link-table"
                   >
                     <img
                       className="img-table"
                       src={
-                        row?._id[0]?.urlCartola
-                          ? `/logos/${row?._id[0]?.logo}.png`
-                          : `${row?._id[0]?.logo}`
+                        row?.equipe?.urlCartola
+                          ? `/logos/${row?.equipe?.logo}.png`
+                          : `${row?.equipe?.logo}`
                       }
-                      alt={row?._id[0]?.nome}
+                      alt={row?.equipe?.nome}
                     />
                   </Link>
                 </td>
@@ -114,32 +143,24 @@ export function TableApp(props: Props) {
                 ) : (
                   <td className="col-name-table">
                     <Link
-                      to={`/${id}/equipe/${row?._id[0]?.id}`}
+                      to={`/${id}/equipe/${row?.equipe?.id}`}
                       className="link-table"
                     >
-                      {row._id[0].nome}
+                      {row?.equipe?.nome}
                     </Link>
                   </td>
                 )}
-                <td className="col-num-table">{row?.dados[0]?.pontos}</td>
-                <td className="col-num-table">{row?.dados[0]?.partidas}</td>
-                <td className="col-num-table">{row?.dados[0]?.vitorias}</td>
-                <td className="col-num-table">{row?.dados[0]?.empates}</td>
-                <td className="col-num-table">{row?.dados[0]?.derrotas}</td>
-                <td className="col-num-table">
-                  {row?.dados[0]?.gols_marcados}
-                </td>
-                <td className="col-num-table">
-                  {row?.dados[0]?.gols_sofridos}
-                </td>
-                <td className="col-num-table">
-                  {row?.dados[0]?.saldo_de_gols}
-                </td>
-                <td className="col-num-table">
-                  {row?.dados[0]?.aproveitamento}%
-                </td>
+                <td className="col-num-table">{row?.dados?.pontos}</td>
+                <td className="col-num-table">{row?.dados?.partidas}</td>
+                <td className="col-num-table">{row?.dados?.vitorias}</td>
+                <td className="col-num-table">{row?.dados?.empates}</td>
+                <td className="col-num-table">{row?.dados?.derrotas}</td>
+                <td className="col-num-table">{row?.dados?.gols_marcados}</td>
+                <td className="col-num-table">{row?.dados?.gols_sofridos}</td>
+                <td className="col-num-table">{row?.dados?.saldo_de_gols}</td>
+                <td className="col-num-table">{row?.dados?.aproveitamento}%</td>
                 <td>
-                  {row?.dados[0]?.forma.map((resultado: string, i) => (
+                  {row?.dados?.forma?.map((resultado: string, i) => (
                     <Fragment key={i}>
                       {resultado === "V" ? (
                         <BsCheckCircleFill

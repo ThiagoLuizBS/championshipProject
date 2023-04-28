@@ -10,8 +10,8 @@ import campeonatosService from "../services/campeonatos";
 import partidasService from "../services/partidas";
 
 type campeonatoProps = {
-  _id: equipeProps[];
-  dados: tabelaProps[];
+  equipe: equipeProps;
+  dados: tabelaProps;
 };
 
 type equipeProps = {
@@ -74,7 +74,7 @@ export function Detalhes() {
   useEffect(() => {
     campeonatosService.getCampeonatoTabela(idCampeonato).then((response) => {
       for (let index = 0; index < response.data.length; index++) {
-        if (response.data[index]._id[0]?.id === id)
+        if (response.data[index].equipe?.id === id)
           setEquipe(response.data[index]);
       }
     });
@@ -111,12 +111,12 @@ export function Detalhes() {
               <img
                 className="img-detalhes"
                 src={
-                  equipe?._id[0].urlCartola
-                    ? `/logos/${equipe?._id[0].logo}.png`
-                    : `${equipe?._id[0].logo}`
+                  equipe?.equipe.urlCartola
+                    ? `/logos/${equipe?.equipe.logo}.png`
+                    : `${equipe?.equipe.logo}`
                 }
-                alt={equipe?._id[0].nome}
-                title={equipe?._id[0].nome}
+                alt={equipe?.equipe.nome}
+                title={equipe?.equipe.nome}
               />
             </Col>
             <Col className="col-detalhes">
@@ -125,7 +125,7 @@ export function Detalhes() {
                   <Col className="title-detalhes">Treinador</Col>
                   <Col>
                     <span className="name-detalhes">
-                      {equipe?._id[0]?.treinador}
+                      {equipe?.equipe?.treinador}
                     </span>
                   </Col>
                 </Col>
@@ -133,7 +133,7 @@ export function Detalhes() {
                   <Col className="title-detalhes">Jogos</Col>
                   <Col>
                     <span className="name-detalhes">
-                      {equipe?.dados[0].partidas}
+                      {equipe?.dados.partidas}
                     </span>
                   </Col>
                 </Col>
@@ -145,7 +145,7 @@ export function Detalhes() {
                   <Col className="title-detalhes">Posição</Col>
                   <Col>
                     <span className="name-detalhes">
-                      {equipe?.dados[0].posicao}°
+                      {equipe?.dados.posicao}°
                     </span>
                   </Col>
                 </Col>
@@ -153,7 +153,7 @@ export function Detalhes() {
                   <Col className="title-detalhes">Pontos</Col>
                   <Col>
                     <span className="name-detalhes">
-                      {equipe?.dados[0].pontos}
+                      {equipe?.dados.pontos}
                     </span>
                   </Col>
                 </Col>
@@ -166,23 +166,21 @@ export function Detalhes() {
                 <Col className="title-detalhes">Vitorias</Col>
                 <Col>
                   <span className="name-detalhes">
-                    {equipe?.dados[0].vitorias}
+                    {equipe?.dados.vitorias}
                   </span>
                 </Col>
               </Col>
               <Col sm={3} xs={6} className="col-inside-detalhes">
                 <Col className="title-detalhes">Empates</Col>
                 <Col>
-                  <span className="name-detalhes">
-                    {equipe?.dados[0].empates}
-                  </span>
+                  <span className="name-detalhes">{equipe?.dados.empates}</span>
                 </Col>
               </Col>
               <Col sm={3} xs={6} className="col-inside-detalhes">
                 <Col className="title-detalhes">Derrotas</Col>
                 <Col>
                   <span className="name-detalhes">
-                    {equipe?.dados[0].derrotas}
+                    {equipe?.dados.derrotas}
                   </span>
                 </Col>
               </Col>
@@ -190,7 +188,7 @@ export function Detalhes() {
                 <Col className="title-detalhes">Aproveitamento</Col>
                 <Col>
                   <span className="name-detalhes">
-                    {equipe?.dados[0].aproveitamento}%
+                    {equipe?.dados.aproveitamento}%
                   </span>
                 </Col>
               </Col>
@@ -200,7 +198,7 @@ export function Detalhes() {
                 <Col className="title-detalhes">Gols marcados</Col>
                 <Col>
                   <span className="name-detalhes">
-                    {equipe?.dados[0].gols_marcados}
+                    {equipe?.dados.gols_marcados}
                   </span>
                 </Col>
               </Col>
@@ -208,7 +206,7 @@ export function Detalhes() {
                 <Col className="title-detalhes">Gols sofridos</Col>
                 <Col>
                   <span className="name-detalhes">
-                    {equipe?.dados[0].gols_sofridos}
+                    {equipe?.dados.gols_sofridos}
                   </span>
                 </Col>
               </Col>
@@ -216,14 +214,14 @@ export function Detalhes() {
                 <Col className="title-detalhes">Saldo de gols</Col>
                 <Col>
                   <span className="name-detalhes">
-                    {equipe?.dados[0].saldo_de_gols}
+                    {equipe?.dados.saldo_de_gols}
                   </span>
                 </Col>
               </Col>
               <Col sm={3} xs={6} className="col-inside-detalhes">
                 <Col className="title-detalhes">Últimos 5 jogos</Col>
                 <Col className="name-detalhes">
-                  {equipe?.dados[0].forma?.map((resultado: string, i) => (
+                  {equipe?.dados.forma?.map((resultado: string, i) => (
                     <Fragment key={i}>
                       {resultado === "V" ? (
                         <BsCheckCircleFill
@@ -256,13 +254,13 @@ export function Detalhes() {
                 </Col>
               </Col>
             </Row>
-            {equipe?.dados[0]?.media_feitos_jogo !== undefined ? (
+            {equipe?.dados?.media_feitos_jogo !== undefined ? (
               <Row className="row-inside-detalhes">
                 <Col sm={3} xs={6} className="col-inside-detalhes">
                   <Col className="title-detalhes">GM por jogo</Col>
                   <Col>
                     <span className="name-detalhes">
-                      {equipe?.dados[0].media_feitos_jogo}
+                      {equipe?.dados.media_feitos_jogo}
                     </span>
                   </Col>
                 </Col>
@@ -270,7 +268,7 @@ export function Detalhes() {
                   <Col className="title-detalhes">GS por jogo</Col>
                   <Col>
                     <span className="name-detalhes">
-                      {equipe?.dados[0].media_sofridos_jogo}
+                      {equipe?.dados.media_sofridos_jogo}
                     </span>
                   </Col>
                 </Col>
@@ -278,7 +276,7 @@ export function Detalhes() {
                   <Col className="title-detalhes">Clean Sheets</Col>
                   <Col>
                     <span className="name-detalhes">
-                      {equipe?.dados[0].clean_sheets}
+                      {equipe?.dados.clean_sheets}
                     </span>
                   </Col>
                 </Col>
@@ -287,7 +285,7 @@ export function Detalhes() {
                     <Col className="title-detalhes">Sem marcar</Col>
                     <Col>
                       <span className="name-detalhes">
-                        {equipe?.dados[0].sem_marcar}
+                        {equipe?.dados.sem_marcar}
                       </span>
                     </Col>
                   </Col>
@@ -299,7 +297,7 @@ export function Detalhes() {
                   <Col className="title-detalhes">Pontuação total</Col>
                   <Col>
                     <span className="name-detalhes">
-                      {equipe?.dados[0].pontuacao_cartola}
+                      {equipe?.dados.pontuacao_cartola}
                     </span>
                   </Col>
                 </Col>
@@ -307,7 +305,7 @@ export function Detalhes() {
                   <Col className="title-detalhes">Pontuação média</Col>
                   <Col>
                     <span className="name-detalhes">
-                      {equipe?.dados[0].media_pontuacao}
+                      {equipe?.dados.media_pontuacao}
                     </span>
                   </Col>
                 </Col>

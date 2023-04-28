@@ -1,24 +1,29 @@
 #responsive-games {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   font-weight: bold;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   flex-wrap: nowrap;
-  color: white;
-  background-color: #21282e;
+  color: var(--body-color);
+  background-color: var(--body-bg);
+}
+
+#content-games {
+  background-color: var(--body-bg);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .rodada-games {
-  background-color: #212529;
+  background-color: var(--body-secondary-bg);
   display: flex;
   text-align: center;
   justify-content: center;
   width: 100%;
   padding: 0.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid var(--border-color);
   margin: 0;
 }
 
@@ -33,7 +38,7 @@
 #button-3-games,
 .button-4-games,
 .button-5-games {
-  color: white;
+  color: var(--body-color);
   background: rgba(76, 175, 80, 0);
   border: none;
   display: flex;
@@ -45,11 +50,15 @@
 .button-1-games,
 .button-2-games,
 .button-3-games {
-  color: antiquewhite;
+  color: var(--body-color);
+}
+
+.radius-top-games {
+  border-radius: 16px 16px 0 0;
 }
 
 .bye-games {
-  color: antiquewhite;
+  color: var(--body-secondary-color);
 }
 
 .img-games {

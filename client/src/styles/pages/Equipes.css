@@ -10,7 +10,7 @@
 }
 
 .col-equipes {
-  border: 1px solid rgb(250, 235, 215, 0.1);
+  border: 1px solid var(--border-color);
   border-radius: 20px;
 }
 
@@ -26,12 +26,12 @@
 }
 
 a.link-equipes {
-  color: white;
+  color: var(--body-color);
   text-decoration: none;
 }
 
 .treinador-equipes {
-  color: antiquewhite;
+  color: var(--body-secondary-color);
   font-weight: bolder;
   font-size: 22px;
   margin-bottom: 5px;

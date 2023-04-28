@@ -51,7 +51,6 @@ export function EditGame(editProps: editProps) {
       partidasService
         .updatePartida(match.idPartida, placarCasa, placarFora)
         .then((response) => {
-          console.log(response);
           setShow(false);
         });
     }
@@ -66,7 +65,6 @@ export function EditGame(editProps: editProps) {
       alert("Este jogo ja foi editado!");
     } else {
       partidasService.inverterPartida(match.idPartida).then((response) => {
-        console.log(response);
         setShow(false);
       });
     }
@@ -74,7 +72,6 @@ export function EditGame(editProps: editProps) {
 
   const resetarPartida = () => {
     partidasService.resetarPartida(match.idPartida).then((response) => {
-      console.log(response);
       setShow(false);
     });
   };

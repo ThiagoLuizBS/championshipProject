@@ -1,0 +1,15 @@
+#container-brand {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--body-color);
+  background-color: var(--body-secondary-bg);
+  border-radius: 16px;
+}
+
+.img-brand {
+  height: 50px;
+}

@@ -49,6 +49,23 @@ export default class campeonatosController {
     }
   }
 
+  static async apiGetCampeonatoInfosById(req, res) {
+    try {
+      let id = req.params.id;
+      let campeonato = await campeonatosDAO.getCampeonatoInfosById(id);
+      if (!campeonato) {
+        res.status(404).json({ error: "Not found" });
+        return;
+      }
+      res.json(campeonato);
+      return;
+    } catch (e) {
+      console.log(`apiGetCampeonatoInfosById, ${e}`);
+      res.status(500).json({ error: e });
+      return;
+    }
+  }
+
   static async apiUpdateTabela(id) {
     try {
       let campeonatoId = await partidasDAO.getPartidaById(id);
@@ -80,7 +97,7 @@ export default class campeonatosController {
           for (let x = 0; x < rodadas.length; x++) {
             for (let y = 0; y < rodadas[x].rodada.length; y++) {
               if (
-                rodadas[x].rodada[y].casa.nome === equipe._id[0].nome &&
+                rodadas[x].rodada[y].casa.nome === equipe.equipe.nome &&
                 rodadas[x].rodada[y].data !== ""
               ) {
                 if (
@@ -118,7 +135,7 @@ export default class campeonatosController {
                   gols_sofridos / partidas
                 ).toFixed(2);
               } else if (
-                rodadas[x].rodada[y].fora.nome === equipe._id[0].nome &&
+                rodadas[x].rodada[y].fora.nome === equipe.equipe.nome &&
                 rodadas[x].rodada[y].data !== ""
               ) {
                 if (
@@ -166,17 +183,17 @@ export default class campeonatosController {
           for (let a = 0; a < rodadas.length; a++) {
             for (let b = 0; b < rodadas[a].rodada.length; b++) {
               if (
-                (rodadas[a].rodada[b].casa.nome === equipe._id[0].nome ||
-                  rodadas[a].rodada[b].fora.nome === equipe._id[0].nome) &&
+                (rodadas[a].rodada[b].casa.nome === equipe.equipe.nome ||
+                  rodadas[a].rodada[b].fora.nome === equipe.equipe.nome) &&
                 rodadas[a].rodada[b].data !== ""
               ) {
                 count = rodadas.length;
                 for (let c = 0; c < rodadas.length; c++) {
                   for (let d = 0; d < rodadas[c].rodada.length; d++) {
                     if (
-                      (rodadas[c].rodada[d].casa.nome === equipe._id[0].nome ||
+                      (rodadas[c].rodada[d].casa.nome === equipe.equipe.nome ||
                         rodadas[c].rodada[d].fora.nome ===
-                          equipe._id[0].nome) &&
+                          equipe.equipe.nome) &&
                       rodadas[a].rodada[b].idPartida !==
                         rodadas[c].rodada[d].idPartida &&
                       (rodadas[c].rodada[d].data === "" ||
@@ -184,9 +201,9 @@ export default class campeonatosController {
                           new Date(rodadas[c]?.rodada[d].data))
                     ) {
                     } else if (
-                      (rodadas[c].rodada[d].casa.nome === equipe._id[0].nome ||
+                      (rodadas[c].rodada[d].casa.nome === equipe.equipe.nome ||
                         rodadas[c].rodada[d].fora.nome ===
-                          equipe._id[0].nome) &&
+                          equipe.equipe.nome) &&
                       rodadas[a].rodada[b].idPartida !==
                         rodadas[c].rodada[d].idPartida
                     ) {
@@ -195,7 +212,7 @@ export default class campeonatosController {
                   }
                 }
 
-                if (rodadas[a].rodada[b].casa.nome === equipe._id[0].nome) {
+                if (rodadas[a].rodada[b].casa.nome === equipe.equipe.nome) {
                   if (
                     parseInt(rodadas[a].rodada[b].placarCasa) >
                     parseInt(rodadas[a].rodada[b].placarFora)
@@ -210,7 +227,7 @@ export default class campeonatosController {
                     partida = "D";
                   }
                 } else if (
-                  rodadas[a].rodada[b].fora.nome === equipe._id[0].nome
+                  rodadas[a].rodada[b].fora.nome === equipe.equipe.nome
                 ) {
                   if (
                     parseInt(rodadas[a].rodada[b].placarFora) >
@@ -247,24 +264,22 @@ export default class campeonatosController {
           }
           //adicionar ao banco
           for (let z = 0; z < tabela.length; z++) {
-            if (tabela[z]._id[0].nome === equipe._id[0].nome) {
-              tabela[z].dados[0].pontos = pontos;
-              tabela[z].dados[0].partidas = partidas;
-              tabela[z].dados[0].vitorias = vitorias;
-              tabela[z].dados[0].empates = empates;
-              tabela[z].dados[0].derrotas = derrotas;
-              tabela[z].dados[0].gols_marcados = gols_marcados;
-              tabela[z].dados[0].gols_sofridos = gols_sofridos;
-              tabela[z].dados[0].saldo_de_gols = saldo_de_gols;
-              tabela[z].dados[0].aproveitamento = Math.round(
-                aproveitamento * 100
-              );
-              tabela[z].dados[0].forma = forma;
-              tabela[z].dados[0].clean_sheets = clean_sheets;
-              tabela[z].dados[0].sem_marcar = sem_marcar;
-              tabela[z].dados[0].media_feitos_jogo = media_feitos_jogo;
-              tabela[z].dados[0].media_sofridos_jogo = media_sofridos_jogo;
-              tabelaAux.push(tabela[z].dados[0]);
+            if (tabela[z].equipe.nome === equipe.equipe.nome) {
+              tabela[z].dados.pontos = pontos;
+              tabela[z].dados.partidas = partidas;
+              tabela[z].dados.vitorias = vitorias;
+              tabela[z].dados.empates = empates;
+              tabela[z].dados.derrotas = derrotas;
+              tabela[z].dados.gols_marcados = gols_marcados;
+              tabela[z].dados.gols_sofridos = gols_sofridos;
+              tabela[z].dados.saldo_de_gols = saldo_de_gols;
+              tabela[z].dados.aproveitamento = Math.round(aproveitamento * 100);
+              tabela[z].dados.forma = forma;
+              tabela[z].dados.clean_sheets = clean_sheets;
+              tabela[z].dados.sem_marcar = sem_marcar;
+              tabela[z].dados.media_feitos_jogo = media_feitos_jogo;
+              tabela[z].dados.media_sofridos_jogo = media_sofridos_jogo;
+              tabelaAux.push(tabela[z].dados);
               break;
             }
           }
@@ -290,7 +305,7 @@ export default class campeonatosController {
               saldoFeito = 0;
               saldoSofrido = 0;
               if (
-                rodadas[x].rodada[y].casa.nome === equipe._id[0].nome &&
+                rodadas[x].rodada[y].casa.nome === equipe.equipe.nome &&
                 rodadas[x].rodada[y].data !== ""
               ) {
                 if (
@@ -346,7 +361,7 @@ export default class campeonatosController {
                   pontuacao_cartola / partidas
                 ).toFixed(2);
               } else if (
-                rodadas[x].rodada[y].fora.nome === equipe._id[0].nome &&
+                rodadas[x].rodada[y].fora.nome === equipe.equipe.nome &&
                 rodadas[x].rodada[y].data !== ""
               ) {
                 if (
@@ -411,17 +426,17 @@ export default class campeonatosController {
           for (let a = 0; a < rodadas.length; a++) {
             for (let b = 0; b < rodadas[a].rodada.length; b++) {
               if (
-                (rodadas[a].rodada[b].casa.nome === equipe._id[0].nome ||
-                  rodadas[a].rodada[b].fora.nome === equipe._id[0].nome) &&
+                (rodadas[a].rodada[b].casa.nome === equipe.equipe.nome ||
+                  rodadas[a].rodada[b].fora.nome === equipe.equipe.nome) &&
                 rodadas[a].rodada[b].data !== ""
               ) {
                 count = rodadas.length;
                 for (let c = 0; c < rodadas.length; c++) {
                   for (let d = 0; d < rodadas[c].rodada.length; d++) {
                     if (
-                      (rodadas[c].rodada[d].casa.nome === equipe._id[0].nome ||
+                      (rodadas[c].rodada[d].casa.nome === equipe.equipe.nome ||
                         rodadas[c].rodada[d].fora.nome ===
-                          equipe._id[0].nome) &&
+                          equipe.equipe.nome) &&
                       rodadas[a].rodada[b].idPartida !==
                         rodadas[c].rodada[d].idPartida &&
                       (rodadas[c].rodada[d].data === "" ||
@@ -429,9 +444,9 @@ export default class campeonatosController {
                           new Date(rodadas[c]?.rodada[d].data))
                     ) {
                     } else if (
-                      (rodadas[c].rodada[d].casa.nome === equipe._id[0].nome ||
+                      (rodadas[c].rodada[d].casa.nome === equipe.equipe.nome ||
                         rodadas[c].rodada[d].fora.nome ===
-                          equipe._id[0].nome) &&
+                          equipe.equipe.nome) &&
                       rodadas[a].rodada[b].idPartida !==
                         rodadas[c].rodada[d].idPartida
                     ) {
@@ -440,7 +455,7 @@ export default class campeonatosController {
                   }
                 }
 
-                if (rodadas[a].rodada[b].casa.nome === equipe._id[0].nome) {
+                if (rodadas[a].rodada[b].casa.nome === equipe.equipe.nome) {
                   if (
                     parseFloat(rodadas[a].rodada[b].placarCasa) -
                       parseFloat(rodadas[a].rodada[b].placarFora) >=
@@ -460,7 +475,7 @@ export default class campeonatosController {
                     partida = "D";
                   }
                 } else if (
-                  rodadas[a].rodada[b].fora.nome === equipe._id[0].nome
+                  rodadas[a].rodada[b].fora.nome === equipe.equipe.nome
                 ) {
                   if (
                     parseFloat(rodadas[a].rodada[b].placarFora) -
@@ -504,22 +519,20 @@ export default class campeonatosController {
 
           //adicionar ao banco
           for (let z = 0; z < tabela.length; z++) {
-            if (tabela[z]._id[0].nome === equipe._id[0].nome) {
-              tabela[z].dados[0].pontos = pontos;
-              tabela[z].dados[0].partidas = partidas;
-              tabela[z].dados[0].vitorias = vitorias;
-              tabela[z].dados[0].empates = empates;
-              tabela[z].dados[0].derrotas = derrotas;
-              tabela[z].dados[0].gols_marcados = gols_marcados;
-              tabela[z].dados[0].gols_sofridos = gols_sofridos;
-              tabela[z].dados[0].saldo_de_gols = saldo_de_gols;
-              tabela[z].dados[0].aproveitamento = Math.round(
-                aproveitamento * 100
-              );
-              tabela[z].dados[0].forma = forma;
-              tabela[z].dados[0].pontuacao_cartola = pontuacao_cartola;
-              tabela[z].dados[0].media_pontuacao = media_pontuacao;
-              tabelaAux.push(tabela[z].dados[0]);
+            if (tabela[z].equipe.nome === equipe.equipe.nome) {
+              tabela[z].dados.pontos = pontos;
+              tabela[z].dados.partidas = partidas;
+              tabela[z].dados.vitorias = vitorias;
+              tabela[z].dados.empates = empates;
+              tabela[z].dados.derrotas = derrotas;
+              tabela[z].dados.gols_marcados = gols_marcados;
+              tabela[z].dados.gols_sofridos = gols_sofridos;
+              tabela[z].dados.saldo_de_gols = saldo_de_gols;
+              tabela[z].dados.aproveitamento = Math.round(aproveitamento * 100);
+              tabela[z].dados.forma = forma;
+              tabela[z].dados.pontuacao_cartola = pontuacao_cartola;
+              tabela[z].dados.media_pontuacao = media_pontuacao;
+              tabelaAux.push(tabela[z].dados);
               break;
             }
           }
@@ -528,41 +541,37 @@ export default class campeonatosController {
 
       tabela.forEach((equipe) => {
         for (let z = 0; z < tabela.length; z++) {
-          if (tabela[z]._id[0].nome === equipe._id[0].nome) {
+          if (tabela[z].equipe.nome === equipe.equipe.nome) {
             let posicao = 1;
             for (let z1 = 0; z1 < tabela.length; z1++) {
-              if (tabela[z]._id[0].nome !== tabela[z1]._id[0].nome) {
-                if (tabela[z].dados[0].pontos < tabela[z1].dados[0].pontos) {
+              if (tabela[z].equipe.nome !== tabela[z1].equipe.nome) {
+                if (tabela[z].dados.pontos < tabela[z1].dados.pontos) {
                   posicao++;
-                } else if (
-                  tabela[z].dados[0].pontos === tabela[z1].dados[0].pontos
-                ) {
+                } else if (tabela[z].dados.pontos === tabela[z1].dados.pontos) {
                   if (
-                    tabela[z].dados[0].saldo_de_gols <
-                    tabela[z1].dados[0].saldo_de_gols
+                    tabela[z].dados.saldo_de_gols <
+                    tabela[z1].dados.saldo_de_gols
                   ) {
                     posicao++;
                   } else if (
-                    tabela[z].dados[0].saldo_de_gols ===
-                    tabela[z1].dados[0].saldo_de_gols
+                    tabela[z].dados.saldo_de_gols ===
+                    tabela[z1].dados.saldo_de_gols
                   ) {
                     if (
-                      tabela[z].dados[0].gols_marcados <
-                      tabela[z1].dados[0].gols_marcados
+                      tabela[z].dados.gols_marcados <
+                      tabela[z1].dados.gols_marcados
                     ) {
                       posicao++;
                     } else if (
-                      tabela[z].dados[0].gols_marcados ===
-                      tabela[z1].dados[0].gols_marcados
+                      tabela[z].dados.gols_marcados ===
+                      tabela[z1].dados.gols_marcados
                     ) {
                       if (
-                        tabela[z].dados[0].partidas >
-                        tabela[z1].dados[0].partidas
+                        tabela[z].dados.partidas > tabela[z1].dados.partidas
                       ) {
                         posicao++;
                       } else if (
-                        tabela[z].dados[0].partidas ===
-                        tabela[z1].dados[0].partidas
+                        tabela[z].dados.partidas === tabela[z1].dados.partidas
                       ) {
                         //
                       }

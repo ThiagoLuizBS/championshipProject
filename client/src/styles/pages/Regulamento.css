@@ -8,7 +8,7 @@
 .img-regulamento {
   margin-top: 10px;
   width: 500px;
-  border: solid 1px #21282e;
+  border: solid 1px var(--body-bg);
 }
 
 .text-regulamento {
@@ -18,7 +18,7 @@
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 1px solid rgb(250, 235, 215, 0.1);
+  border: 1px solid var(--border-color);
   border-radius: 20px;
 }
 

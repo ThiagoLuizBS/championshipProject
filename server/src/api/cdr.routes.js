@@ -14,6 +14,10 @@ router
   .get(campeonatosCtrl.apiGetEquipesByCampeonatoId);
 
 router
+  .route("/campeonato/:id/infos")
+  .get(campeonatosCtrl.apiGetCampeonatoInfosById);
+
+router
   .route("/campeonato/:id/rodadas")
   .get(partidasController.apiGetRodadasByCampeonatoId);
 

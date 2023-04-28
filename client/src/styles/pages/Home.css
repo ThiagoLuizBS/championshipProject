@@ -1,4 +1,4 @@
 #table-home,
 #games-home {
-  background-color: #21282e;
+  background-color: var(--body-bg);
 }
