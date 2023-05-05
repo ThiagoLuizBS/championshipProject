@@ -1,5 +1,4 @@
 import partidasDAO from "../dao/partidasDAO.js";
-import campeonatosDAO from "../dao/campeonatosDAO.js";
 import campeonatosController from "./campeonatos.controller.js";
 
 export default class partidasController {
@@ -40,16 +39,13 @@ export default class partidasController {
   static async apiUpdatePartida(req, res) {
     try {
       let id = req.params.id;
-      let placarCasa = req.params.placarCasa;
-      let placarFora = req.params.placarFora;
+      let placarFinal = req.body;
+      let { placar } = placarFinal;
       let date = new Date();
 
-      console.log(placarCasa + " " + placarFora);
-
-      placarCasa = placarCasa.replace(",", ".");
-      placarFora = placarFora.replace(",", ".");
-
-      console.log(placarCasa + " " + placarFora);
+      placar = placar.split("+");
+      let placarCasa = placar[0];
+      let placarFora = placar[1];
 
       const response = await partidasDAO.updatePartida(
         id,
@@ -118,20 +114,44 @@ export default class partidasController {
     }
   }
 
-  // static async apiCreatePartida(array) {
-  //   try {
-  //     array.forEach(async (element) => {
-  //       const response = await partidasDAO.createPartida(element);
+  static async apiCreatePartida(array) {
+    try {
+      array.forEach(async (element) => {
+        const response = await partidasDAO.createPartida(element);
 
-  //       var { error } = response;
-  //       if (error) {
-  //         return error;
-  //       }
-  //     });
+        var { error } = response;
+        if (error) {
+          return error;
+        }
+      });
 
-  //     return { success: "success" };
-  //   } catch (error) {
-  //     return error;
-  //   }
-  // }
+      return { success: "success" };
+    } catch (error) {
+      return error;
+    }
+  }
+
+  static async apiGetTimesContraTalId(req, res) {
+    try {
+      let id = req.params.id;
+      let partidas = await partidasDAO.getTimesContraTalId(id);
+      let array = [];
+
+      for (let index = 0; index < partidas.length; index++) {
+        if (partidas[index].casa !== id) array.push(partidas[index].casa);
+        else array.push(partidas[index].fora);
+      }
+      if (!partidas) {
+        res.status(404).json({ error: "Not found" });
+        return;
+      }
+      array.sort((a, b) => a - b);
+      res.json(array);
+      return;
+    } catch (e) {
+      console.log(`apiGetTimesContraTalId, ${e}`);
+      res.status(500).json({ error: e });
+      return;
+    }
+  }
 }

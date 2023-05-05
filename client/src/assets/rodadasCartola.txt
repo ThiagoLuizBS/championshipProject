@@ -1,397 +1,227 @@
 Rodada 1
-cbmk - springboks
-cincinnatti - markin
-frankfurto - felipelima
-medr - mancha
-lokomotiv - animes
-surprise - baleia
-vagudo - tamires
-biribiri - f1vs
-universidad - joaninha
-olympique - galatassarey
+cmbk (101) - springboks (109)
+cincinnatti (111) - markin (114)
+frankfurto (102) - felipelima (104)
+medr (118) - mancha (103)
+lokomotiv (110) - animes (107)
+surprise (117) - baleia (108)
+vagudo (112) - tamires (113)
+biribiri (105) - f1vs (115)
+universidad (116) - joaninha (106)
+olympique (119) - galatassarey (120)
 
 Rodada 2
-galatassarey - cmbk
-markin - olympique
-felipelima - springboks
-mancha - cincinnatti
-animes - frankfurto
-baleia - medr 
-tamires - lokomotiv
-f1vs - surprise
-joaninha - vagudo
-universidad - biribiri
+galatassarey (120) - cmbk (101)
+markin (114) - olympique (119)
+felipelima (104) - springboks (109)
+mancha (103) - cincinnatti (111)
+animes (107) - frankfurto (102)
+baleia (108) - medr (118) 
+tamires (113) - lokomotiv (110)
+f1vs (115) - surprise (117)
+joaninha (106) - vagudo (112)
+universidad (116) - biribiri (105)
 
 Rodada 3
-cbmk - felipelima
-markin - mancha
-springboks - galatassarey
-olympique - animes
-cincinnatti - baleia
-frankfurto - tamires
-medr - f1vs
-lokomotiv - joaninha
-surprise - universidad
-vagudo - biribiri
+cmbk (101) - felipelima (104)
+markin (114) - mancha (103)
+springboks (109) - galatassarey (120)
+olympique (119) - animes (107)
+cincinnatti (111) - baleia (108)
+frankfurto (102) - tamires (113)
+medr (118) - f1vs (115)
+lokomotiv (110) - joaninha (106)
+surprise (117) - universidad (116)
+vagudo (112) - biribiri (105)
 
 Rodada 4
-cbmk - mancha
-felipelima - animes
-markin - baleia
-springboks - tamires
-cincinnatti - f1vs
-frankfurto - joaninha
-medr - universidad
-lokomotiv - biribiri
-surprise - vagudo
+mancha (103) - cmbk (101)
+animes (107) - felipelima (104)
+baleia (108) - markin (114)
+tamires (113) - springboks (109)
+galatassarey (120) - cincinnatti (111)
+f1vs (115) - olympique (119)
+joaninha (106) - frankfurto (102)
+universidad (116) - medr (118)
+biribiri (105) - lokomotiv (110)
+vagudo (112) - surprise (117)
 
 Rodada 5
-cbmk - animes
-mancha- baleia
-felipelima - tamires
-markin - f1vs
-springboks - joaninha
-cincinnatti - universidad
-frankfurto - biribiri
-medr - vagudo
-lokomotiv - surprise
+cmbk (101) - animes (107)
+mancha (103) - baleia (108)
+felipelima (104) - tamires (113)
+markin (114) - f1vs (115)
+springboks (109) - joaninha (106)
+cincinnatti (111) - universidad (116)
+frankfurto (102) - galatassarey (120)
+olympique (119) - biribiri (105)
+medr (118) - vagudo (112)
+lokomotiv (110) - surprise (117)
 
 Rodada 6
-cbmk - baleia
-animes - tamires
-mancha- f1vs
-felipelima - joaninha
-markin - universidad
-springboks - biribiri
-cincinnatti - vagudo
-frankfurto - surprise
-medr - lokomotiv
+baleia (108) - cmbk (101)
+tamires (113) - animes (107)
+f1vs (115) - mancha (103)
+joaninha (106) - felipelima (104)
+universidad (116) - markin (114)
+biribiri (105) - springboks (109)
+vagudo (112) - cincinnatti (111)
+surprise (117) - frankfurto (102)
+lokomotiv (110) - galatassarey (120)
+olympique (119) - medr (118)
 
 Rodada 7
-cbmk - tamires
-baleia - f1vs
-animes - joaninha
-mancha- universidad
-felipelima - biribiri
-markin - vagudo
-springboks - surprise
-cincinnatti - lokomotiv
-frankfurto - medr
+cmbk (101) - tamires (113)
+baleia (108) - f1vs (115)
+animes (107) - joaninha (106)
+galatassarey (120) - mancha (103)
+universidad (116) - olympique (119)
+felipelima (104) - biribiri (105)
+markin (114) - vagudo (112)
+springboks (109) - surprise (117)
+cincinnatti (111) - lokomotiv (110)
+frankfurto (102) - medr (118)
 
 Rodada 8
-cbmk - f1vs
-tamires - joaninha
-baleia - universidad
-animes - biribiri
-mancha- vagudo
-felipelima - surprise
-markin - lokomotiv
-springboks - medr
-cincinnatti - frankfurto
+f1vs (115) - cmbk (101)
+joaninha (106) - tamires (113)
+universidad (116) - baleia (108)
+biribiri (105) animes (107)
+vagudo (112) - mancha (103)
+surprise (117) - galatassarey (120)
+olympique (119) - felipelima (104)
+lokomotiv (110) - markin (114)
+medr (118) - springboks (109)
+frankfurto (102) - cincinnatti (111)
 
 Rodada 9
-cbmk - joaninha
-f1vs - universidad
-tamires - biribiri
-baleia - vagudo
-animes - surprise
-mancha- lokomotiv
-felipelima - medr
-markin - frankfurto
-springboks - cincinnatti
+cmbk (101) - joaninha (106)
+f1vs (115) - universidad (116)
+tamires (113) - biribiri (105)
+olympique (119) - vagudo (112)
+baleia (108) - galatassarey (120) 
+animes (107) - surprise (117)
+mancha (103) - lokomotiv (110)
+felipelima (104) - medr (118)
+markin (114) - frankfurto (102)
+springboks (109) - cincinnatti (111)
 
 Rodada 10
-cbmk - universidad
-joaninha - biribiri
-f1vs - vagudo
-tamires - surprise
-baleia - lokomotiv
-animes - medr
-mancha- frankfurto
-felipelima - cincinnatti
-markin - springboks
+universidad (116) - galatassarey (120)
+olympique (119) - cmbk (101)
+biribiri (105) - joaninha (106)
+vagudo (112) - f1vs (115)
+surprise (117) - tamires (113)
+lokomotiv (110) - baleia (108)
+medr (118) - animes (107)
+frankfurto (102) - mancha (103)
+cincinnatti (111) - felipelima (104)
+springboks (109) - markin (114)
 
 Rodada 11
-cbmk - biribiri
-universidad - vagudo
-joaninha - surprise
-f1vs - lokomotiv
-tamires - medr
-baleia - frankfurto
-animes - cincinnatti
-mancha- springboks
-felipelima - markin
+cmbk (101) - biribiri (105)
+universidad (116) - vagudo (112)
+joaninha (106) - galatassarey (120)
+olympique (119) - surprise (117)
+f1vs (115) - lokomotiv (110)
+tamires (113) - medr (118)
+baleia (108) - frankfurto (102)
+animes (107) - cincinnatti (111)
+mancha (103) - springboks (109)
+felipelima (104) - markin (114)
 
 Rodada 12
-cbmk - vagudo
-biribiri - surprise
-universidad - lokomotiv
-joaninha - medr
-f1vs - frankfurto
-tamires - cincinnatti
-baleia - springboks
-animes - markin
-mancha- felipelima
+vagudo (112) - cmbk (101)
+surprise (117) - biribiri (105)
+lokomotiv (110) - universidad (116)
+medr (118) - joaninha (106)
+frankfurto (102) - olympique (119)
+galatassarey (120) - f1vs (115)
+cincinnatti (111) - tamires (113)
+springboks (109) - baleia (108)
+markin (114) - animes (107)
+felipelima (104) - mancha (103)
 
 Rodada 13
-cbmk - surprise
-vagudo - lokomotiv
-biribiri - medr
-universidad - frankfurto
-joaninha - cincinnatti
-f1vs - springboks
-tamires - markin
-baleia - felipelima
-animes - mancha
+cmbk (101) - surprise (117)
+vagudo (112) - lokomotiv (110)
+biribiri (105) - medr (118)
+universidad (116) - frankfurto (102)
+joaninha (106) - cincinnatti (111)
+f1vs (115) - springboks (109)
+tamires (113) - olympique (119)
+galatassarey (120) - markin (114)
+baleia (108) - felipelima (104)
+animes (107) - mancha (103)
 
 Rodada 14
-cbmk - lokomotiv
-surprise - medr
-vagudo - frankfurto
-biribiri - cincinnatti
-universidad - springboks
-joaninha - markin
-f1vs - felipelima
-tamires - mancha
-baleia - animes
+lokomotiv (110) - cmbk (101)
+medr (118) - surprise (117)
+frankfurto (102) - vagudo (112)
+cincinnatti (111) - biribiri (105)
+springboks (109) - universidad (116)
+markin (114) - joaninha (106)
+felipelima (104) - f1vs (115)
+mancha (103) - tamires (113)
+animes (107) - galatassarey (120)
+olympique (119) - baleia (108)
 
 Rodada 15
-cbmk - medr
-lokomotiv - frankfurto
-surprise - cincinnatti
-vagudo - springboks
-biribiri - markin
-universidad - felipelima
-joaninha - mancha
-f1vs - animes
-tamires - baleia
+cmbk (101) - medr (118)
+lokomotiv (110) - frankfurto (102)
+surprise (117) - cincinnatti (111)
+vagudo (112) - galatassarey (120)
+olympique (119) - springboks (109)
+biribiri (105) - markin (114)
+universidad (116) - felipelima (104)
+joaninha (106) - mancha (103)
+f1vs (115) - animes (107)
+tamires (113) - baleia (108)
 
 Rodada 16
-cbmk - frankfurto
-medr - cincinnatti
-lokomotiv - springboks
-surprise - markin
-vagudo - felipelima
-biribiri - mancha
-universidad - animes
-joaninha - baleia
-f1vs - tamires
+frankfurto (102) - cmbk (101)
+cincinnatti (111) - medr (118)
+springboks (109) - lokomotiv (110)
+markin (114) - surprise (117)
+felipelima (104) - vagudo (112)
+mancha (103) - olympique (119)
+galatassarey (120) - biribiri (105)
+animes (107) - universidad (116)
+baleia (108) - joaninha (106)
+tamires (113) - f1vs (115)
 
 Rodada 17
-cbmk - cincinnatti
-frankfurto - springboks
-medr - markin
-lokomotiv - felipelima
-surprise - mancha
-vagudo - animes
-biribiri - baleia
-universidad - tamires
-joaninha - f1vs
+cmbk (101) - cincinnatti (111)
+frankfurto (102) - springboks (109)
+medr (118) - markin (114)
+lokomotiv (110) - olympique (119)
+galatassarey (120) - felipelima (104)
+surprise (117) - mancha (103)
+vagudo (112) - animes (107)
+biribiri (105) - baleia (108)
+universidad (116) - tamires (113)
+joaninha (106) - f1vs (115)
 
 Rodada 18
-cbmk - markin
-springboks - animes
-cincinnatti - f1vs
-frankfurto - biribiri
-medr - lokomotiv
-mancha- universidad
-felipelima - surprise
-tamires - biribiri
-vagudo - olympique
-joaninha - galatassarey
+markin (114) - cmbk (101)
+animes (107) - springboks (109)
+f1vs (115) - cincinnatti (111)
+biribiri (105) - frankfurto (102)
+lokomotiv (110) - medr (118)
+universidad (116) - mancha (103)
+surprise (117) - felipelima (104)
+vagudo (112) - baleia (108)
+galatassarey (120) - tamires (113)
+olympique (119) - joaninha (106)
 
 Rodada 19
-cbmk - universidad
-joaninha - surprise
-f1vs - frankfurto
-tamires - markin
-baleia - animes
-vagudo - springboks
-biribiri - mancha
-lokomotiv - felipelima
-olympique - medr
-galatassarey - cincinnatti
-
-/*/*/*/*/*/
-Rodada 18
-springboks - cbmk
-markin - cincinnatti
-felipelima - frankfurto
-mancha- medr
-animes - lokomotiv
-baleia - surprise
-tamires - vagudo
-f1vs - biribiri
-joaninha - universidad
-
-Rodada 19
-markin - cbmk
-felipelima - springboks
-mancha- cincinnatti
-animes - frankfurto
-baleia - medr
-tamires - lokomotiv
-f1vs - surprise
-joaninha - vagudo
-universidad - biribiri
-
-Rodada 20
-felipelima - cbmk
-mancha- markin
-animes - springboks
-baleia - cincinnatti
-tamires - frankfurto
-f1vs - medr
-joaninha - lokomotiv
-universidad - surprise
-biribiri - vagudo
-
-Rodada 21
-mancha- cbmk
-animes - felipelima
-baleia - markin
-tamires - springboks
-f1vs - cincinnatti
-joaninha - frankfurto
-universidad - medr
-biribiri - lokomotiv
-vagudo - surprise
-
-Rodada 22
-animes - cbmk
-baleia - mancha
-tamires - felipelima
-f1vs - markin
-joaninha - springboks
-universidad - cincinnatti
-biribiri - frankfurto
-vagudo - medr
-surprise - lokomotiv
-
-Rodada 23
-baleia - cbmk
-tamires - animes
-f1vs - mancha
-joaninha - felipelima
-universidad - markin
-biribiri - springboks
-vagudo - cincinnatti
-surprise - frankfurto
-lokomotiv - medr
-
-Rodada 24
-tamires - cbmk
-f1vs - baleia
-joaninha - animes
-universidad - mancha
-biribiri - felipelima
-vagudo - markin
-surprise - springboks
-lokomotiv - cincinnatti
-medr - frankfurto
-
-Rodada 25
-f1vs - cbmk
-joaninha - tamires
-universidad - baleia
-biribiri - animes
-vagudo - mancha
-surprise - felipelima
-lokomotiv - markin
-medr - springboks
-frankfurto - cincinnatti
-
-Rodada 26
-joaninha - cbmk
-universidad - f1vs
-biribiri - tamires
-vagudo - baleia
-surprise - animes
-lokomotiv - mancha
-medr - felipelima
-frankfurto - markin
-cincinnatti - springboks
-
-Rodada 27
-universidad - cbmk
-biribiri - joaninha
-vagudo - f1vs
-surprise - tamires
-lokomotiv - baleia
-medr - animes
-frankfurto - mancha
-cincinnatti - felipelima
-springboks - markin
-
-Rodada 28
-biribiri - cbmk
-vagudo - universidad
-surprise - joaninha
-lokomotiv - f1vs
-medr - tamires
-frankfurto - baleia
-cincinnatti - animes
-springboks - mancha
-markin - felipelima
-
-Rodada 29
-vagudo - cbmk
-surprise - biribiri
-lokomotiv - universidad
-medr - joaninha
-frankfurto - f1vs
-cincinnatti - tamires
-springboks - baleia
-markin - animes
-felipelima - mancha
-Rodada 30
-surprise - cbmk
-lokomotiv - vagudo
-medr - biribiri
-frankfurto - universidad
-cincinnatti - joaninha
-springboks - f1vs
-markin - tamires
-felipelima - baleia
-mancha- animes
-
-Rodada 31
-lokomotiv - cbmk
-medr - surprise
-frankfurto - vagudo
-cincinnatti - biribiri
-springboks - universidad
-markin - joaninha
-felipelima - f1vs
-mancha- tamires
-animes - baleia
-Rodada 32
-medr - cbmk
-frankfurto - lokomotiv
-cincinnatti - surprise
-springboks - vagudo
-markin - biribiri
-felipelima - universidad
-mancha- joaninha
-animes - f1vs
-baleia - tamires
-Rodada 33
-frankfurto - cbmk
-cincinnatti - medr
-springboks - lokomotiv
-markin - surprise
-felipelima - vagudo
-mancha- biribiri
-animes - universidad
-baleia - joaninha
-tamires - f1vs
-Rodada 34
-cincinnatti - cbmk
-springboks - frankfurto
-markin - medr
-felipelima - lokomotiv
-mancha- surprise
-animes - vagudo
-baleia - biribiri
-tamires - universidad
-f1vs - joaninha
+cmbk (101) - universidad (116)
+joaninha (106) - surprise (117)
+f1vs (115) - frankfurto (102)
+tamires (113) - markin (114)
+baleia (108) - animes (107)
+vagudo (112) - springboks (109)
+biribiri (105) - mancha (103)
+lokomotiv (110) - felipelima (104)
+galatassarey (120) - medr (118)
+olympique (119) - cincinnatti (111)

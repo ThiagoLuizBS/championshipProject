@@ -320,8 +320,17 @@ export function Detalhes() {
               <span className="title-detalhes">2° TURNO</span>
             </Col>
           </Row>
-          <Row md={12} sm={12} xs={12} className="row-down-detalhes">
-            {partidas?.map((partida: partidaProps) => (
+          <Row
+            md={12}
+            sm={12}
+            xs={12}
+            className={
+              idCampeonato === "2"
+                ? "row-down-detalhes row-2"
+                : "row-down-detalhes"
+            }
+          >
+            {partidas?.map((partida: partidaProps, i: number) => (
               <Col
                 lg={3}
                 md={4}
@@ -329,6 +338,7 @@ export function Detalhes() {
                 xs={6}
                 className="partida-detalhes"
                 key={partida.idPartida}
+                title={`Rodada ${i + 1} - ${partida.idPartida}`}
               >
                 {partida.casa.nome === "BYE" || partida.fora.nome === "BYE" ? (
                   <>

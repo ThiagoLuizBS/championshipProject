@@ -6,7 +6,8 @@ class partidasService {
   }
 
   updatePartida(id: string, placarCasa: string, placarFora: string) {
-    return http.get(`/partida/${id}/atualizar/${placarCasa}/${placarFora}`);
+    const placarFinal = { placar: placarCasa + " + " + placarFora };
+    return http.put(`/partida/${id}/atualizar`, placarFinal);
   }
 
   inverterPartida(id: string) {

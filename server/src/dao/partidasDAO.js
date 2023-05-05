@@ -214,4 +214,25 @@ export default class partidasDAO {
       return { error: e };
     }
   }
+
+  static async getTimesContraTalId(id) {
+    try {
+      const pipeline = [
+        {
+          $match: { $or: [{ casa: id }, { fora: id }] },
+        },
+        {
+          $project: {
+            _id: 0,
+            casa: 1,
+            fora: 1,
+          },
+        },
+      ];
+      return await partidas.aggregate(pipeline).toArray();
+    } catch (e) {
+      console.error(`Something went wrong in apiGetTimesContraTalId: ${e}`);
+      throw e;
+    }
+  }
 }

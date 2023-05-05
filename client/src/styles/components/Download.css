@@ -1,6 +1,11 @@
-.button-download {
+#button-download {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.col-download {
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 .img-download {

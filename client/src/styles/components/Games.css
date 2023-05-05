@@ -47,10 +47,8 @@
   padding: 0;
 }
 
-.button-1-games,
-.button-2-games,
-.button-3-games {
-  color: var(--body-color);
+.button-2-games {
+  color: var(--body-secondary-color);
 }
 
 .radius-top-games {

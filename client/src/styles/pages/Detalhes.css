@@ -38,6 +38,10 @@
   font-size: 1rem;
 }
 
+.row-2 {
+  max-height: 904px;
+}
+
 .row-col-detalhes {
   display: flex;
   flex-direction: row;
@@ -266,6 +270,10 @@
   .row-down-detalhes,
   .row-col-detalhes {
     max-height: 727px;
+  }
+
+  .row-2 {
+    max-height: 809px;
   }
 
   .match-detalhes {

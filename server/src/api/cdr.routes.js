@@ -23,14 +23,16 @@ router
 
 router.route("/partida/:id").get(partidasController.apiGetPartidaById);
 
-router
-  .route("/partida/:id/atualizar/:placarCasa/:placarFora")
-  .get(partidasController.apiUpdatePartida);
+router.route("/partida/:id/atualizar").put(partidasController.apiUpdatePartida);
 
 router
   .route("/partida/:id/inverter")
   .get(partidasController.apiInverterPartida);
 
 router.route("/partida/:id/resetar").get(partidasController.apiResetarPartida);
+
+// router
+//   .route("/equipe/:id/equipes")
+//   .get(partidasController.apiGetTimesContraTalId);
 
 export default router;

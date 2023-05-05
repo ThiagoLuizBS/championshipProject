@@ -135,6 +135,7 @@ export function TableApp(props: Props) {
                           : `${row?.equipe?.logo}`
                       }
                       alt={row?.equipe?.nome}
+                      title={row?.equipe?.nome}
                     />
                   </Link>
                 </td>

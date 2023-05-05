@@ -81,7 +81,7 @@ p {
 }
 
 .spinner {
-  padding-top: 10px;
+  margin: 20px;
   display: flex;
   justify-content: center;
 }
