@@ -64,21 +64,45 @@ export function Download() {
   return (
     <Row id="button-download">
       <Col lg={12} md={12} xs={12} className="col-download">
-        <button type="button" onClick={handleDownloadHome}>
-          <FiDownload className="img-download" />{" "}
-          <span className="text-download">Campeonato</span>
+        <button
+          type="button"
+          className="col-button-download"
+          onClick={handleDownloadHome}
+        >
+          <Col lg={3} md={3} xs={3}>
+            <FiDownload className="img-download" />
+          </Col>
+          <Col lg={9} md={9} xs={9}>
+            <span className="text-download">Campeonato</span>
+          </Col>
         </button>
       </Col>
-      <Col lg={6} md={6} xs={6} className="col-download">
-        <button type="button" onClick={handleDownloadTable}>
-          <FiDownload className="img-download" />{" "}
-          <span className="text-download">Tabela</span>
+      <Col lg={12} md={12} xs={12} className="col-download">
+        <button
+          type="button"
+          className="col-button-download"
+          onClick={handleDownloadTable}
+        >
+          <Col lg={3} md={3} xs={3}>
+            <FiDownload className="img-download" />
+          </Col>
+          <Col lg={9} md={9} xs={9}>
+            <span className="text-download">Tabela</span>
+          </Col>
         </button>
       </Col>
-      <Col lg={6} md={6} xs={6} className="col-download">
-        <button type="button" onClick={handleDownloadGames}>
-          <FiDownload className="img-download" />{" "}
-          <span className="text-download">Rodadas</span>
+      <Col lg={12} md={12} xs={12} className="col-download">
+        <button
+          type="button"
+          className="col-button-download"
+          onClick={handleDownloadGames}
+        >
+          <Col lg={3} md={3} xs={3}>
+            <FiDownload className="img-download" />
+          </Col>
+          <Col lg={9} md={9} xs={9}>
+            <span className="text-download">Rodadas</span>
+          </Col>
         </button>
       </Col>
     </Row>
