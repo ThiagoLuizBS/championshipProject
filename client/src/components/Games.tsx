@@ -38,7 +38,7 @@ export function Games(props: Props) {
   const [rodadaNum, setRodadaNum] = useState<number>(20);
   const [rodadas, setRodadas] = useState<rodadasProps[]>([]);
   const [botaoLeft, setBotaoLeft] = useState<boolean>(true);
-  const [botaoRight, setBotaoRight] = useState<boolean>(false);
+  const [botaoRight, setBotaoRight] = useState<boolean>(true);
   const [loading, setLoading] = useState<Boolean>(true);
   const { id } = props;
 
